@@ -1,0 +1,50 @@
+version: '3'
+
+env:
+  PUID:
+    sh: id -u
+  PGID: 
+    sh: id -g
+
+vars:
+  DOCKER_FOLDERS: docker_proxy homepage
+  DOCKER_NETWORKS: docker_proxy
+
+tasks:
+  all-down:
+    cmds:
+    - for: { var: DOCKER_FOLDERS }
+      cmd: docker compose -f docker/compose/{{.ITEM}}/docker-compose.yml down
+      
+  destroy:
+    dir: '{{.USER_WORKING_DIR}}'
+    preconditions:
+      - test -f docker-compose.yml
+    cmds:
+      - docker compose down --volumes
+  
+  down:
+    dir: '{{.USER_WORKING_DIR}}'
+    preconditions:
+      - test -f docker-compose.yml
+    cmds:
+      - docker compose down
+  
+  hello:
+    cmds:
+      - echo 'Hello World from Task!'
+    silent: true
+
+  networks:
+    cmds:
+      - for: { var: DOCKER_NETWORKS }
+        cmd: docker network inspect {{.ITEM}} --format \{\{.Id\}\} 2>/dev/null || docker network create --driver bridge {{.ITEM}}
+  
+  up:
+    dir: '{{.USER_WORKING_DIR}}'
+    deps:
+      - networks
+    preconditions:
+      - test -f docker-compose.yml
+    cmds:
+      - docker compose up -d

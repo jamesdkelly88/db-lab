@@ -1,0 +1,17 @@
+services:
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    volumes:
+      - ./config:/app/config
+    ports:
+      - 3000:3000
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+
+networks:
+  default:
+    name: docker_proxy
+    external: true
