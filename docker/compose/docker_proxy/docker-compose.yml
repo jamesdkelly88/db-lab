@@ -2,6 +2,11 @@ services:
   docker_proxy:
     image: ghcr.io/tecnativa/docker-socket-proxy:latest
     container_name: dockerproxy
+    labels:
+      - homepage.group=Services
+      - homepage.name=Docker
+      - homepage.icon=docker.png
+      - homepage.description=Docker socket read-only proxy
     environment:
       - CONTAINERS=1 # Allow access to viewing containers
       - SERVICES=0 # Allow access to viewing services (necessary when using Docker Swarm)

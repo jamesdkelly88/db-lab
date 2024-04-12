@@ -1,13 +1,15 @@
 version: '3'
 
 env:
+  DOMAIN: jkdb.duckdns.org
   PUID:
     sh: id -u
   PGID: 
     sh: id -g
 
 vars:
-  DOCKER_FOLDERS: docker_proxy homepage
+  DOCKER_FOLDERS:
+    sh: ls ./docker/compose
   DOCKER_NETWORKS: docker_proxy
 
 tasks:

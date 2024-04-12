@@ -2,10 +2,16 @@ services:
   homepage:
     image: ghcr.io/gethomepage/homepage:latest
     container_name: homepage
+    labels:
+      - homepage.group=Web
+      - homepage.name=Homepage
+      - homepage.icon=homepage.png
+      - homepage.href=http://homepage.$DOMAIN
+      - homepage.description=This page
     volumes:
       - ./config:/app/config
     ports:
-      - 3000:3000
+      - 80:3000
     restart: unless-stopped
     environment:
       PUID: $PUID

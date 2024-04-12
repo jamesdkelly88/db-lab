@@ -5,3 +5,10 @@
 providers:
   openweathermap: openweathermapapikey
   weatherapi: weatherapiapikey
+
+layout:
+  Databases:
+    # style: row
+    # columns: 3
+  Web:
+  Services:
