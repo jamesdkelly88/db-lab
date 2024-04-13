@@ -19,16 +19,7 @@ All the services in this repository are set up to be configured using [Task](htt
 
 ## Services
 
-### Homepage
-
-A landing page for the other services in the database lab. Available on port __80__ (TODO: SSL, reverse proxy, DNS etc)
-
-
-## Ports
-
-| # | Service |
-| --- | --- |
-| 80 | [Homepage](docs/homepage.md) |
+See the docs folder for a list of what is available to deploy.
 
 ## Copyright
 

@@ -8,10 +8,11 @@ services:
       - homepage.icon=homepage.png
       - homepage.href=http://homepage.$DOMAIN
       - homepage.description=This page
+      - traefik.enable=true
     volumes:
       - ./config:/app/config
     ports:
-      - 80:3000
+      - 3000:3000
     restart: unless-stopped
     environment:
       PUID: $PUID
@@ -19,5 +20,5 @@ services:
 
 networks:
   default:
-    name: docker_proxy
+    name: docker
     external: true

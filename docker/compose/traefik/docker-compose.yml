@@ -1,0 +1,46 @@
+services:
+  traefik:
+    image: traefik:v2.5
+    container_name: traefik
+    environment:
+      - TRAEFIK_API_INSECURE=true
+      - TRAEFIK_PROVIDERS_DOCKER=true
+      - TRAEFIK_PROVIDERS_DOCKER_EXPOSEDBYDEFAULT=false
+      - TRAEFIK_PROVIDERS_DOCKER_NETWORK=web
+      - TRAEFIK_PROVIDERS_DOCKER_DEFAULTRULE=Host(`{{ index .Labels "com.docker.compose.service" }}.$DOMAIN`)
+      # https://doc.traefik.io/traefik/reference/static-configuration/env/
+    labels:
+      - homepage.group=Services
+      - homepage.name=Traefik
+      - homepage.icon=traefik.png
+      - homepage.description=Reverse proxy (dashboard)
+    networks:
+      - default
+      - docker
+    ports:
+      - 80:80
+      # - 443:443
+      - 8080:8080
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro # Mounted as read-only
+    restart: unless-stopped
+
+  test:
+    image: traefik/whoami
+    container_name: test
+    labels:
+      - homepage.group=Web
+      - homepage.name=Test
+      - homepage.icon=traefik.png
+      - homepage.href=http://test.$DOMAIN
+      - homepage.description=Test page
+      - traefik.enable=true
+    networks:
+      - default
+
+networks:
+  default:
+    name: web
+    external: true
+  docker:
+    external: true

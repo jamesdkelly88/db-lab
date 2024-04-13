@@ -1,5 +1,5 @@
 services:
-  db:
+  postgres16:
     container_name: postgres16
     labels:
       - homepage.group=Databases
@@ -18,7 +18,8 @@ services:
 
 networks:
   default:
-    name: postgres16
+    name: postgres
+    external: true
 
 volumes:
   data:

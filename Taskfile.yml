@@ -10,15 +10,23 @@ env:
 vars:
   DOCKER_FOLDERS:
     sh: ls ./docker/compose
-  DOCKER_NETWORKS: docker_proxy
+  DOCKER_NETWORKS: docker postgres web
 
 tasks:
   all-down:
+    desc: Run docker compose down on all stacks
     cmds:
     - for: { var: DOCKER_FOLDERS }
       cmd: docker compose -f docker/compose/{{.ITEM}}/docker-compose.yml down
+
+  all-up:
+    desc: Run docker compose up on all stacks
+    cmds:
+    - for: { var: DOCKER_FOLDERS }
+      cmd: docker compose -f docker/compose/{{.ITEM}}/docker-compose.yml up -d
       
   destroy:
+    desc: Destroy stack in current folder, including volumes
     dir: '{{.USER_WORKING_DIR}}'
     preconditions:
       - test -f docker-compose.yml
@@ -26,6 +34,7 @@ tasks:
       - docker compose down --volumes
   
   down:
+    desc: Destroy stack in current folder, excluding volumes
     dir: '{{.USER_WORKING_DIR}}'
     preconditions:
       - test -f docker-compose.yml
@@ -33,16 +42,19 @@ tasks:
       - docker compose down
   
   hello:
+    desc: Hello world task
     cmds:
       - echo 'Hello World from Task!'
     silent: true
 
   networks:
+    desc: Create required docker networks
     cmds:
       - for: { var: DOCKER_NETWORKS }
         cmd: docker network inspect {{.ITEM}} --format \{\{.Id\}\} 2>/dev/null || docker network create --driver bridge {{.ITEM}}
   
   up:
+    desc: Deploy stack in current folder
     dir: '{{.USER_WORKING_DIR}}'
     deps:
       - networks
