@@ -9,7 +9,7 @@ services:
       - homepage.href=http://wud.${DOMAIN}
       - homepage.description=Container update watcher
       - homepage.widget.type=whatsupdocker
-      - homepage.widget.url=http://wud.${DOMAIN}
+      - homepage.widget.url=http://wud:3000
       - traefik.enable=true
       - wud.tag.include=^2.\d+?.\d+?$
     networks:
