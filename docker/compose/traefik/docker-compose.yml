@@ -16,6 +16,8 @@ services:
       - homepage.href=http://traefik.${DOMAIN}
       - homepage.icon=traefik.png
       - homepage.description=Reverse proxy dashboard
+      - homepage.widget.type=traefik
+      - homepage.widget.url=http://traefik:8080
       - traefik.enable=true
       - traefik.http.routers.traefik-api.rule=Host(`traefik.${DOMAIN}`) && PathPrefix(`/api`)
       - traefik.http.routers.traefik-api.service=api@internal
