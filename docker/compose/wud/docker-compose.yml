@@ -1,0 +1,23 @@
+services:
+  wud:
+    image: fmartinou/whats-up-docker:6.3.0
+    container_name: wud
+    labels:
+      - homepage.group=Web
+      - homepage.name=What's Up Docker
+      - homepage.icon=wud.png
+      - homepage.href=http://wud.{$DOMAIN}
+      - homepage.description=Container update watcher
+      - traefik.enable=true
+      - wud.tag.include=^2.\d+?.\d+?$
+    networks:
+    - default
+    - web
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro # Mounted as read-only
+networks:
+  default:
+    name: docker
+    external: true
+  web:
+    external: true

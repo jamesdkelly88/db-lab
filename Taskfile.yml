@@ -24,6 +24,9 @@ tasks:
     cmds:
     - for: { var: DOCKER_FOLDERS }
       cmd: docker compose -f docker/compose/{{.ITEM}}/docker-compose.yml up -d
+
+  # TODO: cleanup
+    # desc: Delete unused docker images
       
   destroy:
     desc: Destroy stack in current folder, including volumes

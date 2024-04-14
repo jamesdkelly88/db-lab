@@ -1,0 +1,24 @@
+services:
+  dozzle:
+    container_name: dozzle
+    environment:
+      - DOZZLE_REMOTE_HOST=tcp://dockerproxy:2375
+    image: amir20/dozzle:v6.4.6
+    labels:
+      - homepage.group=Web
+      - homepage.name=Dozzle
+      - homepage.icon=dozzle.png
+      - homepage.href=http://dozzle.${DOMAIN}
+      - homepage.description=Container log viewer
+      - traefik.enable=true
+      - wud.tag.include=^v\d+?.\d+?.\d+?$
+    networks:
+    - default
+    - web
+    restart: unless-stopped
+networks:
+  default:
+    name: docker
+    external: true
+  web:
+    external: true

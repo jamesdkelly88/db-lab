@@ -6,10 +6,11 @@ services:
       - homepage.name=PostgreSQL 16
       - homepage.icon=postgres.png
       - homepage.description=PostgreSQL v16 (5432)
+      - wud.tag.include=^16.\d{1,2}-alpine.+?$
     environment:
     - POSTGRES_HOST_AUTH_METHOD=scram-sha-256
     - POSTGRES_PASSWORD=password
-    image: postgres:16
+    image: postgres:16.2-alpine3.19
     ports:
     - 5432:5432
     restart: unless-stopped

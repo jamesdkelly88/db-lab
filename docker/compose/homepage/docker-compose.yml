@@ -1,22 +1,21 @@
 services:
   homepage:
-    image: ghcr.io/gethomepage/homepage:latest
+    image: ghcr.io/gethomepage/homepage:v0.8.11
     container_name: homepage
     labels:
       - homepage.group=Web
       - homepage.name=Homepage
       - homepage.icon=homepage.png
-      - homepage.href=http://homepage.$DOMAIN
+      - homepage.href=http://homepage.{$DOMAIN}
       - homepage.description=This page
       - traefik.enable=true
+      - wud.tag.include=^v\d+?.\d+?.\d+?$
     volumes:
       - ./config:/app/config
-    ports:
-      - 3000:3000
     restart: unless-stopped
     environment:
-      PUID: $PUID
-      PGID: $PGID
+      PUID: ${PUID}
+      PGID: ${PGID}
 
 networks:
   default:
