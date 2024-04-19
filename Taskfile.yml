@@ -2,14 +2,15 @@ version: '3'
 
 env:
   DOMAIN: jkdb.duckdns.org
-  PUID:
-    sh: id -u
-  PGID: 
-    sh: id -g
+  PUID: 1000
+    # sh: id -u
+  PGID: 1000
+    # sh: id -g
+  # TODO: detect if windows/linux as use accordingly
 
 vars:
-  DOCKER_FOLDERS:
-    sh: ls ./docker/compose
+  DOCKER_FOLDERS: dockerproxy dozzle homepage postgres15 postgres16 traefik wud
+  #  sh: ls ./docker/compose
   DOCKER_NETWORKS: docker postgres web
 
 tasks:
