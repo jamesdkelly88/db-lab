@@ -1,5 +1,5 @@
 services:
-  wud:
+  pgadmin:
     image: dpage/pgadmin4:8.4
     container_name: pgadmin
     labels:

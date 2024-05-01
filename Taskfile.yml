@@ -27,8 +27,10 @@ tasks:
     - for: { var: DOCKER_FOLDERS }
       cmd: docker compose -f docker/compose/{{.ITEM}}/docker-compose.yml up -d --remove-orphans
 
-  # TODO: cleanup
-    # desc: Delete unused docker images
+  cleanup:
+    desc: Delete unused docker images
+    cmds:
+      - docker image prune -a -f
       
   destroy:
     desc: Destroy stack in current folder, including volumes
