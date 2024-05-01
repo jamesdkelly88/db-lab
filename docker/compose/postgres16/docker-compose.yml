@@ -2,7 +2,7 @@ services:
   postgres16:
     container_name: postgres16
     labels:
-      - homepage.group=Databases
+      - homepage.group=Relational
       - homepage.name=PostgreSQL 16
       - homepage.icon=postgres.png
       - homepage.description=PostgreSQL v16 (5432)

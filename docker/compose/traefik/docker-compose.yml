@@ -11,7 +11,7 @@ services:
       - TRAEFIK_PROVIDERS_DOCKER_DEFAULTRULE=Host(`{{ index .Labels "com.docker.compose.service" }}.${DOMAIN}`)
       # https://doc.traefik.io/traefik/reference/static-configuration/env/
     labels:
-      - homepage.group=Web
+      - homepage.group=Docker
       - homepage.name=Traefik
       - homepage.href=http://traefik.${DOMAIN}
       - homepage.icon=traefik.png
@@ -31,19 +31,19 @@ services:
       # - 443:443
     restart: unless-stopped
 
-  test:
-    image: traefik/whoami:v1.10.1
-    container_name: test
-    labels:
-      - homepage.group=Web
-      - homepage.name=Test
-      - homepage.icon=traefik.png
-      - homepage.href=http://test.${DOMAIN}
-      - homepage.description=Test page
-      - traefik.enable=true
-      - wud.tag.include=^v\d+?.\d+?.\d+?$
-    networks:
-      - default
+  # test:
+  #   image: traefik/whoami:v1.10.1
+  #   container_name: test
+  #   labels:
+  #     - homepage.group=Web
+  #     - homepage.name=Test
+  #     - homepage.icon=traefik.png
+  #     - homepage.href=http://test.${DOMAIN}
+  #     - homepage.description=Test page
+  #     - traefik.enable=true
+  #     - wud.tag.include=^v\d+?.\d+?.\d+?$
+  #   networks:
+  #     - default
 
 networks:
   default:

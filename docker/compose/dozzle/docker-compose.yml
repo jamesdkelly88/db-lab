@@ -5,7 +5,7 @@ services:
       - DOZZLE_REMOTE_HOST=tcp://dockerproxy:2375
     image: amir20/dozzle:v6.4.6
     labels:
-      - homepage.group=Web
+      - homepage.group=Docker
       - homepage.name=Dozzle
       - homepage.icon=dozzle.png
       - homepage.href=http://dozzle.${DOMAIN}

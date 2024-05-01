@@ -3,7 +3,7 @@ services:
     image: fmartinou/whats-up-docker:6.3.0
     container_name: wud
     labels:
-      - homepage.group=Web
+      - homepage.group=Docker
       - homepage.name=What's Up Docker
       - homepage.icon=wud.png
       - homepage.href=http://wud.${DOMAIN}

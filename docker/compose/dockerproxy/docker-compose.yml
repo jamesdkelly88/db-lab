@@ -3,7 +3,7 @@ services:
     image: ghcr.io/tecnativa/docker-socket-proxy:0.1.2
     container_name: dockerproxy
     labels:
-      - homepage.group=Services
+      - homepage.group=Docker
       - homepage.name=Docker
       - homepage.icon=docker.png
       - homepage.description=Docker socket read-only proxy

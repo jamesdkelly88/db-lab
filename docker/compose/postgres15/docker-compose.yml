@@ -2,7 +2,7 @@ services:
   postgres15:
     container_name: postgres15
     labels:
-      - homepage.group=Databases
+      - homepage.group=Relational
       - homepage.name=PostgreSQL 15
       - homepage.icon=postgres.png
       - homepage.description=PostgreSQL v15 (5433)
