@@ -1,0 +1,24 @@
+services:
+  wud:
+    image: dpage/pgadmin4:8.4
+    container_name: pgadmin
+    labels:
+      - homepage.group=Relational
+      - homepage.name=pgAdmin
+      - homepage.icon=pgadmin.png
+      - homepage.href=http://pgadmin.${DOMAIN}
+      - homepage.description=PostgreSQL admin web interface
+      - traefik.enable=true
+      - wud.tag.include=^8.\d+?$
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@pg.admin
+      - PGADMIN_DEFAULT_PASSWORD=password
+    networks:
+    - default
+    - web
+networks:
+  default:
+    name: postgres
+    external: true
+  web:
+    external: true
