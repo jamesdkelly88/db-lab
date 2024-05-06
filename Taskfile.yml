@@ -17,13 +17,25 @@ vars:
   DOCKER_NETWORKS: docker postgres web
 
 tasks:
+  all-destroy:
+    aliases:
+    - destroy-all
+    desc: Run docker compose down on all stacks, including volumes
+    cmds:
+    - for: { var: DOCKER_FOLDERS }
+      cmd: docker compose -f docker/compose/{{.ITEM}}/docker-compose.yml down --volumes
+  
   all-down:
-    desc: Run docker compose down on all stacks
+    aliases:
+    - down-all
+    desc: Run docker compose down on all stacks, excluding volumes
     cmds:
     - for: { var: DOCKER_FOLDERS }
       cmd: docker compose -f docker/compose/{{.ITEM}}/docker-compose.yml down
 
   all-up:
+    aliases:
+    - up-all
     desc: Run docker compose up on all stacks
     deps: 
     - networks
@@ -32,6 +44,8 @@ tasks:
       cmd: docker compose -f docker/compose/{{.ITEM}}/docker-compose.yml up -d --remove-orphans
 
   baseline-up:
+    aliases:
+    - up-baseline
     desc: Launch bare minimum for working lab with homepage
     deps:
     - networks
@@ -73,6 +87,8 @@ tasks:
         cmd: docker network inspect {{.ITEM}} --format \{\{.Id\}\} 2>/dev/null || docker network create --driver bridge {{.ITEM}}
   
   test-pwsh:
+    aliases:
+    - pwsh-test
     desc: Test database using powershell script
     dir: '{{.USER_WORKING_DIR}}'
     preconditions:
