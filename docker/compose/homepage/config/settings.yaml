@@ -7,8 +7,10 @@ providers:
   weatherapi: weatherapiapikey
 
 layout:
-  Databases:
+  Docker:
     # style: row
     # columns: 3
-  Web:
-  Services:
+  Relational:
+  Document:
+  Graph:
+  Vector:

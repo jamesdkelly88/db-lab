@@ -6,8 +6,12 @@ env:
     sh: id -u
   PGID:
     sh: id -g
+  SECRET_EMAIL: admin@jkdb.duckdns.org
+  SECRET_PASSWORD: Pa$$w0rd
+  SECRET_USER: admin
 
 vars:
+  BASELINE: dockerproxy traefik homepage
   DOCKER_FOLDERS:
     sh: ls ./docker/compose
   DOCKER_NETWORKS: docker postgres web
@@ -25,6 +29,14 @@ tasks:
     - networks
     cmds:
     - for: { var: DOCKER_FOLDERS }
+      cmd: docker compose -f docker/compose/{{.ITEM}}/docker-compose.yml up -d --remove-orphans
+
+  baseline-up:
+    desc: Launch bare minimum for working lab with homepage
+    deps:
+    - networks
+    cmds:
+    - for: { var: BASELINE }
       cmd: docker compose -f docker/compose/{{.ITEM}}/docker-compose.yml up -d --remove-orphans
 
   cleanup:
@@ -60,6 +72,29 @@ tasks:
       - for: { var: DOCKER_NETWORKS }
         cmd: docker network inspect {{.ITEM}} --format \{\{.Id\}\} 2>/dev/null || docker network create --driver bridge {{.ITEM}}
   
+  test-pwsh:
+    desc: Test database using powershell script
+    dir: '{{.USER_WORKING_DIR}}'
+    preconditions:
+      - test -f test.ps1
+    cmds:
+      - pwsh -f ./test.ps1
+
+  # test-py:
+  #   desc: Test database using python script
+  #   dir: '{{.USER_WORKING_DIR}}'
+  #   preconditions:
+  #     - test -f test.py
+  #   cmds:
+  #     - cmd: virtualenv venv
+  #     - cmd: source venv/bin/activate <- fails here
+  #       platforms: [darwin, linux]
+  #     - cmd: source venv/scripts/activate.bat
+  #       platforms: [windows]
+  #     - cmd: pip install -r ./requirements.txt
+  #     - cmd: python ./test.py
+  #     - cmd: deactivate
+
   up:
     desc: Deploy stack in current folder
     dir: '{{.USER_WORKING_DIR}}'
