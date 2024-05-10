@@ -1,16 +1,18 @@
 ---
 # For configuration options and examples, please see:
 # https://gethomepage.dev/latest/configs/settings
+fiveColumns: true
+
+layout:
+  Docker:
+  Relational:
+  Document:
+  Graph:
+  Vector:
 
 providers:
   openweathermap: openweathermapapikey
   weatherapi: weatherapiapikey
 
-layout:
-  Docker:
-    # style: row
-    # columns: 3
-  Relational:
-  Document:
-  Graph:
-  Vector:
+statusStyle: "dot"
+

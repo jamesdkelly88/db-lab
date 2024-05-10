@@ -1,12 +1,3 @@
 ---
 # For configuration options and examples, please see:
 # https://gethomepage.dev/latest/configs/bookmarks
-
-- Development:
-    - Github:
-        - abbr: GH
-          href: https://github.com/jamesdkelly88/db-lab
-    - Azure Devops:
-        - abbr: ADO
-          href: https://dev.azure.com/jdkhomelab/Homelab/_build?definitionScope=%5CDatabases
-
