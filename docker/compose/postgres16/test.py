@@ -1,5 +1,6 @@
 import psycopg2
 
+# TODO - env var for password, hostname, port
 try:
     conn = psycopg2.connect("dbname='postgres' user='postgres' host='localhost' password='P@ssw0rd'")
 except:

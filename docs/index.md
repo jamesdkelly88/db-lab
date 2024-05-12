@@ -1,4 +1,4 @@
-# Database Lab
+# Introduction
 
 This repository is my database lab. It provides containerised environments for many database platforms and some supporting technologies.
 
