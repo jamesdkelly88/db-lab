@@ -1,8 +1,12 @@
 import psycopg2
+import os
 
-# TODO - env var for password, hostname, port
+password = os.environ['SECRET_PASSWORD']
+host = os.environ['DOMAIN']
+port = 5432
+
 try:
-    conn = psycopg2.connect("dbname='postgres' user='postgres' host='localhost' password='P@ssw0rd'")
+    conn = psycopg2.connect(f"dbname='postgres' user='postgres' host='{host}' port={port} password='{password}'")
 except:
     print("I am unable to connect to the database")
     quit()

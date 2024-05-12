@@ -13,8 +13,7 @@ services:
     networks:
     - default
     volumes:
-    - ${PWD}/../../../mkdocs.yml:/docs/mkdocs.yml
-    - ${PWD}/../../../docs:/docs/docs
+    - ${PWD}/../../../docs:/docs
 networks:
   default:
     name: web

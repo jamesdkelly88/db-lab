@@ -14,7 +14,7 @@ vars:
   BASELINE: dockerproxy traefik homepage mkdocs
   DOCKER_FOLDERS:
     sh: ls ./docker/compose
-  DOCKER_NETWORKS: docker postgres web
+  DOCKER_NETWORKS: backup docker postgres web
 
 tasks:
   all-destroy:
@@ -54,6 +54,15 @@ tasks:
     - for: { var: BASELINE }
       cmd: docker compose -f docker/compose/{{.ITEM}}/docker-compose.yml up -d --remove-orphans
 
+  backup:
+    desc: backup database(s)
+    dir: '{{.USER_WORKING_DIR}}'
+    preconditions:
+      - test -f backup.sh
+    cmds:
+      - chmod +x backup.sh && ./backup.sh
+    silent: true
+
   cleanup:
     desc: Delete unused docker images
     cmds:
@@ -86,6 +95,15 @@ tasks:
     cmds:
       - for: { var: DOCKER_NETWORKS }
         cmd: docker network inspect {{.ITEM}} --format \{\{.Id\}\} 2>/dev/null || docker network create --driver bridge {{.ITEM}}
+
+  sample:
+    desc: deploy a sample database
+    dir: '{{.USER_WORKING_DIR}}'
+    preconditions:
+      - test -f sample.sh
+    cmds:
+      - chmod +x sample.sh && ./sample.sh
+    silent: true
   
   test-pwsh:
     aliases:
@@ -96,6 +114,7 @@ tasks:
       - test -f test.ps1
     cmds:
       - pwsh -f ./test.ps1
+    silent: true
 
   test-py:
     aliases:
@@ -109,6 +128,7 @@ tasks:
         virtualenv env > /dev/null
         ./env/bin/pip install -r requirements.txt > /dev/null
         ./env/bin/python test.py
+    silent: true
 
   up:
     desc: Deploy stack in current folder

@@ -1,5 +1,11 @@
 # Traefik
 
+[:fontawesome-solid-globe: Project Homepage](https://traefik.io/traefik/)
+
+[:simple-git: Repository](https://github.com/traefik)
+
+[:simple-docker: Container Registry](https://hub.docker.com/_/traefik)
+
 Reverse proxy for web services
 
 ## Requirements

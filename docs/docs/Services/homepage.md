@@ -1,8 +1,10 @@
 # Homepage
 
-[Project Homepage](https://gethomepage.dev/)
-[Repository](https://github.com/gethomepage/homepage)
-[Container Registry](https://ghcr.io/gethomepage/homepage)
+[:fontawesome-solid-globe: Project Homepage](https://gethomepage.dev/)
+
+[:simple-git: Repository](https://github.com/gethomepage/homepage)
+
+[:simple-docker: Container Registry](https://ghcr.io/gethomepage/homepage)
 
 ## Requirements
 
