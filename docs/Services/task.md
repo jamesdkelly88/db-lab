@@ -1,4 +1,4 @@
-# Task (taskfile)
+# Task
 
 This repository uses a single global taskfile to manage the database lab. Use `task list-all` to view the configured tasks and their descriptions.
 

@@ -1,0 +1,21 @@
+services:
+  mkdocs:
+    image: squidfunk/mkdocs-material:9.5.21
+    container_name: mkdocs
+    labels:
+      - homepage.group=Docker
+      - homepage.name=Documentation
+      - homepage.icon=mkdocs.png
+      - homepage.href=http://mkdocs.${DOMAIN}
+      - homepage.description=Lab documentation using MkDocs
+      - traefik.enable=true
+      - wud.tag.include=^\d+?.\d+?.\d+?$
+    networks:
+    - default
+    volumes:
+    - ${PWD}/../../../mkdocs.yml:/docs/mkdocs.yml
+    - ${PWD}/../../../docs:/docs/docs
+networks:
+  default:
+    name: web
+    external: true

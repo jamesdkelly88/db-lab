@@ -13,5 +13,7 @@ repo_url: https://github.com/jamesdkelly88/db-lab
 site_name: Db-Lab
 theme:
   name: material
+  features:
+  - navigation.expand
   palette:
     scheme: slate

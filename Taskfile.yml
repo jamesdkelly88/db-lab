@@ -7,11 +7,11 @@ env:
   PGID:
     sh: id -g
   SECRET_EMAIL: admin@jkdb.duckdns.org
-  SECRET_PASSWORD: Pa$$w0rd
+  SECRET_PASSWORD: P@ssw0rd
   SECRET_USER: admin
 
 vars:
-  BASELINE: dockerproxy traefik homepage
+  BASELINE: dockerproxy traefik homepage mkdocs
   DOCKER_FOLDERS:
     sh: ls ./docker/compose
   DOCKER_NETWORKS: docker postgres web
@@ -45,6 +45,7 @@ tasks:
 
   baseline-up:
     aliases:
+    - baseline
     - up-baseline
     desc: Launch bare minimum for working lab with homepage
     deps:
@@ -96,20 +97,18 @@ tasks:
     cmds:
       - pwsh -f ./test.ps1
 
-  # test-py:
-  #   desc: Test database using python script
-  #   dir: '{{.USER_WORKING_DIR}}'
-  #   preconditions:
-  #     - test -f test.py
-  #   cmds:
-  #     - cmd: virtualenv venv
-  #     - cmd: source venv/bin/activate <- fails here
-  #       platforms: [darwin, linux]
-  #     - cmd: source venv/scripts/activate.bat
-  #       platforms: [windows]
-  #     - cmd: pip install -r ./requirements.txt
-  #     - cmd: python ./test.py
-  #     - cmd: deactivate
+  test-py:
+    aliases:
+    - py-test
+    desc: Test database using python script
+    dir: '{{.USER_WORKING_DIR}}'
+    preconditions:
+      - test -f test.py
+    cmds:
+    - cmd: |
+        virtualenv env > /dev/null
+        ./env/bin/pip install -r requirements.txt > /dev/null
+        ./env/bin/python test.py
 
   up:
     desc: Deploy stack in current folder
