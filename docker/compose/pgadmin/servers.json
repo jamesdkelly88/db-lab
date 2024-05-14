@@ -17,6 +17,33 @@
             "MaintenanceDB": "postgres",
             "Username": "postgres",
             "SSLMode": "prefer"
+        },
+        "3": {
+            "Name": "v14",
+            "Group": "Servers",
+            "Host": "postgres14",
+            "Port": 5432,
+            "MaintenanceDB": "postgres",
+            "Username": "postgres",
+            "SSLMode": "prefer"
+        },
+        "4": {
+            "Name": "v13",
+            "Group": "Servers",
+            "Host": "postgres13",
+            "Port": 5432,
+            "MaintenanceDB": "postgres",
+            "Username": "postgres",
+            "SSLMode": "prefer"
+        },
+        "5": {
+            "Name": "v12",
+            "Group": "Servers",
+            "Host": "postgres12",
+            "Port": 5432,
+            "MaintenanceDB": "postgres",
+            "Username": "postgres",
+            "SSLMode": "prefer"
         }
     }
 }

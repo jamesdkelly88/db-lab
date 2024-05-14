@@ -1,6 +1,6 @@
 services:
   mkdocs:
-    image: squidfunk/mkdocs-material:9.5.21
+    image: squidfunk/mkdocs-material:9.5.22
     container_name: mkdocs
     labels:
       - homepage.group=Docker
@@ -12,8 +12,12 @@ services:
       - wud.tag.include=^\d+?.\d+?.\d+?$
     networks:
     - default
+    restart: unless-stopped
     volumes:
-    - ${PWD}/../../../docs:/docs
+    - ./content:/docs
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
 networks:
   default:
     name: web

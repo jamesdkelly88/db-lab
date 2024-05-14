@@ -11,11 +11,12 @@ services:
       - traefik.enable=true
       - wud.tag.include=^8.\d+?$
     environment:
-      - PGADMIN_DEFAULT_EMAIL=${SECRET_EMAIL}
-      - PGADMIN_DEFAULT_PASSWORD=${SECRET_PASSWORD}
+      PGADMIN_DEFAULT_EMAIL: ${SECRET_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${SECRET_PASSWORD}
     networks:
     - default
     - web
+    restart: unless-stopped
     volumes:
     - ./servers.json:/pgadmin4/servers.json
 networks:

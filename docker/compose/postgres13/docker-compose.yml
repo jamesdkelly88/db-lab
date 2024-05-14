@@ -1,18 +1,17 @@
 services:
-  postgres16:
-    container_name: postgres16
+  postgres13:
+    container_name: postgres13
     labels:
       - homepage.group=Relational
-      - homepage.name=PostgreSQL 16
+      - homepage.name=PostgreSQL 13
       - homepage.icon=postgres.png
-      - homepage.description=PostgreSQL v16 (5432)
-      - wud.tag.include=^16.\d{1,2}-alpine.+?$
+      - homepage.description=PostgreSQL v13 (5435)
+      - wud.tag.include=^13.\d{1,2}-alpine.+?$
     environment:
-      POSTGRES_HOST_AUTH_METHOD: scram-sha-256
       POSTGRES_PASSWORD: ${SECRET_PASSWORD}
-    image: postgres:16.3-alpine3.19
+    image: postgres:13.15-alpine3.19
     ports:
-    - 5432:5432
+    - 5435:5432
     restart: unless-stopped
     volumes:
     - data:/var/lib/postgresql/data
@@ -21,6 +20,6 @@ networks:
   default:
     name: postgres
     external: true
-
+      
 volumes:
   data:

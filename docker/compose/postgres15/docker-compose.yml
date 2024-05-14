@@ -8,8 +8,8 @@ services:
       - homepage.description=PostgreSQL v15 (5433)
       - wud.tag.include=^15.\d{1,2}-alpine.+?$
     environment:
-    - POSTGRES_HOST_AUTH_METHOD=scram-sha-256
-    - POSTGRES_PASSWORD=${SECRET_PASSWORD}
+      POSTGRES_HOST_AUTH_METHOD: scram-sha-256
+      POSTGRES_PASSWORD: ${SECRET_PASSWORD}
     image: postgres:15.7-alpine3.19
     ports:
     - 5433:5432

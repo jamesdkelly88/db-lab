@@ -3,7 +3,7 @@ services:
     image: fmartinou/whats-up-docker:6.3.0
     container_name: wud
     environment:
-    - WUD_WATCHER_LOCAL_CRON=0 12 * * *
+      WUD_WATCHER_LOCAL_CRON: 0 12 * * *
     labels:
       - homepage.group=Docker
       - homepage.name=What's Up Docker
@@ -17,6 +17,7 @@ services:
     networks:
     - default
     - web
+    restart: unless-stopped
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro # Mounted as read-only
 networks:

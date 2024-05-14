@@ -4,8 +4,10 @@ services:
     container_name: minio
     command: server /data --console-address ":9001"
     environment:
-    - MINIO_ROOT_USER=${SECRET_USER}
-    - MINIO_ROOT_PASSWORD=${SECRET_PASSWORD}
+      MINIO_ROOT_USER: ${SECRET_USER}
+      MINIO_ROOT_PASSWORD: ${SECRET_PASSWORD}
+      PUID: ${PUID}
+      PGID: ${PGID}
     labels:
       - homepage.group=Docker
       - homepage.name=MinIO
@@ -20,8 +22,9 @@ services:
     - web
     ports:
     - 9000:9000
+    restart: unless-stopped
     volumes:
-    - ${PWD}/data:/data
+    - ./data:/data
 networks:
   default:
     name: backup

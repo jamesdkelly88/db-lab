@@ -2,8 +2,8 @@ services:
   dozzle:
     container_name: dozzle
     environment:
-      - DOZZLE_REMOTE_HOST=tcp://dockerproxy:2375
-    image: amir20/dozzle:v6.5.2
+      DOZZLE_REMOTE_HOST: tcp://dockerproxy:2375
+    image: amir20/dozzle:v6.6.2
     labels:
       - homepage.group=Docker
       - homepage.name=Dozzle

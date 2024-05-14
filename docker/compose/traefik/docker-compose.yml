@@ -3,12 +3,12 @@ services:
     image: traefik:v2.11.2
     container_name: traefik
     environment:
-      - TRAEFIK_API_INSECURE=true
-      - TRAEFIK_PROVIDERS_DOCKER=true
-      - TRAEFIK_PROVIDERS_DOCKER_ENDPOINT=tcp://dockerproxy:2375
-      - TRAEFIK_PROVIDERS_DOCKER_EXPOSEDBYDEFAULT=false
-      - TRAEFIK_PROVIDERS_DOCKER_NETWORK=web
-      - TRAEFIK_PROVIDERS_DOCKER_DEFAULTRULE=Host(`{{ index .Labels "com.docker.compose.service" }}.${DOMAIN}`)
+      TRAEFIK_API_INSECURE: true
+      TRAEFIK_PROVIDERS_DOCKER: true
+      TRAEFIK_PROVIDERS_DOCKER_ENDPOINT: tcp://dockerproxy:2375
+      TRAEFIK_PROVIDERS_DOCKER_EXPOSEDBYDEFAULT: false
+      TRAEFIK_PROVIDERS_DOCKER_NETWORK: web
+      TRAEFIK_PROVIDERS_DOCKER_DEFAULTRULE: Host(`{{ index .Labels "com.docker.compose.service" }}.${DOMAIN}`)
       # https://doc.traefik.io/traefik/reference/static-configuration/env/
     labels:
       - homepage.group=Docker
