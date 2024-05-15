@@ -17,6 +17,22 @@ vars:
   DOCKER_NETWORKS: backup docker postgres web
 
 tasks:
+  all-backup:
+    aliases:
+    - backup-all
+    desc: Run backup script on all stacks where available
+    cmds:
+    - for: { var: DOCKER_FOLDERS}
+      cmd: |
+        cd docker/compose/{{.ITEM}}
+        if [ -f "backup.sh" ]; then
+          echo "Backing up {{.ITEM}}"
+          chmod +x backup.sh
+          ./backup.sh > /dev/null
+        else
+          echo "Skipping {{.ITEM}}"
+        fi
+    silent: true
   all-destroy:
     aliases:
     - destroy-all

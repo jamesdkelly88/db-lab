@@ -1,8 +1,6 @@
 services:
   dozzle:
     container_name: dozzle
-    environment:
-      DOZZLE_REMOTE_HOST: tcp://dockerproxy:2375
     image: amir20/dozzle:v6.6.2
     labels:
       - homepage.group=Docker
@@ -16,6 +14,8 @@ services:
     - default
     - web
     restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro # Mounted as read-only (some features fail using proxy)
 networks:
   default:
     name: docker
