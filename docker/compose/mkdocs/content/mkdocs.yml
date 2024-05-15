@@ -1,0 +1,23 @@
+copyright: © James Kelly 2024
+dev_addr: '0.0.0.0:8080'
+# extra_css:
+#   - css/badges.css
+#   - css/expand.css
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tilde
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+repo_name: GitHub
+repo_url: https://github.com/jamesdkelly88/db-lab
+site_name: Db-Lab
+theme:
+  name: material
+  features:
+  - navigation.expand
+  palette:
+    scheme: slate

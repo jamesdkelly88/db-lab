@@ -1,0 +1,27 @@
+services:
+  pgadmin:
+    image: dpage/pgadmin4:8.6
+    container_name: pgadmin
+    labels:
+      - homepage.group=Relational
+      - homepage.name=pgAdmin
+      - homepage.icon=pgadmin.png
+      - homepage.href=http://pgadmin.${DOMAIN}
+      - homepage.description=PostgreSQL admin web interface
+      - traefik.enable=true
+      - wud.tag.include=^8.\d+?$
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${SECRET_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${SECRET_PASSWORD}
+    networks:
+    - default
+    - web
+    restart: unless-stopped
+    volumes:
+    - ./servers.json:/pgadmin4/servers.json
+networks:
+  default:
+    name: postgres
+    external: true
+  web:
+    external: true

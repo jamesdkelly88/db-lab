@@ -1,0 +1,24 @@
+services:
+  dozzle:
+    container_name: dozzle
+    image: amir20/dozzle:v6.6.2
+    labels:
+      - homepage.group=Docker
+      - homepage.name=Dozzle
+      - homepage.icon=dozzle.png
+      - homepage.href=http://dozzle.${DOMAIN}
+      - homepage.description=Container log viewer
+      - traefik.enable=true
+      - wud.tag.include=^v\d+?.\d+?.\d+?$
+    networks:
+    - default
+    - web
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro # Mounted as read-only (some features fail using proxy)
+networks:
+  default:
+    name: docker
+    external: true
+  web:
+    external: true

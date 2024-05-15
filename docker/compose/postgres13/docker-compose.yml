@@ -1,0 +1,25 @@
+services:
+  postgres13:
+    container_name: postgres13
+    labels:
+      - homepage.group=Relational
+      - homepage.name=PostgreSQL 13
+      - homepage.icon=postgres.png
+      - homepage.description=PostgreSQL v13 (5435)
+      - wud.tag.include=^13.\d{1,2}-alpine.+?$
+    environment:
+      POSTGRES_PASSWORD: ${SECRET_PASSWORD}
+    image: postgres:13.15-alpine3.19
+    ports:
+    - 5435:5432
+    restart: unless-stopped
+    volumes:
+    - data:/var/lib/postgresql/data
+
+networks:
+  default:
+    name: postgres
+    external: true
+      
+volumes:
+  data:

@@ -1,0 +1,25 @@
+services:
+  postgres12:
+    container_name: postgres12
+    labels:
+      - homepage.group=Relational
+      - homepage.name=PostgreSQL 12
+      - homepage.icon=postgres.png
+      - homepage.description=PostgreSQL v12 (5436)
+      - wud.tag.include=^12.\d{1,2}-alpine.+?$
+    environment:
+      POSTGRES_PASSWORD: ${SECRET_PASSWORD}
+    image: postgres:12.19-alpine3.19
+    ports:
+    - 5436:5432
+    restart: unless-stopped
+    volumes:
+    - data:/var/lib/postgresql/data
+
+networks:
+  default:
+    name: postgres
+    external: true
+      
+volumes:
+  data:

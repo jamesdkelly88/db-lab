@@ -1,0 +1,157 @@
+version: '3'
+
+env:
+  DOMAIN: jkdb.duckdns.org
+  PUID:
+    sh: id -u
+  PGID:
+    sh: id -g
+  SECRET_EMAIL: admin@jkdb.duckdns.org
+  SECRET_PASSWORD: P@ssw0rd
+  SECRET_USER: admin
+
+vars:
+  BASELINE: dockerproxy traefik homepage mkdocs
+  DOCKER_FOLDERS:
+    sh: ls ./docker/compose
+  DOCKER_NETWORKS: backup docker postgres web
+
+tasks:
+  all-backup:
+    aliases:
+    - backup-all
+    desc: Run backup script on all stacks where available
+    cmds:
+    - for: { var: DOCKER_FOLDERS}
+      cmd: |
+        cd docker/compose/{{.ITEM}}
+        if [ -f "backup.sh" ]; then
+          echo "Backing up {{.ITEM}}"
+          chmod +x backup.sh
+          ./backup.sh > /dev/null
+        else
+          echo "Skipping {{.ITEM}}"
+        fi
+    silent: true
+  all-destroy:
+    aliases:
+    - destroy-all
+    desc: Run docker compose down on all stacks, including volumes
+    cmds:
+    - for: { var: DOCKER_FOLDERS }
+      cmd: docker compose -f docker/compose/{{.ITEM}}/docker-compose.yml down --volumes
+  
+  all-down:
+    aliases:
+    - down-all
+    desc: Run docker compose down on all stacks, excluding volumes
+    cmds:
+    - for: { var: DOCKER_FOLDERS }
+      cmd: docker compose -f docker/compose/{{.ITEM}}/docker-compose.yml down
+
+  all-up:
+    aliases:
+    - up-all
+    desc: Run docker compose up on all stacks
+    deps: 
+    - networks
+    cmds:
+    - for: { var: DOCKER_FOLDERS }
+      cmd: docker compose -f docker/compose/{{.ITEM}}/docker-compose.yml up -d --remove-orphans
+
+  baseline-up:
+    aliases:
+    - baseline
+    - up-baseline
+    desc: Launch bare minimum for working lab with homepage
+    deps:
+    - networks
+    cmds:
+    - for: { var: BASELINE }
+      cmd: docker compose -f docker/compose/{{.ITEM}}/docker-compose.yml up -d --remove-orphans
+
+  backup:
+    desc: backup database(s)
+    dir: '{{.USER_WORKING_DIR}}'
+    preconditions:
+      - test -f backup.sh
+    cmds:
+      - chmod +x backup.sh && ./backup.sh
+    silent: true
+
+  cleanup:
+    desc: Delete unused docker images
+    cmds:
+      - docker image prune -a -f
+      
+  destroy:
+    desc: Destroy stack in current folder, including volumes
+    dir: '{{.USER_WORKING_DIR}}'
+    preconditions:
+      - test -f docker-compose.yml
+    cmds:
+      - docker compose down --volumes
+  
+  down:
+    desc: Destroy stack in current folder, excluding volumes
+    dir: '{{.USER_WORKING_DIR}}'
+    preconditions:
+      - test -f docker-compose.yml
+    cmds:
+      - docker compose down
+  
+  hello:
+    desc: Hello world task
+    cmds:
+      - echo 'Hello World from Task!'
+    silent: true
+
+  networks:
+    desc: Create required docker networks
+    cmds:
+      - for: { var: DOCKER_NETWORKS }
+        cmd: docker network inspect {{.ITEM}} --format \{\{.Id\}\} 2>/dev/null || docker network create --driver bridge {{.ITEM}}
+
+  sample:
+    desc: deploy a sample database
+    dir: '{{.USER_WORKING_DIR}}'
+    preconditions:
+      - test -f sample.sh
+    cmds:
+      - chmod +x sample.sh && ./sample.sh
+    silent: true
+  
+  test-pwsh:
+    aliases:
+    - pwsh-test
+    desc: Test database using powershell script
+    dir: '{{.USER_WORKING_DIR}}'
+    preconditions:
+      - test -f test.ps1
+    cmds:
+      - pwsh -f ./test.ps1
+    silent: true
+
+  test-py:
+    aliases:
+    - py-test
+    desc: Test database using python script
+    dir: '{{.USER_WORKING_DIR}}'
+    preconditions:
+      - test -f test.py
+    cmds:
+    - cmd: |
+        virtualenv env > /dev/null
+        ./env/bin/pip install -r requirements.txt > /dev/null
+        ./env/bin/python test.py
+    silent: true
+
+  up:
+    desc: Deploy stack in current folder
+    dir: '{{.USER_WORKING_DIR}}'
+    deps:
+      - networks
+    preconditions:
+      - test -f docker-compose.yml
+    cmds:
+      - docker compose up -d --remove-orphans

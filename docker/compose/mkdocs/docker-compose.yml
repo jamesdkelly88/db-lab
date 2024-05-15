@@ -1,0 +1,24 @@
+services:
+  mkdocs:
+    image: squidfunk/mkdocs-material:9.5.23
+    container_name: mkdocs
+    labels:
+      - homepage.group=Docker
+      - homepage.name=Documentation
+      - homepage.icon=mkdocs.png
+      - homepage.href=http://mkdocs.${DOMAIN}
+      - homepage.description=Lab documentation using MkDocs
+      - traefik.enable=true
+      - wud.tag.include=^\d+?.\d+?.\d+?$
+    networks:
+    - default
+    restart: unless-stopped
+    volumes:
+    - ./content:/docs
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+networks:
+  default:
+    name: web
+    external: true
