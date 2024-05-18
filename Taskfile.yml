@@ -11,7 +11,7 @@ env:
   SECRET_USER: admin
 
 vars:
-  BASELINE: dockerproxy traefik homepage mkdocs
+  BASELINE: dockerproxy dozzle traefik homepage mkdocs wud
   DOCKER_FOLDERS:
     sh: ls ./docker/compose
   DOCKER_NETWORKS: backup docker postgres web

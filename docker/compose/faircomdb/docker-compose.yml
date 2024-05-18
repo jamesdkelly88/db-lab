@@ -1,0 +1,25 @@
+services:
+  faircomdb:
+    build: .
+    container_name: faircomdb
+    labels:
+      - homepage.group=NoSQL
+      - homepage.name=Faircom DB
+      - homepage.href=http://faircomdb.${DOMAIN}
+      - homepage.icon=https://assets-global.website-files.com/65021260e4fae0ddc09307a3/6564be626a7dcacab9a4e49f_DB-Icon.svg
+      - homepage.description=FairCom DB v12 Demo Server [6597]
+      - traefik.enable=true
+      - traefik.http.services.faircomdb-faircomdb.loadbalancer.server.port=8080
+    ports:
+      - 6597:6597
+    restart: unless-stopped
+    volumes:
+      - data:/faircomdb/data
+
+networks:
+  default:
+    name: web
+    external: true
+
+volumes:
+  data:

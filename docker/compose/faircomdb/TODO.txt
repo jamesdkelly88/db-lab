@@ -1,0 +1,6 @@
+Logging - nothing written to files/stdout currently
+Default password
+Test connection scripts
+Backups
+Sample database
+Custom configuration file?
