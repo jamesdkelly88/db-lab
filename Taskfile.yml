@@ -14,7 +14,7 @@ vars:
   BASELINE: dockerproxy traefik homepage mkdocs
   DOCKER_FOLDERS:
     sh: ls ./docker/compose
-  DOCKER_NETWORKS: backup docker postgres web
+  DOCKER_NETWORKS: backup docker dynamodb postgres web
 
 tasks:
   all-backup:
