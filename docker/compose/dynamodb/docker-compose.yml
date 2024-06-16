@@ -1,0 +1,31 @@
+services:
+  dynamodb:
+    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ./data"
+    container_name: dynamodb
+    labels:
+      - homepage.group=Document
+      - homepage.name=DynamoDB
+      - homepage.icon=aws.png
+      - homepage.description=DynamoDB Local (8000)
+      - wud.tag.include=^v\d+?.\d+?.\d+?$
+    environment:
+      - AWS_ACCESS_KEY_ID=""
+      - AWS_SECRET_ACCESS_KEY=""
+      - AWS_SESSION_TOKEN=""
+      - AWS_DEFAULT_REGION=us-east-1
+    image: amazon/dynamodb-local:2.5.0
+    ports:
+    - 8000:8000
+    restart: unless-stopped
+    user: root
+    volumes:
+    - data:/home/dynamodblocal/data
+    working_dir: /home/dynamodblocal
+
+networks:
+  default:
+    name: dynamodb
+    external: true
+      
+volumes:
+  data:

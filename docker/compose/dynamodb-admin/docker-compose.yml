@@ -1,0 +1,28 @@
+services:
+  dynamodb-admin:
+    container_name: dynamodb-admin
+    labels:
+      - homepage.group=Document
+      - homepage.name=DynamoDB Admin
+      - homepage.icon=aws.png
+      - homepage.href=http://dynamodb-admin.${DOMAIN}
+      - homepage.description=DynamoDB admin web interface
+      - traefik.enable=true
+      - wud.tag.include=^v\d+?.\d+?.\d+?$
+    environment:
+      DYNAMO_ENDPOINT: "http://dynamodb:8000"
+      AWS_ACCESS_KEY_ID: local
+      AWS_REGION: us-east-1
+      AWS_SECRET_ACCESS_KEY: local
+    image: aaronshaf/dynamodb-admin:4.6.1
+    networks:
+    - default
+    - web
+    restart: unless-stopped
+
+networks:
+  default:
+    name: dynamodb
+    external: true
+  web:
+    external: true

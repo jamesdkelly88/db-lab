@@ -1,8 +1,7 @@
 copyright: © James Kelly 2024
 dev_addr: '0.0.0.0:8080'
-# extra_css:
-#   - css/badges.css
-#   - css/expand.css
+extra_css:
+  - css/extra.css
 markdown_extensions:
   - admonition
   - pymdownx.details

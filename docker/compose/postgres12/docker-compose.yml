@@ -9,7 +9,7 @@ services:
       - wud.tag.include=^12.\d{1,2}-alpine.+?$
     environment:
       POSTGRES_PASSWORD: ${SECRET_PASSWORD}
-    image: postgres:12.19-alpine3.19
+    image: postgres:12.19-alpine3.20
     ports:
     - 5436:5432
     restart: unless-stopped
