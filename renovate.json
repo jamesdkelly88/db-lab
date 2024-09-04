@@ -3,6 +3,7 @@
   "extends": [
     "config:recommended"
   ],
+  "baseBranches": ["main"],
   "packageRules": [
     {
       "matchUpdateTypes": ["major"],
