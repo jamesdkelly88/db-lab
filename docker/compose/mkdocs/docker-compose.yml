@@ -1,6 +1,6 @@
 services:
   mkdocs:
-    image: squidfunk/mkdocs-material:9.5.36
+    image: squidfunk/mkdocs-material:9.5.38
     container_name: mkdocs
     labels:
       - homepage.group=Docker
