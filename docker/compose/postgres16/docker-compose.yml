@@ -5,14 +5,14 @@ services:
       - homepage.group=Relational
       - homepage.name=PostgreSQL 16
       - homepage.icon=postgres.png
-      - homepage.description=PostgreSQL v16 (5432)
+      - homepage.description=PostgreSQL v16 (54326)
       - wud.tag.include=^16.\d{1,2}-alpine.+?$
     environment:
       POSTGRES_HOST_AUTH_METHOD: scram-sha-256
       POSTGRES_PASSWORD: ${SECRET_PASSWORD}
     image: postgres:16.4-alpine3.20
     ports:
-    - 5432:5432
+    - 54326:5432
     restart: unless-stopped
     volumes:
     - data:/var/lib/postgresql/data

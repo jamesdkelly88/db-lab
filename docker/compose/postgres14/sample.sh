@@ -5,7 +5,7 @@ git clone https://github.com/devrimgunduz/pagila.git sample
 echo "Opening repository"
 
 export PGHOST=localhost
-export PGPORT=5434
+export PGPORT=54324
 export PGDATABASE=postgres
 export PGUSER=postgres
 export PGPASSWORD=${SECRET_PASSWORD}

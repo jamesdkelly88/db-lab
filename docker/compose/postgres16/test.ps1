@@ -2,7 +2,7 @@ Install-Module PSPostgres
 Import-Module PSPostgres
 
 $hostname            = $env:DOMAIN
-$port                = 5432
+$port                = 54326
 $username            = "postgres"
 $password            = $env:SECRET_PASSWORD
 

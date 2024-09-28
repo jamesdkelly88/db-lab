@@ -14,7 +14,7 @@ else
 fi
 
 export PGHOST=localhost
-export PGPORT=5432
+export PGPORT=54326
 export PGDATABASE=postgres
 export PGUSER=postgres
 export PGPASSWORD=${SECRET_PASSWORD}
