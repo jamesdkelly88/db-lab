@@ -57,7 +57,7 @@ tasks:
     - networks
     cmds:
     - for: { var: DOCKER_FOLDERS }
-      cmd: docker compose -f docker/compose/{{.ITEM}}/docker-compose.yml up -d --remove-orphans
+      cmd: docker compose -f docker/compose/{{.ITEM}}/docker-compose.yml up --build -d --remove-orphans
 
   baseline-up:
     aliases:
@@ -154,4 +154,4 @@ tasks:
     preconditions:
       - test -f docker-compose.yml
     cmds:
-      - docker compose up -d --remove-orphans
+      - docker compose up --build -d --remove-orphans

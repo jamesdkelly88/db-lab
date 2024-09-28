@@ -53,6 +53,42 @@
             "MaintenanceDB": "postgres",
             "Username": "postgres",
             "SSLMode": "prefer"
+        },
+        "ha": {
+            "Name": "HA",
+            "Group": "Servers",
+            "Host": "pg-proxy",
+            "Port": 5432,
+            "MaintenanceDB": "postgres",
+            "Username": "postgres",
+            "SSLMode": "prefer"
+        },
+        "ha-1": {
+            "Name": "HA-Primary",
+            "Group": "Servers",
+            "Host": "pg-primary",
+            "Port": 5432,
+            "MaintenanceDB": "postgres",
+            "Username": "postgres",
+            "SSLMode": "prefer"
+        },
+        "ha-2": {
+            "Name": "HA-Secondary",
+            "Group": "Servers",
+            "Host": "pg-secondary",
+            "Port": 5432,
+            "MaintenanceDB": "postgres",
+            "Username": "postgres",
+            "SSLMode": "prefer"
+        },
+        "ha-3": {
+            "Name": "HA-Tertiary",
+            "Group": "Servers",
+            "Host": "pg-tertiary",
+            "Port": 5432,
+            "MaintenanceDB": "postgres",
+            "Username": "postgres",
+            "SSLMode": "prefer"
         }
     }
 }

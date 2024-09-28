@@ -1,0 +1,83 @@
+services:
+  pg-proxy:
+    build: 'haproxy'
+    container_name: pg-proxy
+    depends_on:
+      - zookeeper
+      - pg-primary
+      - pg-secondary
+      - pg-tertiary
+    labels:
+      - homepage.group=Relational
+      - homepage.name=HAProxy Stats
+      - homepage.icon=haproxy.png
+      - homepage.href=http://${DOMAIN}:7000
+      - homepage.description=HAProxy stats for HA PostgreSQL (7000)
+      - traefik.enable=true
+      - traefik.http.services.pg-proxy-postgres-ha.loadbalancer.server.port=7000
+    ports:
+      - 5432:5432
+      - 7000:7000
+    restart: unless-stopped
+  pg-primary:
+    build: 'postgres'
+    container_name: pg-primary
+    restart: unless-stopped
+    hostname: pg-primary
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: scram-sha-256
+      PATRONI_SUPERUSER_PASSWORD: ${SECRET_PASSWORD}
+      PGDATA: '/var/lib/postgresql/data/pgdata'
+    expose:
+      - 5432
+      - 8008
+    volumes:
+     - data1:/var/lib/postgresql/data
+    command: patroni /postgres0.yml
+  pg-secondary:
+    build: 'postgres'
+    container_name: pg-secondary
+    restart: unless-stopped
+    hostname: pg-secondary
+    expose:
+      - 5432
+      - 8008
+    volumes:
+     - data2:/var/lib/postgresql/data
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: scram-sha-256
+      PATRONI_SUPERUSER_PASSWORD: ${SECRET_PASSWORD}
+      PGDATA: '/var/lib/postgresql/data/pgdata'
+    command: patroni /postgres1.yml        
+  pg-tertiary:
+    build: 'postgres'
+    container_name: pg-tertiary
+    restart: unless-stopped
+    hostname: pg-tertiary
+    expose:
+      - 5432
+      - 8008
+    volumes:
+     - data3:/var/lib/postgresql/data
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: scram-sha-256
+      PATRONI_SUPERUSER_PASSWORD: ${SECRET_PASSWORD}
+      PGDATA: '/var/lib/postgresql/data/pgdata'
+    command: patroni /postgres2.yml        
+  zookeeper:
+    container_name: zookeeper
+    labels:
+      - wud.tag.include=^\d+?.\d+?.\d+?$
+    environment:
+      ZOO_TICK_TIME: 2000
+    image: zookeeper:3.9.2
+    restart: unless-stopped
+networks:
+  default:
+    name: postgres
+    external: true
+
+volumes:
+  data1:
+  data2:
+  data3:

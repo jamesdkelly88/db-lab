@@ -6,7 +6,7 @@ services:
       - homepage.name=PostgreSQL 17
       - homepage.icon=postgres.png
       - homepage.description=PostgreSQL v17 (54327)
-      - wud.tag.include=^17beta\d{1,2}-alpine.+?$
+      - wud.tag.include=^17.\d{1,2}-alpine.+?$
     environment:
       POSTGRES_HOST_AUTH_METHOD: scram-sha-256
       POSTGRES_PASSWORD: ${SECRET_PASSWORD}

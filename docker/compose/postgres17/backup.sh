@@ -13,7 +13,7 @@ else
     aws s3api create-bucket --bucket "$S3_BUCKET" > /dev/null
 fi
 
-export PGHOST=localhost
+export PGHOST=${DOMAIN}
 export PGPORT=54327
 export PGDATABASE=postgres
 export PGUSER=postgres

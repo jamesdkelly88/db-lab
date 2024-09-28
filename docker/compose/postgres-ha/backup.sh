@@ -14,11 +14,11 @@ else
 fi
 
 export PGHOST=${DOMAIN}
-export PGPORT=54325
+export PGPORT=5432
 export PGDATABASE=postgres
 export PGUSER=postgres
 export PGPASSWORD=${SECRET_PASSWORD}
-export VERSION=15
+export VERSION=HA
 
 DBS=$(psql -t -c "select datname from pg_database where datistemplate = false;")
 DATE=$(date '+%Y-%m-%d.%H%M%S')

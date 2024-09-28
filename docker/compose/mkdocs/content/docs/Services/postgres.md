@@ -14,4 +14,12 @@ PostgreSQL tools are required on your machine to connect to Postgres and run the
 
 pgAdmin is provided in this lab as a web interface for PostgreSQL. This comes pre-configured with connections to all included versions.
 
-There are always 5 supported versions of PostgreSQL. The latest version keeps the default port `5432`, for each older version this is incremented by 1, up to a maximum `5436`.
+There are always 5 supported versions of PostgreSQL (plus a 2 month grace period for the oldest when a new one is released). Each version is exposed on port `5432X`, where `X` is the last digit of the major version number: e.g PostgreSQL 16 uses port `54326`.
+
+A high-availability PostgreSQL cluster is exposed on the default port `5432`, consisting of:
+
+- HAProxy
+- 3x PostgreSQL instances
+- Zookeeper
+
+HAProxy stats are viewable via port `7000` - for some reason this doesn't work behind Traefik and times out.
