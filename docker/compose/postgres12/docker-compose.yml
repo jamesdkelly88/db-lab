@@ -5,13 +5,13 @@ services:
       - homepage.group=Relational
       - homepage.name=PostgreSQL 12
       - homepage.icon=postgres.png
-      - homepage.description=PostgreSQL v12 (5436)
+      - homepage.description=PostgreSQL v12 (54322)
       - wud.tag.include=^12.\d{1,2}-alpine.+?$
     environment:
       POSTGRES_PASSWORD: ${SECRET_PASSWORD}
     image: postgres:12.20-alpine3.20
     ports:
-    - 5436:5432
+    - 54322:5432
     restart: unless-stopped
     volumes:
     - data:/var/lib/postgresql/data
