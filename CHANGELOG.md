@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.1] - 2024-09-28
+
+- Adding high-availability PostgreSQL (version 16)
+- Updating PostgreSQL documentation
+- Script and tag fixes
+
+## [1.3.0] - 2024-09-28
+
+- Making PostgreSQL v17 use live images
+- Updating PostgreSQL ports for all versions
+
+## [1.2.0] - 2024-09-04
+
+- Adding PostgreSQL v17 preview
+- Renovate integration for automated image/library update detection
+
 ## [1.1.0] - 2024-06-16
 
 Adding DynamoDB
