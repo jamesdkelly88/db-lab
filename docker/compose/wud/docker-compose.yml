@@ -1,6 +1,6 @@
 services:
   wud:
-    image: fmartinou/whats-up-docker:6.6.0
+    image: fmartinou/whats-up-docker:6.6.1
     container_name: wud
     environment:
       WUD_WATCHER_LOCAL_CRON: 0 12 * * *
