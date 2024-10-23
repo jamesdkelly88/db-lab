@@ -1,0 +1,41 @@
+services:
+  sqlserver2022:
+    container_name: sqlserver2022
+    hostname: sqlserver2022
+    labels:
+      - homepage.group=Relational
+      - homepage.name=SQL Server 2022
+      - homepage.icon=microsoft-sql-server.png
+      - homepage.description=Microsoft SQL Server 2022 (1433)
+      - wud.tag.include=^2022-CU.+?-rhel-.+?$
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_AGENT_ENABLED: true
+      MSSQL_BACKUP_DIR: /var/opt/mssql/backup
+      MSSQL_COLLATION: SQL_Latin1_General_CP1_CI_AS
+      MSSQL_DATA_DIR: /var/opt/mssql/data
+      MSSQL_LOG_DIR: /var/opt/mssql/tlog
+      MSSQL_PID: Evaluation
+      MSSQL_SA_PASSWORD: ${SECRET_PASSWORD}
+      TZ: Europe/London
+    image: mcr.microsoft.com/mssql/rhel/server:2022-CU15-GDR1-rhel-9.1   
+    ports:
+    - 1433:1433
+    restart: unless-stopped
+    user: root
+    volumes:
+    - backup:/var/opt/mssql/backup
+    - data:/var/opt/mssql/data
+    - tlog:/var/opt/mssql/tlog
+    - secrets:/var/opt/mssql/secrets
+
+networks:
+  default:
+    name: mssql
+    external: true
+      
+volumes:
+  backup:
+  data:
+  tlog:
+  secrets:

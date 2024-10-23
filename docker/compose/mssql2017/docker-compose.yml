@@ -1,0 +1,41 @@
+services:
+  sqlserver2017:
+    container_name: sqlserver2017
+    hostname: sqlserver2017
+    labels:
+      - homepage.group=Relational
+      - homepage.name=SQL Server 2017
+      - homepage.icon=microsoft-sql-server.png
+      - homepage.description=Microsoft SQL Server 2017 (1435)
+      - wud.tag.include=^2017-CU.+?-ubuntu-.+?$
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_AGENT_ENABLED: true
+      MSSQL_BACKUP_DIR: /var/opt/mssql/backup
+      MSSQL_COLLATION: SQL_Latin1_General_CP1_CI_AS
+      MSSQL_DATA_DIR: /var/opt/mssql/data
+      MSSQL_LOG_DIR: /var/opt/mssql/tlog
+      MSSQL_PID: Evaluation
+      MSSQL_SA_PASSWORD: ${SECRET_PASSWORD}
+      TZ: Europe/London
+    image: mcr.microsoft.com/mssql/server:2017-CU31-GDR2-ubuntu-18.04
+    ports:
+    - 1435:1433
+    restart: unless-stopped
+    user: root
+    volumes:
+    - backup:/var/opt/mssql/backup
+    - data:/var/opt/mssql/data
+    - tlog:/var/opt/mssql/tlog
+    - secrets:/var/opt/mssql/secrets
+
+networks:
+  default:
+    name: mssql
+    external: true
+      
+volumes:
+  backup:
+  data:
+  tlog:
+  secrets:
