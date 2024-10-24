@@ -1,0 +1,29 @@
+services:
+  cloudbeaver:
+    container_name: cloudbeaver
+    image: dbeaver/cloudbeaver:24.2.3
+    labels:
+      - homepage.group=Relational
+      - homepage.name=CloudBeaver
+      - homepage.icon=cloudbeaver.svg
+      - homepage.href=http://cloudbeaver.${DOMAIN}
+      - homepage.description=Database manager
+      - traefik.enable=true
+      - wud.tag.include=^\d+?.\d+?.\d+?$
+    networks:
+    - default
+    - mssql
+    - postgres
+    restart: unless-stopped
+    volumes:
+      - workspace:/opt/cloudbeaver/workspace
+networks:
+  default:
+    name: web
+    external: true
+  mssql:
+    external: true
+  postgres:
+    external: true
+volumes:
+  workspace:
