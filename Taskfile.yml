@@ -11,10 +11,10 @@ env:
   SECRET_USER: admin
 
 vars:
-  BASELINE: dockerproxy traefik homepage mkdocs
+  BASELINE: dockerproxy dozzle homepage mkdocs traefik wud
   DOCKER_FOLDERS:
     sh: ls ./docker/compose
-  DOCKER_NETWORKS: backup docker dynamodb mssql postgres web
+  DOCKER_NETWORKS: backup docker dynamodb mssql oracle postgres web
 
 tasks:
   all-backup:

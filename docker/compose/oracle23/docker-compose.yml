@@ -1,0 +1,28 @@
+services:
+  oracle23:
+    container_name: oracle23
+    labels:
+      - homepage.group=Relational
+      - homepage.name=Oracle 23ai
+      - homepage.icon=oracle.png
+      - homepage.description=Oracle Database 23ai Free (1523)
+      - wud.tag.include=^23.\d+?.\d+?.\d+?$
+    environment:
+      ENABLE_ARCHIVELOG: true
+      ENABLE_FORCE_LOGGING: true
+      ORACLE_CHARACTERSET: AL32UTF8
+      ORACLE_PWD: ${SECRET_PASSWORD}
+    image: container-registry.oracle.com/database/free:23.5.0.0
+    ports:
+    - 1523:1521
+    restart: unless-stopped
+    volumes:
+    - data:/opt/oracle/oradata
+
+networks:
+  default:
+    name: oracle
+    external: true
+      
+volumes:
+  data:

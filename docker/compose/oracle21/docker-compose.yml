@@ -1,0 +1,28 @@
+services:
+  oracle21:
+    container_name: oracle21
+    labels:
+      - homepage.group=Relational
+      - homepage.name=Oracle 21c
+      - homepage.icon=oracle.png
+      - homepage.description=Oracle Database 21c Express (1521)
+      - wud.tag.include=^21.\d+?.\d+?-xe$
+    environment:
+      ENABLE_ARCHIVELOG: true
+      ENABLE_FORCE_LOGGING: true
+      ORACLE_CHARACTERSET: AL32UTF8
+      ORACLE_PWD: ${SECRET_PASSWORD}
+    image: container-registry.oracle.com/database/express:21.3.0-xe	
+    ports:
+    - 1521:1521
+    restart: unless-stopped
+    volumes:
+    - data:/opt/oracle/oradata
+
+networks:
+  default:
+    name: oracle
+    external: true
+      
+volumes:
+  data:
