@@ -70,7 +70,7 @@ services:
       - wud.tag.include=^\d+?.\d+?.\d+?$
     environment:
       ZOO_TICK_TIME: 2000
-    image: zookeeper:3.9.2
+    image: zookeeper:3.9.3
     restart: unless-stopped
 networks:
   default:
