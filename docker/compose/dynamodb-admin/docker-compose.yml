@@ -14,7 +14,7 @@ services:
       AWS_ACCESS_KEY_ID: local
       AWS_REGION: us-east-1
       AWS_SECRET_ACCESS_KEY: local
-    image: aaronshaf/dynamodb-admin:4.6.1
+    image: aaronshaf/dynamodb-admin:4.6.2
     networks:
     - default
     - web
