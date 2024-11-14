@@ -1,6 +1,6 @@
 services:
   pgadmin:
-    image: dpage/pgadmin4:8.12
+    image: dpage/pgadmin4:8.13
     container_name: pgadmin
     labels:
       - homepage.group=Relational
