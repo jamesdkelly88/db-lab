@@ -155,7 +155,7 @@ tasks:
       - test -f test.py
     cmds:
     - cmd: |
-        virtualenv env > /dev/null
+        python -m venv env > /dev/null
         ./env/bin/pip install -r requirements.txt > /dev/null
         ./env/bin/python test.py
     silent: true
