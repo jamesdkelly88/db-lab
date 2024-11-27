@@ -12,6 +12,7 @@ env:
 
 vars:
   BASELINE: dockerproxy traefik homepage mkdocs
+  CORE: dockerproxy traefik homepage mkdocs minio dozzle wud
   DOCKER_FOLDERS:
     sh: ls ./docker/compose
   DOCKER_NETWORKS: backup docker dynamodb mssql postgres web
@@ -40,6 +41,8 @@ tasks:
     cmds:
     - for: { var: DOCKER_FOLDERS }
       cmd: docker compose -f docker/compose/{{.ITEM}}/docker-compose.yml down --volumes
+    - for: { var: DOCKER_NETWORKS }
+      cmd: docker network rm {{.ITEM}}
   
   all-down:
     aliases:
@@ -76,13 +79,24 @@ tasks:
     preconditions:
       - test -f backup.sh
     cmds:
-      - chmod +x backup.sh && ./backup.sh
+      - chmod +x backup.sh && bash ./backup.sh
     silent: true
 
   cleanup:
     desc: Delete unused docker images
     cmds:
       - docker image prune -a -f
+
+  core:
+    aliases:
+    - core-up
+    - up-core
+    desc: Launch common services for working lab with homepage and useful tools
+    deps:
+    - networks
+    cmds:
+    - for: { var: CORE }
+      cmd: docker compose -f docker/compose/{{.ITEM}}/docker-compose.yml up -d --remove-orphans
       
   destroy:
     desc: Destroy stack in current folder, including volumes
@@ -118,7 +132,7 @@ tasks:
     preconditions:
       - test -f sample.sh
     cmds:
-      - chmod +x sample.sh && ./sample.sh
+      - chmod +x sample.sh && bash ./sample.sh
     silent: true
   
   test-pwsh:
@@ -141,7 +155,7 @@ tasks:
       - test -f test.py
     cmds:
     - cmd: |
-        virtualenv env > /dev/null
+        python -m venv env > /dev/null
         ./env/bin/pip install -r requirements.txt > /dev/null
         ./env/bin/python test.py
     silent: true
