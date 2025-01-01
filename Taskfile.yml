@@ -1,15 +1,13 @@
 version: '3'
 
 env:
-  DOMAIN: jkdb.duckdns.org
   PUID:
     sh: id -u
   PGID:
     sh: id -g
-  SECRET_EMAIL: admin@jkdb.duckdns.org
-  SECRET_PASSWORD: P@ssw0rd
-  SECRET_USER: admin
-
+  
+dotenv: ['db-lab.env']
+  
 vars:
   BASELINE: dockerproxy traefik homepage mkdocs
   CORE: dockerproxy traefik homepage mkdocs minio dozzle wud
@@ -125,16 +123,7 @@ tasks:
     cmds:
       - for: { var: DOCKER_NETWORKS }
         cmd: docker network inspect {{.ITEM}} --format \{\{.Id\}\} 2>/dev/null || docker network create --driver bridge {{.ITEM}}
-
-  sample:
-    desc: deploy a sample database
-    dir: '{{.USER_WORKING_DIR}}'
-    preconditions:
-      - test -f sample.sh
-    cmds:
-      - chmod +x sample.sh && bash ./sample.sh
-    silent: true
-  
+ 
   test-pwsh:
     aliases:
     - pwsh-test
