@@ -9,6 +9,11 @@
       "matchUpdateTypes": ["major"],
       "matchBaseBranches": ["main"],
       "enabled": false
+    },
+    {
+      "matchUpdateTypes": ["minor","patch"],
+      "matchBaseBranches": ["main"],
+      "automerge": true
     }
   ]
 }
