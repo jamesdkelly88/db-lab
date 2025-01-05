@@ -1,4 +1,4 @@
-$ErrorActionPreference = "Stop"
+s$ErrorActionPreference = "Stop"
 
 Install-Module powershell-yaml
 Import-Module powershell-yaml
