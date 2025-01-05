@@ -111,6 +111,23 @@ tasks:
     cmds:
     - for: { var: CORE }
       cmd: docker compose -f docker/compose/{{.ITEM}}/docker-compose.yml up -d --remove-orphans
+
+  create-folder-shell:
+    desc: Create folder structure for a new service
+    dir: '{{.USER_WORKING_DIR}}'
+    cmds:
+    - mkdir tests
+    - mkdir tests/go
+    - mkdir tests/powershell
+    - mkdir tests/python
+    - touch backup.sh
+    - touch docker-compose.yml
+    - touch info.json
+    - cd tests/go && go mod init dblab/test && cd ../..
+    - touch tests/go/test.go
+    - touch tests/powershell/test.ps1
+    - touch tests/python/requirements.txt
+    - touch tests/python/test.py
       
   destroy:
     desc: Destroy stack in current folder, including volumes

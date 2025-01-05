@@ -47,6 +47,7 @@ This repository is my database lab. It provides containerised environments for m
 | all-test-go | Run every available go test in the repository | repository root |
 | all-test-pwsh | Run every available powershell test in the repository | repository root |
 | all-test-py | Run every available python test in the repository | repository root |
+| create-folder-shell | Create the required files for a new stack in an empty folder | a new folder |
 
 ## Folder structure
 
