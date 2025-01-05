@@ -80,6 +80,22 @@ tasks:
       - chmod +x backup.sh && bash ./backup.sh
     silent: true
 
+  build:
+    desc: build docker image
+    dir: '{{.USER_WORKING_DIR}}'
+    preconditions:
+      - test -f Dockerfile
+      - test -f tag
+    env:
+      IMAGE_NAME: 
+        sh: basename ${{ .PWD }}
+      IMAGE_TAG:
+        sh: cat tag
+    cmds:
+    - echo "building $DOCKER_HUB_USER/$IMAGE_NAME:$IMAGE_TAG"
+    - docker build -t "$DOCKER_HUB_USER/$IMAGE_NAME:$IMAGE_TAG" .
+    silent: true
+
   cleanup:
     desc: Delete unused docker images
     cmds:
@@ -123,6 +139,21 @@ tasks:
     cmds:
       - for: { var: DOCKER_NETWORKS }
         cmd: docker network inspect {{.ITEM}} --format \{\{.Id\}\} 2>/dev/null || docker network create --driver bridge {{.ITEM}}
+
+  publish:
+    desc: Publish image to Docker Hub
+    dir: '{{.USER_WORKING_DIR}}'
+    deps:
+    - build
+    env:
+      IMAGE_NAME: 
+        sh: basename ${{ .PWD }}
+      IMAGE_TAG:
+        sh: cat tag
+    cmds:
+    - echo "publishing $DOCKER_HUB_USER/$IMAGE_NAME:$IMAGE_TAG"
+    - docker push "$DOCKER_HUB_USER/$IMAGE_NAME:$IMAGE_TAG"
+    silent: true
  
   test-pwsh:
     aliases:

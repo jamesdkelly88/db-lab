@@ -8,7 +8,8 @@ RUN echo "deb http://deb.debian.org/debian bookworm main" > /etc/apt/sources.lis
     echo "deb http://security.debian.org/debian-security bookworm-security main" >> /etc/apt/sources.list && \
     echo "deb http://deb.debian.org/debian bookworm-updates main" >> /etc/apt/sources.list && \
     apt-get update -y && \
-    apt-get install -y netcat-openbsd python3-pip curl python3-psycopg2 python3-venv iputils-ping
+    apt-get install -y netcat-openbsd python3-pip curl python3-psycopg2 python3-venv iputils-ping && \
+    rm -rf /var/lib/apt/lists/*
 
 # Create a virtual environment and install Patroni and psycopg2-binary
 RUN python3 -m venv /opt/patroni-venv && \

@@ -1,12 +1,12 @@
 services:
   pg-proxy:
-    build: 'haproxy'
     container_name: pg-proxy
     depends_on:
       - zookeeper
       - pg-primary
       - pg-secondary
       - pg-tertiary
+    image: haproxy:3.1.1-alpine3.20
     labels:
       - homepage.group=Relational
       - homepage.name=HAProxy Stats
@@ -18,10 +18,14 @@ services:
     ports:
       - 5432:5432
       - 7000:7000
+    volumes:
+      - type: bind
+        source: ./haproxy.cfg
+        target: /usr/local/etc/haproxy/haproxy.cfg
     restart: unless-stopped
   pg-primary:
-    build: 'postgres'
     container_name: pg-primary
+    image: jamesdkelly88/postgres-patroni:16
     restart: unless-stopped
     hostname: pg-primary
     environment:
@@ -35,8 +39,8 @@ services:
      - data1:/var/lib/postgresql/data
     command: patroni /postgres0.yml
   pg-secondary:
-    build: 'postgres'
     container_name: pg-secondary
+    image: jamesdkelly88/postgres-patroni:16
     restart: unless-stopped
     hostname: pg-secondary
     expose:
@@ -50,8 +54,8 @@ services:
       PGDATA: '/var/lib/postgresql/data/pgdata'
     command: patroni /postgres1.yml        
   pg-tertiary:
-    build: 'postgres'
     container_name: pg-tertiary
+    image: jamesdkelly88/postgres-patroni:16
     restart: unless-stopped
     hostname: pg-tertiary
     expose:
