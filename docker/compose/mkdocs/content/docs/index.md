@@ -66,6 +66,7 @@ This repository is my database lab. It provides containerised environments for m
 │   │       │       └── test.py                                     python test script
 │   │       ├── backup.sh                                           shell script to backup the database using docker container(s)
 │   │       ├── docker-compose.yml                                  definition of the container stack for the database/tool
+│   │       ├── info.json                                           a few values used by the script to generate documentation
 │   │       └── <other files for mounting in containers>
 │   └── images
 │       └── <name>

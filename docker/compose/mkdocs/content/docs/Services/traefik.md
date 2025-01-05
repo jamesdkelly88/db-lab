@@ -1,3 +1,7 @@
+---
+tags:
+  - utility
+---
 # Traefik
 
 [:fontawesome-solid-globe: Project Homepage](https://traefik.io/traefik/)
@@ -8,7 +12,16 @@
 
 Reverse proxy for web services
 
-## Requirements
+Web containers need to have the label `traefik.enable=true` in their `docker-compose.yml` definition. Container name, service name and DNS sub-domain should all match, so the default rule for routing picks them up correctly.
 
-- Web containers need to have the label `traefik.enable=true` in their `docker-compose.yml` definition
-- Container name, service name and DNS sub-domain should all match, so the default rule for routing picks them up correctly
+## Images
+| Image | Tag |
+| --- | --- |
+| traefik | v2.11.16 |
+
+## Ports
+- 80
+
+## Links
+- [http://traefik.jkdb.duckdns.org](http://traefik.jkdb.duckdns.org)
+

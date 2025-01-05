@@ -1,0 +1,13 @@
+{
+    "name": "pgAdmin",
+    "type": ["gui"],
+    "description": [
+        "pgAdmin 4 is a web based administration tool for the PostgreSQL database."
+    ],
+    "links": {
+        "homepage": "https://www.pgadmin.org/",
+        "repository": "https://github.com/pgadmin-org/pgadmin4",
+        "registry": "https://hub.docker.com/r/dpage/pgadmin4/"
+    },
+    "ui": []
+}

@@ -1,0 +1,12 @@
+{
+    "name": "DynamoDB Admin",
+    "type": ["gui"],
+    "description": [
+        "GUI for DynamoDB Local"
+    ],
+    "links": {
+        "repository": "https://github.com/aaronshaf/dynamodb-admin",
+        "registry": "https://hub.docker.com/r/aaronshaf/dynamodb-admin/"
+    },
+    "ui": []
+}
