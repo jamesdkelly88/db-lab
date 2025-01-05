@@ -154,12 +154,23 @@ tasks:
     - echo "publishing $DOCKER_HUB_USER/$IMAGE_NAME:$IMAGE_TAG"
     - docker push "$DOCKER_HUB_USER/$IMAGE_NAME:$IMAGE_TAG"
     silent: true
+
+  test-go:
+    aliases:
+    - go-test
+    desc: Test database using go (golang) script
+    dir: '{{.USER_WORKING_DIR}}/tests/go'
+    preconditions:
+      - test -f test.go
+    cmds:
+      - go run .
+    silent: true
  
   test-pwsh:
     aliases:
     - pwsh-test
     desc: Test database using powershell script
-    dir: '{{.USER_WORKING_DIR}}'
+    dir: '{{.USER_WORKING_DIR}}/tests/powershell'
     preconditions:
       - test -f test.ps1
     cmds:
@@ -170,7 +181,7 @@ tasks:
     aliases:
     - py-test
     desc: Test database using python script
-    dir: '{{.USER_WORKING_DIR}}'
+    dir: '{{.USER_WORKING_DIR}}/tests/python'
     preconditions:
       - test -f test.py
     cmds:
