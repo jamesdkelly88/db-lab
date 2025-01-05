@@ -6,6 +6,7 @@ services:
       - pg-primary
       - pg-secondary
       - pg-tertiary
+    hostname: pg-proxy
     image: haproxy:3.1.1-alpine3.20
     labels:
       - homepage.group=Relational
