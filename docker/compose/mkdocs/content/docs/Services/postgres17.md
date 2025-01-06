@@ -14,6 +14,7 @@ A powerful, open source object-relational database system with over 35 years of 
 
 ## GUI
 
+- [DbGate](../dbgate)
 - [pgAdmin](../pgadmin)
 
 ## Images

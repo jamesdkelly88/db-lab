@@ -29,6 +29,12 @@ services:
     image: jamesdkelly88/postgres-patroni:16
     restart: unless-stopped
     hostname: pg-primary
+    labels:
+      - homepage.group=Relational
+      - homepage.name=PostgreSQL (HA)
+      - homepage.icon=postgres.png
+      - homepage.description=PostgreSQL 3-node cluster with HAProxy/Patroni/Zookeeper (5432)
+      - wud.tag.include=^\d$
     environment:
       POSTGRES_HOST_AUTH_METHOD: scram-sha-256
       PATRONI_SUPERUSER_PASSWORD: ${SECRET_PASSWORD}

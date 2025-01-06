@@ -14,6 +14,10 @@ There is no official web interface for SQL Server.
 
 SQL Server has supported Linux containers since 2017. All versions since then are included in this lab. The latest version is exposed on the default port `1433`, with each older version using the next port number (`1434`, `1435` etc). When new versions are released (every 2-3 years) these port numbers will increment to ensure the latest version is always using the default port.
 
+## GUI
+
+- [DbGate](../dbgate)
+
 ## Images
 | Image | Tag |
 | --- | --- |

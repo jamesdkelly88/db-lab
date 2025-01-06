@@ -10,5 +10,5 @@
         "homepage": "https://www.microsoft.com/en-gb/sql-server",
         "registry": "https://mcr.microsoft.com/en-us/catalog?cat=Databases&alphaSort=asc&alphaSortKey=Name"
     },
-    "ui": []
+    "ui": ["DbGate"]
 }
