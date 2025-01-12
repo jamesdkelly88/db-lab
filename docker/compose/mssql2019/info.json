@@ -1,5 +1,5 @@
 {
-    "name": "SQL Server 2019",
+    "name": "Microsoft SQL Server 2019",
     "type": ["relational"],
     "description": [
         "Microsoft SQL Server (Structured Query Language) is a proprietary relational database management system developed by Microsoft",
@@ -8,7 +8,8 @@
     ],
     "links": {
         "homepage": "https://www.microsoft.com/en-gb/sql-server",
-        "registry": "https://mcr.microsoft.com/en-us/catalog?cat=Databases&alphaSort=asc&alphaSortKey=Name"
+        "registry": "https://mcr.microsoft.com/en-us/catalog?cat=Databases&alphaSort=asc&alphaSortKey=Name",
+        "dbdb": "https://dbdb.io/db/sql-server"
     },
     "ui": ["DbGate"]
 }

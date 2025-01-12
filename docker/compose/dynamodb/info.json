@@ -11,9 +11,9 @@
         "A list of the differences between the Amazon hosted DynamoDB and this locally hosted version can be found [here](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.UsageNotes.html#DynamoDBLocal.Differences)."
     ],
     "links": {
-        "homepage": "https://www.postgresql.org/",
-        "repository": "https://git.postgresql.org/gitweb/?p=postgresql.git",
-        "registry": "https://hub.docker.com/_/postgres"
+        "homepage": "https://aws.amazon.com/dynamodb/",
+        "registry": "https://hub.docker.com/r/amazon/dynamodb-local",
+        "dbdb": "https://dbdb.io/db/dynamodb"
     },
     "ui": ["DynamoDB Admin"]
 }

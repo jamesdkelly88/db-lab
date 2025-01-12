@@ -72,6 +72,11 @@ foreach($f in Get-ChildItem -Path $compose_root -Directory)
             $page.AppendLine("[:simple-docker: Container Registry]($($info.links.registry))`n") | Out-Null
         }
 
+        if(-not [String]::IsNullOrEmpty($info.links.dbdb))
+        {
+            $page.AppendLine("[:material-database: DBDB.io]($($info.links.dbdb))`n") | Out-Null
+        }
+
         foreach($d in $info.description)
         {
             $page.AppendLine("$d`n") | Out-Null

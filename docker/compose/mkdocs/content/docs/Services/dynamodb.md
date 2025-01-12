@@ -4,11 +4,11 @@ tags:
 ---
 # DynamoDB
 
-[:fontawesome-solid-globe: Project Homepage](https://www.postgresql.org/)
+[:fontawesome-solid-globe: Project Homepage](https://aws.amazon.com/dynamodb/)
 
-[:simple-git: Repository](https://git.postgresql.org/gitweb/?p=postgresql.git)
+[:simple-docker: Container Registry](https://hub.docker.com/r/amazon/dynamodb-local)
 
-[:simple-docker: Container Registry](https://hub.docker.com/_/postgres)
+[:material-database: DBDB.io](https://dbdb.io/db/dynamodb)
 
 Amazon DynamoDB is a serverless, NoSQL database service that enables you to develop modern applications at any scale. With the downloadable version of Amazon DynamoDB, you can develop and test applications without accessing the DynamoDB web service. Instead, the database is self-contained on your computer.
 

@@ -10,6 +10,8 @@ tags:
 
 [:simple-docker: Container Registry](https://hub.docker.com/_/postgres)
 
+[:material-database: DBDB.io](https://dbdb.io/db/postgresql)
+
 A powerful, open source object-relational database system with over 35 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.
 
 This high-availability 3-node cluster is exposed on port 5432 and uses HA-Proxy to manage traffic and zookeeper to determine the leader.
