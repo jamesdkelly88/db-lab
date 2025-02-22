@@ -1,7 +1,7 @@
 services:
   dozzle:
     container_name: dozzle
-    image: amir20/dozzle:v8.11.5
+    image: amir20/dozzle:v8.11.6
     labels:
       - homepage.group=Docker
       - homepage.name=Dozzle
