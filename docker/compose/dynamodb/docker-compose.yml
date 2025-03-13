@@ -13,7 +13,7 @@ services:
       - AWS_SECRET_ACCESS_KEY=""
       - AWS_SESSION_TOKEN=""
       - AWS_DEFAULT_REGION=us-east-1
-    image: amazon/dynamodb-local:2.5.4
+    image: amazon/dynamodb-local:2.6.0
     ports:
     - 8000:8000
     restart: unless-stopped
