@@ -1,5 +1,6 @@
 ---
 tags:
+  - ledger
   - relational
 ---
 # Microsoft SQL Server 2022

@@ -6,5 +6,5 @@ See the [mkdocs folder](./docker/compose/mkdocs/content/docs/index.md) for more 
 
 ## Copyright
 
-(C) James Kelly 2024
+(C) James Kelly 2025
 MIT License

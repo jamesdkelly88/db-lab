@@ -13,6 +13,7 @@
     "links": {
         "homepage": "https://aws.amazon.com/dynamodb/",
         "registry": "https://hub.docker.com/r/amazon/dynamodb-local",
+        "repository": "closed-source",
         "dbdb": "https://dbdb.io/db/dynamodb"
     },
     "ui": ["DynamoDB Admin"]

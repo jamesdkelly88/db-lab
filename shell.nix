@@ -1,7 +1,7 @@
 let
   unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz) { };
 in
-{ pkgs ? import <nixpkgs> { } }:
+{ pkgs ? import <nixpkgs> {config.allowUnfree = true;} }:
 
 pkgs.mkShell rec {
 
@@ -15,6 +15,8 @@ pkgs.mkShell rec {
     pkgs.python311
     pkgs.python311Packages.pip
     pkgs.sqlcmd
+    pkgs.unixODBC
+    pkgs.unixODBCDrivers.msodbcsql18
     pkgs.zlib
     unstable.pkgs.postgresql_17
   ];

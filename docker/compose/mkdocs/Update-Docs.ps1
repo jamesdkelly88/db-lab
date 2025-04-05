@@ -1,4 +1,4 @@
-s$ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Stop"
 
 Install-Module powershell-yaml
 Import-Module powershell-yaml
@@ -57,12 +57,12 @@ foreach($f in Get-ChildItem -Path $compose_root -Directory)
 
         $page.AppendLine("# $($info.name)`n") | Out-Null
 
-        if(-not [String]::IsNullOrEmpty($info.links.homepage))
+        if(-not [String]::IsNullOrEmpty($info.links.homepage) -and $info.links.homepage -ne "n/a")
         {
             $page.AppendLine("[:fontawesome-solid-globe: Project Homepage]($($info.links.homepage))`n") | Out-Null
         }
 
-        if(-not [String]::IsNullOrEmpty($info.links.repository))
+        if(-not [String]::IsNullOrEmpty($info.links.repository) -and $info.links.repository -ne "closed-source")
         {
             $page.AppendLine("[:simple-git: Repository]($($info.links.repository))`n") | Out-Null
         }
