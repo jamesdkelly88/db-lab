@@ -1,0 +1,13 @@
+{
+    "name": "DbGate",
+    "type": ["gui"],
+    "description": [
+        "Powerful cross-platform SQL client and database manager for MySQL, SQL Server, Oracle, PostgreSQL, SQLite, MongoDB, Redis."
+    ],
+    "links": {
+        "homepage": "https://dbgate.org/",
+        "repository": "https://github.com/dbgate/dbgate",
+        "registry": "https://hub.docker.com/r/dbgate/dbgate"
+    },
+    "ui": []
+}

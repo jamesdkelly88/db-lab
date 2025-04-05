@@ -1,4 +1,4 @@
-copyright: © James Kelly 2024
+copyright: © James Kelly 2025
 dev_addr: '0.0.0.0:8080'
 extra_css:
   - css/extra.css
@@ -11,6 +11,9 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+plugins:
+  - search
+  - tags
 repo_name: GitHub
 repo_url: https://github.com/jamesdkelly88/db-lab
 site_name: Db-Lab

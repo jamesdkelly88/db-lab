@@ -1,0 +1,12 @@
+{
+    "name": "Docker Socket Proxy",
+    "type": ["utility"],
+    "description": [
+        "A read-only docker socket to improve security while allowing viewing of the Docker environment"
+    ],
+    "links": {
+        "repository": "https://github.com/Tecnativa/docker-socket-proxy",
+        "registry": "https://github.com/Tecnativa/docker-socket-proxy/pkgs/container/docker-socket-proxy"
+    },
+    "ui": []
+}

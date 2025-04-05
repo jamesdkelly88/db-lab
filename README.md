@@ -2,7 +2,7 @@
 
 This repository is my database lab. It provides containerised environments for many database platforms and some supporting technologies.
 
-See the docs folder for more information.
+See the [mkdocs folder](./docker/compose/mkdocs/content/docs/index.md) for more information.
 
 ## Copyright
 

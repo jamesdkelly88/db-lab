@@ -1,0 +1,14 @@
+{
+    "name": "PostgreSQL v14",
+    "type": ["relational"],
+    "description": [
+        "A powerful, open source object-relational database system with over 35 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance."
+    ],
+    "links": {
+        "homepage": "https://www.postgresql.org/",
+        "repository": "https://git.postgresql.org/gitweb/?p=postgresql.git",
+        "registry": "https://hub.docker.com/_/postgres",
+        "dbdb": "https://dbdb.io/db/postgresql"
+    },
+    "ui": ["DbGate","pgAdmin"]
+}

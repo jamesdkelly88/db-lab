@@ -1,0 +1,14 @@
+{
+    "name": "Traefik",
+    "type": ["utility"],
+    "description": [
+        "Reverse proxy for web services",
+        "Web containers need to have the label `traefik.enable=true` in their `docker-compose.yml` definition. Container name, service name and DNS sub-domain should all match, so the default rule for routing picks them up correctly."
+    ],
+    "links": {
+        "homepage": "https://traefik.io/traefik/",
+        "repository": "https://github.com/traefik",
+        "registry": "https://hub.docker.com/_/traefik"
+    },
+    "ui": []
+}

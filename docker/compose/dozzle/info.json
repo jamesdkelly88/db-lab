@@ -1,0 +1,13 @@
+{
+    "name": "Dozzle",
+    "type": ["utility"],
+    "description": [
+        "Real-time logging and monitoring for Docker in the browser"
+    ],
+    "links": {
+        "homepage": "https://dozzle.dev/",
+        "repository": "https://github.com/amir20/dozzle",
+        "registry": "https://hub.docker.com/r/amir20/dozzle"
+    },
+    "ui": []
+}

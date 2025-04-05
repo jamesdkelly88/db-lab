@@ -4,7 +4,7 @@ services:
     container_name: dockerproxy
     labels:
       - homepage.group=Docker
-      - homepage.name=Docker
+      - homepage.name=Docker Proxy
       - homepage.icon=docker.png
       - homepage.description=Docker socket read-only proxy
       - wud.tag.include=^\d+?.\d+?.\d+?$

@@ -1,0 +1,104 @@
+services:
+  dbgate:
+    image: dbgate/dbgate:6.1.2-alpine
+    container_name: dbgate
+    labels:
+      - homepage.group=Relational
+      - homepage.name=DbGate
+      - homepage.icon=https://avatars.githubusercontent.com/u/78292618
+      - homepage.href=http://dbgate.${DOMAIN}
+      - homepage.description=Multi-database admin web interface
+      - traefik.enable=true
+      - wud.tag.include=^\d.\d.\d-alpine$
+    environment:
+      CONNECTIONS: mssql2017,mssql2019,mssql2022,postgresha,postgres12,postgres13,,postgres14,postgres15,postgres16,postgres17
+
+      LABEL_mssql2017: SQL Server 2017
+      SERVER_mssql2017: sqlserver2017
+      USER_mssql2017: sa
+      PASSWORD_mssql2017: ${SECRET_PASSWORD}
+      PORT_mssql2017: 1433
+      ENGINE_mssql2017: mssql@dbgate-plugin-mssql
+
+      LABEL_mssql2019: SQL Server 2019
+      SERVER_mssql2019: sqlserver2019
+      USER_mssql2019: sa
+      PASSWORD_mssql2019: ${SECRET_PASSWORD}
+      PORT_mssql2019: 1433
+      ENGINE_mssql2019: mssql@dbgate-plugin-mssql
+
+      LABEL_mssql2022: SQL Server 2022
+      SERVER_mssql2022: sqlserver2022
+      USER_mssql2022: sa
+      PASSWORD_mssql2022: ${SECRET_PASSWORD}
+      PORT_mssql2022: 1433
+      ENGINE_mssql2022: mssql@dbgate-plugin-mssql
+
+      LABEL_postgresha: PostgreSQL (HA)
+      SERVER_postgresha: pg-proxy
+      USER_postgresha: postgres
+      PASSWORD_postgresha: ${SECRET_PASSWORD}
+      PORT_postgresha: 5432
+      ENGINE_postgresha: postgres@dbgate-plugin-postgres
+
+      LABEL_postgres12: PostgreSQL v12
+      SERVER_postgres12: postgres12
+      USER_postgres12: postgres
+      PASSWORD_postgres12: ${SECRET_PASSWORD}
+      PORT_postgres12: 5432
+      ENGINE_postgres12: postgres@dbgate-plugin-postgres
+
+      LABEL_postgres13: PostgreSQL v13
+      SERVER_postgres13: postgres13
+      USER_postgres13: postgres
+      PASSWORD_postgres13: ${SECRET_PASSWORD}
+      PORT_postgres13: 5432
+      ENGINE_postgres13: postgres@dbgate-plugin-postgres
+
+      LABEL_postgres14: PostgreSQL v14
+      SERVER_postgres14: postgres14
+      USER_postgres14: postgres
+      PASSWORD_postgres14: ${SECRET_PASSWORD}
+      PORT_postgres14: 5432
+      ENGINE_postgres14: postgres@dbgate-plugin-postgres
+
+      LABEL_postgres15: PostgreSQL v15
+      SERVER_postgres15: postgres15
+      USER_postgres15: postgres
+      PASSWORD_postgres15: ${SECRET_PASSWORD}
+      PORT_postgres15: 5432
+      ENGINE_postgres15: postgres@dbgate-plugin-postgres
+
+      LABEL_postgres16: PostgreSQL v16
+      SERVER_postgres16: postgres16
+      USER_postgres16: postgres
+      PASSWORD_postgres16: ${SECRET_PASSWORD}
+      PORT_postgres16: 5432
+      ENGINE_postgres16: postgres@dbgate-plugin-postgres
+
+      LABEL_postgres17: PostgreSQL v17
+      SERVER_postgres17: postgres17
+      USER_postgres17: postgres
+      PASSWORD_postgres17: ${SECRET_PASSWORD}
+      PORT_postgres17: 5432
+      ENGINE_postgres17: postgres@dbgate-plugin-postgres
+      
+    networks:
+    - default
+    - mssql
+    - postgres
+    restart: unless-stopped
+    volumes:
+    - data:/root/.dbgate
+
+networks:
+  default:
+    name: web
+    external: true
+  mssql:
+    external: true
+  postgres:
+    external: true
+      
+volumes:
+  data:

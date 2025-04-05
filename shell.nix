@@ -7,6 +7,9 @@ pkgs.mkShell rec {
 
   buildInputs = [
     pkgs.awscli2
+    pkgs.cargo
+    pkgs.dotnet-sdk
+    pkgs.go
     pkgs.go-task
     pkgs.powershell
     pkgs.python311

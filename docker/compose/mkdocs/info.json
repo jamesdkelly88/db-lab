@@ -1,0 +1,13 @@
+{
+    "name": "Mkdocs",
+    "type": ["utility"],
+    "description": [
+        "This documentation is running in Mkdocs."
+    ],
+    "links": {
+        "homepage": "https://squidfunk.github.io/mkdocs-material/",
+        "repository": "https://github.com/squidfunk/mkdocs-material",
+        "registry": "https://hub.docker.com/r/squidfunk/mkdocs-material"
+    },
+    "ui": []
+}
