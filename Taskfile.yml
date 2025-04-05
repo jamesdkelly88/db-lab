@@ -50,6 +50,62 @@ tasks:
     - for: { var: DOCKER_FOLDERS }
       cmd: docker compose -f docker/compose/{{.ITEM}}/docker-compose.yml down
 
+  all-test-go:
+    aliases:
+    - test-go-all
+    - test-all-go
+    desc: Test all databases using go (golang) script
+    cmds:
+    - for: { var: DOCKER_FOLDERS}
+      cmd: |
+        cd docker/compose/{{.ITEM}}
+        if [ -f "tests/go/go.mod" ]; then
+          echo "Testing {{.ITEM}}"
+          cd tests/go
+          go run .
+        else
+          echo "Skipping {{.ITEM}}"
+        fi
+    silent: true
+
+  all-test-pwsh:
+    aliases:
+    - test-pwsh-all
+    - test-all-pwsh
+    desc: Test all databases using powershell script
+    cmds:
+    - for: { var: DOCKER_FOLDERS}
+      cmd: |
+        cd docker/compose/{{.ITEM}}
+        if [ -f "tests/powershell/test.ps1" ]; then
+          echo "Testing {{.ITEM}}"
+          cd tests/powershell
+          pwsh -f ./test.ps1
+        else
+          echo "Skipping {{.ITEM}}"
+        fi
+    silent: true
+
+  all-test-py:
+    aliases:
+    - test-py-all
+    - test-all-py
+    desc: Test all databases using python script
+    cmds:
+    - for: { var: DOCKER_FOLDERS}
+      cmd: |
+        cd docker/compose/{{.ITEM}}
+        if [ -f "tests/python/test.py" ]; then
+          echo "Testing {{.ITEM}}"
+          cd tests/python
+          python -m venv env > /dev/null
+          ./env/bin/pip install -r requirements.txt > /dev/null
+          ./env/bin/python test.py
+        else
+          echo "Skipping {{.ITEM}}"
+        fi
+    silent: true
+
   all-up:
     aliases:
     - up-all

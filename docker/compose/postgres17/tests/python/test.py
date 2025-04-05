@@ -7,8 +7,7 @@ port = 54327
 
 try:
     conn = psycopg2.connect(f"dbname='postgres' user='postgres' host='{host}' port={port} password='{password}'")
-except (Exception) as error:
-    print(error)
+except:
     print("I am unable to connect to the database")
     quit()
 

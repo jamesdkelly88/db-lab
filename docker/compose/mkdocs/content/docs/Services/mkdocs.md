@@ -15,7 +15,7 @@ This documentation is running in Mkdocs.
 ## Images
 | Image | Tag |
 | --- | --- |
-| squidfunk/mkdocs-material | 9.5.49 |
+| squidfunk/mkdocs-material | 9.6.11 |
 
 ## Links
 - [http://mkdocs.jkdb.duckdns.org](http://mkdocs.jkdb.duckdns.org)

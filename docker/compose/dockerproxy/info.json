@@ -5,6 +5,7 @@
         "A read-only docker socket to improve security while allowing viewing of the Docker environment"
     ],
     "links": {
+        "homepage": "n/a",
         "repository": "https://github.com/Tecnativa/docker-socket-proxy",
         "registry": "https://github.com/Tecnativa/docker-socket-proxy/pkgs/container/docker-socket-proxy"
     },

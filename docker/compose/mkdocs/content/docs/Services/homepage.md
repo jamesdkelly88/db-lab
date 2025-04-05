@@ -31,7 +31,7 @@ If ports are exposed, these should be included at the end of the description for
 ## Images
 | Image | Tag |
 | --- | --- |
-| ghcr.io/gethomepage/homepage | v0.10.7 |
+| ghcr.io/gethomepage/homepage | v0.10.9 |
 
 ## Links
 - [http://homepage.jkdb.duckdns.org](http://homepage.jkdb.duckdns.org)
