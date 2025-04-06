@@ -7,7 +7,7 @@ services:
     labels:
       - homepage.group=Docker
       - homepage.name=What's Up Docker
-      - homepage.icon=wud.png
+      - homepage.icon=whats-up-docker.svg
       - homepage.href=http://wud.${DOMAIN}
       - homepage.description=Container update watcher
       - homepage.widget.type=whatsupdocker

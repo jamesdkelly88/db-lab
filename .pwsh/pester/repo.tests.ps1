@@ -105,6 +105,18 @@ Describe "Docker" {
                 "backup.sh" | Should -Exist
             }
         }
+        It "should have a restore script" {
+            if($is_db)
+            {
+                "restore.sh" | Should -Exist
+            }
+        }
+        It "should have a stress-test script" {
+            if($is_db)
+            {
+                "stress.sh" | Should -Exist
+            }
+        }
         It "should not have a sample script" {
             "sample.sh" | Should -Not -Exist
         }
