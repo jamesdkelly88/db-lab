@@ -33,7 +33,7 @@ services:
       - homepage.group=Relational
       - homepage.name=PostgreSQL (HA)
       - homepage.icon=postgres.png
-      - homepage.description=PostgreSQL 3-node cluster with HAProxy/Patroni/Zookeeper (5432)
+      - homepage.description=3-node cluster (5432)
       - wud.tag.include=^\d$
     environment:
       POSTGRES_HOST_AUTH_METHOD: scram-sha-256

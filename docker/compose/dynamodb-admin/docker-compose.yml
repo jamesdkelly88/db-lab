@@ -2,11 +2,11 @@ services:
   dynamodb-admin:
     container_name: dynamodb-admin
     labels:
-      - homepage.group=Document
+      - homepage.group=GUIs
       - homepage.name=DynamoDB Admin
       - homepage.icon=aws.png
       - homepage.href=http://dynamodb-admin.${DOMAIN}
-      - homepage.description=DynamoDB admin web interface
+      - "homepage.description=For: DynamoDB"
       - traefik.enable=true
       - wud.tag.include=^v\d+?.\d+?.\d+?$
     environment:
