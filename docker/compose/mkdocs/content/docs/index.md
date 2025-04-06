@@ -40,6 +40,7 @@ This repository is my database lab. It provides containerised environments for m
 | basline-up | Launch a minimal environment | repository root |
 | core | Launch a full environment (with no database services) | repository root |
 | networks | Create the required docker networks | repository root |
+| pre-commit | Run the helper scripts (before committing changes) | repository root |
 | all-up | Launch everything in the repository | repository root |
 | all-down | Stop everything in the repository | repository root |
 | all-destroy | Stop everything in the repository and delete any volumes and networks | repository root |

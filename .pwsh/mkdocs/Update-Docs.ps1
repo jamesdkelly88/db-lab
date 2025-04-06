@@ -3,7 +3,9 @@ $ErrorActionPreference = "Stop"
 Install-Module powershell-yaml
 Import-Module powershell-yaml
 
-$compose_root = Resolve-Path (Join-Path -Path $PSScriptRoot -ChildPath "..") | Select-Object -ExpandProperty Path
+$compose_root = Resolve-Path (Join-Path -Path $PSScriptRoot -ChildPath "../../docker/compose") | Select-Object -ExpandProperty Path
+$samples_root = Resolve-Path (Join-Path -Path $PSScriptRoot -ChildPath "../../samples") | Select-Object -ExpandProperty Path
+$content_dir  = "$compose_root/mkdocs/content"
 
 $y = ":white_check_mark:"
 $n = ":x:"
@@ -122,6 +124,11 @@ foreach($f in Get-ChildItem -Path $compose_root -Directory)
 
             }
 
+            if($info.name -eq "Homepage")
+            {
+                $urls += "http://homepage.$($domain)"
+            }
+
             $images = $images | Sort-Object -Unique
             $ports = $ports | Sort-Object -Unique
             $urls = $urls | Sort-Object -Unique
@@ -184,7 +191,7 @@ foreach($f in Get-ChildItem -Path $compose_root -Directory)
 
 
 
-        $page.ToString() | Out-File "$PSScriptRoot/content/docs/Services/$($f.Name).md"
+        $page.ToString() | Out-File "$content_dir/docs/Services/$($f.Name).md"
 
         $features += $feature
     }
@@ -201,7 +208,7 @@ foreach($f in Get-ChildItem -Path $compose_root -Directory)
 
 # update table for features based on which files exist (tests, sample database creates etc)
 
-foreach($db in (Get-ChildItem -Path (Resolve-Path "$($compose_root)/../../samples") -Directory))
+foreach($db in (Get-ChildItem -Path $samples_root -Directory))
 {
     foreach($s in Get-ChildItem $db -File)
     {
@@ -261,4 +268,4 @@ foreach($f in $features.Where{ $_.database } | Sort-Object -Property Name)
     $feature_page.AppendLine("|") | Out-Null
 }
 
-$feature_page.ToString() | Out-File "$PSScriptRoot/content/docs/features.md"
+$feature_page.ToString() | Out-File "$content_dir/docs/features.md"
