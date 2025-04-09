@@ -1,674 +1,420 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<test-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="399" errors="0" failures="29" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2025-04-06" time="12:24:21">
-  <environment clr-version="8.0.10" machine-name="lt16" nunit-version="2.5.8.0" user="james" os-version="6.6.82" user-domain="" cwd="/home/james/repos/db-lab/docker/compose/wud" platform="Linux" />
-  <culture-info current-culture="en-GB" current-uiculture="en-GB" />
-  <test-suite type="TestFixture" name="Pester" executed="True" result="Failure" success="False" time="3.5719" asserts="0" description="Pester">
-    <results>
-      <test-suite type="TestFixture" name="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" executed="True" result="Failure" success="False" time="3.5719" asserts="0" description="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1">
-        <results>
-          <test-suite type="TestFixture" name="Docker" executed="True" result="Failure" success="False" time="2.8451" asserts="0" description="Docker">
-            <results>
-              <test-suite type="TestFixture" name="Docker.dbgate" executed="True" result="Success" success="True" time="0.4127" asserts="0" description="Docker.dbgate">
-                <results>
-                  <test-case description="contains docker-compose.yml" name="Docker.dbgate.contains docker-compose.yml" time="0.1562" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="doesn't contain a dockerfile" name="Docker.dbgate.doesn't contain a dockerfile" time="0.0091" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="contains info.json" name="Docker.dbgate.contains info.json" time="0.0085" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a title" name="Docker.dbgate.should have a title" time="0.02" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a description" name="Docker.dbgate.should have a description" time="0.008" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a type" name="Docker.dbgate.should have a type" time="0.0093" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a valid type" name="Docker.dbgate.should have a valid type" time="0.0074" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a homepage" name="Docker.dbgate.should have a homepage" time="0.0087" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a registry" name="Docker.dbgate.should have a registry" time="0.0078" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a repository" name="Docker.dbgate.should have a repository" time="0.0082" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a dbdb link" name="Docker.dbgate.should have a dbdb link" time="0.0126" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a tests folder" name="Docker.dbgate.should have a tests folder" time="0.0054" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a go test" name="Docker.dbgate.should have a go test" time="0.005" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a powershell test" name="Docker.dbgate.should have a powershell test" time="0.0124" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a python test" name="Docker.dbgate.should have a python test" time="0.0098" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a backup script" name="Docker.dbgate.should have a backup script" time="0.0088" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a restore script" name="Docker.dbgate.should have a restore script" time="0.0085" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a stress-test script" name="Docker.dbgate.should have a stress-test script" time="0.0078" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should not have a sample script" name="Docker.dbgate.should not have a sample script" time="0.0182" asserts="0" success="True" result="Success" executed="True" />
-                </results>
-              </test-suite>
-              <test-suite type="TestFixture" name="Docker.dockerproxy" executed="True" result="Success" success="True" time="0.5867" asserts="0" description="Docker.dockerproxy">
-                <results>
-                  <test-case description="contains docker-compose.yml" name="Docker.dockerproxy.contains docker-compose.yml" time="0.0113" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="doesn't contain a dockerfile" name="Docker.dockerproxy.doesn't contain a dockerfile" time="0.0082" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="contains info.json" name="Docker.dockerproxy.contains info.json" time="0.0092" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a title" name="Docker.dockerproxy.should have a title" time="0.0119" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a description" name="Docker.dockerproxy.should have a description" time="0.0083" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a type" name="Docker.dockerproxy.should have a type" time="0.0081" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a valid type" name="Docker.dockerproxy.should have a valid type" time="0.008" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a homepage" name="Docker.dockerproxy.should have a homepage" time="0.0085" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a registry" name="Docker.dockerproxy.should have a registry" time="0.0064" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a repository" name="Docker.dockerproxy.should have a repository" time="0.0077" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a dbdb link" name="Docker.dockerproxy.should have a dbdb link" time="0.006" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a tests folder" name="Docker.dockerproxy.should have a tests folder" time="0.0047" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a go test" name="Docker.dockerproxy.should have a go test" time="0.0108" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a powershell test" name="Docker.dockerproxy.should have a powershell test" time="0.0089" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a python test" name="Docker.dockerproxy.should have a python test" time="0.0102" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a backup script" name="Docker.dockerproxy.should have a backup script" time="0.007" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a restore script" name="Docker.dockerproxy.should have a restore script" time="0.0072" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a stress-test script" name="Docker.dockerproxy.should have a stress-test script" time="0.0097" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should not have a sample script" name="Docker.dockerproxy.should not have a sample script" time="0.0084" asserts="0" success="True" result="Success" executed="True" />
-                </results>
-              </test-suite>
-              <test-suite type="TestFixture" name="Docker.dozzle" executed="True" result="Success" success="True" time="0.7271" asserts="0" description="Docker.dozzle">
-                <results>
-                  <test-case description="contains docker-compose.yml" name="Docker.dozzle.contains docker-compose.yml" time="0.0089" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="doesn't contain a dockerfile" name="Docker.dozzle.doesn't contain a dockerfile" time="0.0067" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="contains info.json" name="Docker.dozzle.contains info.json" time="0.0078" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a title" name="Docker.dozzle.should have a title" time="0.0081" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a description" name="Docker.dozzle.should have a description" time="0.007" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a type" name="Docker.dozzle.should have a type" time="0.0081" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a valid type" name="Docker.dozzle.should have a valid type" time="0.0069" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a homepage" name="Docker.dozzle.should have a homepage" time="0.0062" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a registry" name="Docker.dozzle.should have a registry" time="0.0057" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a repository" name="Docker.dozzle.should have a repository" time="0.009" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a dbdb link" name="Docker.dozzle.should have a dbdb link" time="0.0045" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a tests folder" name="Docker.dozzle.should have a tests folder" time="0.0084" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a go test" name="Docker.dozzle.should have a go test" time="0.0049" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a powershell test" name="Docker.dozzle.should have a powershell test" time="0.0047" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a python test" name="Docker.dozzle.should have a python test" time="0.0067" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a backup script" name="Docker.dozzle.should have a backup script" time="0.0047" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a restore script" name="Docker.dozzle.should have a restore script" time="0.0057" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a stress-test script" name="Docker.dozzle.should have a stress-test script" time="0.0053" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should not have a sample script" name="Docker.dozzle.should not have a sample script" time="0.0099" asserts="0" success="True" result="Success" executed="True" />
-                </results>
-              </test-suite>
-              <test-suite type="TestFixture" name="Docker.dynamodb" executed="True" result="Failure" success="False" time="0.985" asserts="0" description="Docker.dynamodb">
-                <results>
-                  <test-case description="contains docker-compose.yml" name="Docker.dynamodb.contains docker-compose.yml" time="0.0079" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="doesn't contain a dockerfile" name="Docker.dynamodb.doesn't contain a dockerfile" time="0.0074" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="contains info.json" name="Docker.dynamodb.contains info.json" time="0.0094" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a title" name="Docker.dynamodb.should have a title" time="0.0083" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a description" name="Docker.dynamodb.should have a description" time="0.0076" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a type" name="Docker.dynamodb.should have a type" time="0.0077" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a valid type" name="Docker.dynamodb.should have a valid type" time="0.0061" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a homepage" name="Docker.dynamodb.should have a homepage" time="0.0087" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a registry" name="Docker.dynamodb.should have a registry" time="0.0064" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a repository" name="Docker.dynamodb.should have a repository" time="0.0084" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a dbdb link" name="Docker.dynamodb.should have a dbdb link" time="0.0096" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a tests folder" name="Docker.dynamodb.should have a tests folder" time="0.0131" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a go test" name="Docker.dynamodb.should have a go test" time="0.0984" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'tests/go' to exist, but it did not exist.</message>
-                      <stack-trace>at "tests/go" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:87
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:87</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should have a powershell test" name="Docker.dynamodb.should have a powershell test" time="0.0054" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a python test" name="Docker.dynamodb.should have a python test" time="0.0064" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a backup script" name="Docker.dynamodb.should have a backup script" time="0.0089" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a restore script" name="Docker.dynamodb.should have a restore script" time="0.0109" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'restore.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "restore.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:111
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:111</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should have a stress-test script" name="Docker.dynamodb.should have a stress-test script" time="0.0102" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'stress.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "stress.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:117
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:117</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should not have a sample script" name="Docker.dynamodb.should not have a sample script" time="0.005" asserts="0" success="True" result="Success" executed="True" />
-                </results>
-              </test-suite>
-              <test-suite type="TestFixture" name="Docker.dynamodb-admin" executed="True" result="Success" success="True" time="1.1049" asserts="0" description="Docker.dynamodb-admin">
-                <results>
-                  <test-case description="contains docker-compose.yml" name="Docker.dynamodb-admin.contains docker-compose.yml" time="0.0059" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="doesn't contain a dockerfile" name="Docker.dynamodb-admin.doesn't contain a dockerfile" time="0.009" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="contains info.json" name="Docker.dynamodb-admin.contains info.json" time="0.0051" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a title" name="Docker.dynamodb-admin.should have a title" time="0.0063" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a description" name="Docker.dynamodb-admin.should have a description" time="0.0048" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a type" name="Docker.dynamodb-admin.should have a type" time="0.0061" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a valid type" name="Docker.dynamodb-admin.should have a valid type" time="0.0049" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a homepage" name="Docker.dynamodb-admin.should have a homepage" time="0.0065" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a registry" name="Docker.dynamodb-admin.should have a registry" time="0.0057" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a repository" name="Docker.dynamodb-admin.should have a repository" time="0.0062" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a dbdb link" name="Docker.dynamodb-admin.should have a dbdb link" time="0.0043" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a tests folder" name="Docker.dynamodb-admin.should have a tests folder" time="0.0064" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a go test" name="Docker.dynamodb-admin.should have a go test" time="0.0044" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a powershell test" name="Docker.dynamodb-admin.should have a powershell test" time="0.0041" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a python test" name="Docker.dynamodb-admin.should have a python test" time="0.0059" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a backup script" name="Docker.dynamodb-admin.should have a backup script" time="0.0043" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a restore script" name="Docker.dynamodb-admin.should have a restore script" time="0.0058" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a stress-test script" name="Docker.dynamodb-admin.should have a stress-test script" time="0.0045" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should not have a sample script" name="Docker.dynamodb-admin.should not have a sample script" time="0.0072" asserts="0" success="True" result="Success" executed="True" />
-                </results>
-              </test-suite>
-              <test-suite type="TestFixture" name="Docker.homepage" executed="True" result="Success" success="True" time="1.2376" asserts="0" description="Docker.homepage">
-                <results>
-                  <test-case description="contains docker-compose.yml" name="Docker.homepage.contains docker-compose.yml" time="0.01" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="doesn't contain a dockerfile" name="Docker.homepage.doesn't contain a dockerfile" time="0.0099" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="contains info.json" name="Docker.homepage.contains info.json" time="0.0066" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a title" name="Docker.homepage.should have a title" time="0.0077" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a description" name="Docker.homepage.should have a description" time="0.0071" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a type" name="Docker.homepage.should have a type" time="0.0072" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a valid type" name="Docker.homepage.should have a valid type" time="0.0066" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a homepage" name="Docker.homepage.should have a homepage" time="0.008" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a registry" name="Docker.homepage.should have a registry" time="0.0066" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a repository" name="Docker.homepage.should have a repository" time="0.0072" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a dbdb link" name="Docker.homepage.should have a dbdb link" time="0.0035" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a tests folder" name="Docker.homepage.should have a tests folder" time="0.0048" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a go test" name="Docker.homepage.should have a go test" time="0.0067" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a powershell test" name="Docker.homepage.should have a powershell test" time="0.0045" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a python test" name="Docker.homepage.should have a python test" time="0.0054" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a backup script" name="Docker.homepage.should have a backup script" time="0.0063" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a restore script" name="Docker.homepage.should have a restore script" time="0.0033" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a stress-test script" name="Docker.homepage.should have a stress-test script" time="0.0038" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should not have a sample script" name="Docker.homepage.should not have a sample script" time="0.0063" asserts="0" success="True" result="Success" executed="True" />
-                </results>
-              </test-suite>
-              <test-suite type="TestFixture" name="Docker.minio" executed="True" result="Success" success="True" time="1.3245" asserts="0" description="Docker.minio">
-                <results>
-                  <test-case description="contains docker-compose.yml" name="Docker.minio.contains docker-compose.yml" time="0.0065" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="doesn't contain a dockerfile" name="Docker.minio.doesn't contain a dockerfile" time="0.006" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="contains info.json" name="Docker.minio.contains info.json" time="0.0042" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a title" name="Docker.minio.should have a title" time="0.0039" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a description" name="Docker.minio.should have a description" time="0.0038" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a type" name="Docker.minio.should have a type" time="0.0053" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a valid type" name="Docker.minio.should have a valid type" time="0.0038" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a homepage" name="Docker.minio.should have a homepage" time="0.0038" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a registry" name="Docker.minio.should have a registry" time="0.0052" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a repository" name="Docker.minio.should have a repository" time="0.0037" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a dbdb link" name="Docker.minio.should have a dbdb link" time="0.0043" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a tests folder" name="Docker.minio.should have a tests folder" time="0.0028" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a go test" name="Docker.minio.should have a go test" time="0.0028" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a powershell test" name="Docker.minio.should have a powershell test" time="0.004" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a python test" name="Docker.minio.should have a python test" time="0.0028" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a backup script" name="Docker.minio.should have a backup script" time="0.0043" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a restore script" name="Docker.minio.should have a restore script" time="0.003" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a stress-test script" name="Docker.minio.should have a stress-test script" time="0.0034" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should not have a sample script" name="Docker.minio.should not have a sample script" time="0.0056" asserts="0" success="True" result="Success" executed="True" />
-                </results>
-              </test-suite>
-              <test-suite type="TestFixture" name="Docker.mkdocs" executed="True" result="Success" success="True" time="1.4191" asserts="0" description="Docker.mkdocs">
-                <results>
-                  <test-case description="contains docker-compose.yml" name="Docker.mkdocs.contains docker-compose.yml" time="0.0062" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="doesn't contain a dockerfile" name="Docker.mkdocs.doesn't contain a dockerfile" time="0.004" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="contains info.json" name="Docker.mkdocs.contains info.json" time="0.006" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a title" name="Docker.mkdocs.should have a title" time="0.004" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a description" name="Docker.mkdocs.should have a description" time="0.005" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a type" name="Docker.mkdocs.should have a type" time="0.0038" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a valid type" name="Docker.mkdocs.should have a valid type" time="0.0056" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a homepage" name="Docker.mkdocs.should have a homepage" time="0.0037" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a registry" name="Docker.mkdocs.should have a registry" time="0.0049" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a repository" name="Docker.mkdocs.should have a repository" time="0.0039" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a dbdb link" name="Docker.mkdocs.should have a dbdb link" time="0.0028" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a tests folder" name="Docker.mkdocs.should have a tests folder" time="0.0044" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a go test" name="Docker.mkdocs.should have a go test" time="0.0029" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a powershell test" name="Docker.mkdocs.should have a powershell test" time="0.0028" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a python test" name="Docker.mkdocs.should have a python test" time="0.0043" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a backup script" name="Docker.mkdocs.should have a backup script" time="0.0045" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a restore script" name="Docker.mkdocs.should have a restore script" time="0.0058" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a stress-test script" name="Docker.mkdocs.should have a stress-test script" time="0.0033" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should not have a sample script" name="Docker.mkdocs.should not have a sample script" time="0.0061" asserts="0" success="True" result="Success" executed="True" />
-                </results>
-              </test-suite>
-              <test-suite type="TestFixture" name="Docker.mssql2017" executed="True" result="Failure" success="False" time="1.5568" asserts="0" description="Docker.mssql2017">
-                <results>
-                  <test-case description="contains docker-compose.yml" name="Docker.mssql2017.contains docker-compose.yml" time="0.0052" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="doesn't contain a dockerfile" name="Docker.mssql2017.doesn't contain a dockerfile" time="0.0057" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="contains info.json" name="Docker.mssql2017.contains info.json" time="0.004" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a title" name="Docker.mssql2017.should have a title" time="0.0061" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a description" name="Docker.mssql2017.should have a description" time="0.0064" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a type" name="Docker.mssql2017.should have a type" time="0.0064" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a valid type" name="Docker.mssql2017.should have a valid type" time="0.0052" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a homepage" name="Docker.mssql2017.should have a homepage" time="0.0059" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a registry" name="Docker.mssql2017.should have a registry" time="0.0041" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a repository" name="Docker.mssql2017.should have a repository" time="0.0048" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a dbdb link" name="Docker.mssql2017.should have a dbdb link" time="0.0063" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a tests folder" name="Docker.mssql2017.should have a tests folder" time="0.0073" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a go test" name="Docker.mssql2017.should have a go test" time="0.0107" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'tests/go' to exist, but it did not exist.</message>
-                      <stack-trace>at "tests/go" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:87
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:87</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should have a powershell test" name="Docker.mssql2017.should have a powershell test" time="0.0043" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a python test" name="Docker.mssql2017.should have a python test" time="0.0083" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a backup script" name="Docker.mssql2017.should have a backup script" time="0.0129" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'backup.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "backup.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:105
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:105</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should have a restore script" name="Docker.mssql2017.should have a restore script" time="0.0108" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'restore.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "restore.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:111
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:111</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should have a stress-test script" name="Docker.mssql2017.should have a stress-test script" time="0.0104" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'stress.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "stress.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:117
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:117</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should not have a sample script" name="Docker.mssql2017.should not have a sample script" time="0.0041" asserts="0" success="True" result="Success" executed="True" />
-                </results>
-              </test-suite>
-              <test-suite type="TestFixture" name="Docker.mssql2019" executed="True" result="Failure" success="False" time="1.6745" asserts="0" description="Docker.mssql2019">
-                <results>
-                  <test-case description="contains docker-compose.yml" name="Docker.mssql2019.contains docker-compose.yml" time="0.0045" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="doesn't contain a dockerfile" name="Docker.mssql2019.doesn't contain a dockerfile" time="0.0058" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="contains info.json" name="Docker.mssql2019.contains info.json" time="0.0039" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a title" name="Docker.mssql2019.should have a title" time="0.0037" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a description" name="Docker.mssql2019.should have a description" time="0.0036" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a type" name="Docker.mssql2019.should have a type" time="0.0051" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a valid type" name="Docker.mssql2019.should have a valid type" time="0.0036" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a homepage" name="Docker.mssql2019.should have a homepage" time="0.0053" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a registry" name="Docker.mssql2019.should have a registry" time="0.0036" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a repository" name="Docker.mssql2019.should have a repository" time="0.005" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a dbdb link" name="Docker.mssql2019.should have a dbdb link" time="0.0036" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a tests folder" name="Docker.mssql2019.should have a tests folder" time="0.0057" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a go test" name="Docker.mssql2019.should have a go test" time="0.0101" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'tests/go' to exist, but it did not exist.</message>
-                      <stack-trace>at "tests/go" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:87
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:87</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should have a powershell test" name="Docker.mssql2019.should have a powershell test" time="0.0043" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a python test" name="Docker.mssql2019.should have a python test" time="0.0057" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a backup script" name="Docker.mssql2019.should have a backup script" time="0.0104" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'backup.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "backup.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:105
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:105</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should have a restore script" name="Docker.mssql2019.should have a restore script" time="0.0089" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'restore.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "restore.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:111
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:111</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should have a stress-test script" name="Docker.mssql2019.should have a stress-test script" time="0.0101" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'stress.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "stress.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:117
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:117</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should not have a sample script" name="Docker.mssql2019.should not have a sample script" time="0.0061" asserts="0" success="True" result="Success" executed="True" />
-                </results>
-              </test-suite>
-              <test-suite type="TestFixture" name="Docker.mssql2022" executed="True" result="Failure" success="False" time="1.8011" asserts="0" description="Docker.mssql2022">
-                <results>
-                  <test-case description="contains docker-compose.yml" name="Docker.mssql2022.contains docker-compose.yml" time="0.006" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="doesn't contain a dockerfile" name="Docker.mssql2022.doesn't contain a dockerfile" time="0.004" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="contains info.json" name="Docker.mssql2022.contains info.json" time="0.0054" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a title" name="Docker.mssql2022.should have a title" time="0.0042" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a description" name="Docker.mssql2022.should have a description" time="0.0059" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a type" name="Docker.mssql2022.should have a type" time="0.0042" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a valid type" name="Docker.mssql2022.should have a valid type" time="0.0041" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a homepage" name="Docker.mssql2022.should have a homepage" time="0.0055" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a registry" name="Docker.mssql2022.should have a registry" time="0.0041" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a repository" name="Docker.mssql2022.should have a repository" time="0.0057" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a dbdb link" name="Docker.mssql2022.should have a dbdb link" time="0.0042" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a tests folder" name="Docker.mssql2022.should have a tests folder" time="0.0061" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a go test" name="Docker.mssql2022.should have a go test" time="0.0095" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'tests/go' to exist, but it did not exist.</message>
-                      <stack-trace>at "tests/go" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:87
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:87</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should have a powershell test" name="Docker.mssql2022.should have a powershell test" time="0.0061" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a python test" name="Docker.mssql2022.should have a python test" time="0.0048" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a backup script" name="Docker.mssql2022.should have a backup script" time="0.011" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'backup.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "backup.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:105
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:105</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should have a restore script" name="Docker.mssql2022.should have a restore script" time="0.0106" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'restore.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "restore.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:111
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:111</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should have a stress-test script" name="Docker.mssql2022.should have a stress-test script" time="0.0109" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'stress.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "stress.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:117
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:117</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should not have a sample script" name="Docker.mssql2022.should not have a sample script" time="0.0058" asserts="0" success="True" result="Success" executed="True" />
-                </results>
-              </test-suite>
-              <test-suite type="TestFixture" name="Docker.pgadmin" executed="True" result="Success" success="True" time="1.9047" asserts="0" description="Docker.pgadmin">
-                <results>
-                  <test-case description="contains docker-compose.yml" name="Docker.pgadmin.contains docker-compose.yml" time="0.0069" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="doesn't contain a dockerfile" name="Docker.pgadmin.doesn't contain a dockerfile" time="0.0086" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="contains info.json" name="Docker.pgadmin.contains info.json" time="0.0057" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a title" name="Docker.pgadmin.should have a title" time="0.0077" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a description" name="Docker.pgadmin.should have a description" time="0.0046" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a type" name="Docker.pgadmin.should have a type" time="0.0062" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a valid type" name="Docker.pgadmin.should have a valid type" time="0.004" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a homepage" name="Docker.pgadmin.should have a homepage" time="0.004" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a registry" name="Docker.pgadmin.should have a registry" time="0.0042" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a repository" name="Docker.pgadmin.should have a repository" time="0.0041" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a dbdb link" name="Docker.pgadmin.should have a dbdb link" time="0.0042" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a tests folder" name="Docker.pgadmin.should have a tests folder" time="0.0029" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a go test" name="Docker.pgadmin.should have a go test" time="0.0042" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a powershell test" name="Docker.pgadmin.should have a powershell test" time="0.0033" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a python test" name="Docker.pgadmin.should have a python test" time="0.0027" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a backup script" name="Docker.pgadmin.should have a backup script" time="0.004" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a restore script" name="Docker.pgadmin.should have a restore script" time="0.0027" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a stress-test script" name="Docker.pgadmin.should have a stress-test script" time="0.0037" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should not have a sample script" name="Docker.pgadmin.should not have a sample script" time="0.0077" asserts="0" success="True" result="Success" executed="True" />
-                </results>
-              </test-suite>
-              <test-suite type="TestFixture" name="Docker.postgres-ha" executed="True" result="Failure" success="False" time="2.0107" asserts="0" description="Docker.postgres-ha">
-                <results>
-                  <test-case description="contains docker-compose.yml" name="Docker.postgres-ha.contains docker-compose.yml" time="0.0065" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="doesn't contain a dockerfile" name="Docker.postgres-ha.doesn't contain a dockerfile" time="0.0038" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="contains info.json" name="Docker.postgres-ha.contains info.json" time="0.0054" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a title" name="Docker.postgres-ha.should have a title" time="0.0036" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a description" name="Docker.postgres-ha.should have a description" time="0.0052" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a type" name="Docker.postgres-ha.should have a type" time="0.0039" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a valid type" name="Docker.postgres-ha.should have a valid type" time="0.0037" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a homepage" name="Docker.postgres-ha.should have a homepage" time="0.0054" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a registry" name="Docker.postgres-ha.should have a registry" time="0.0034" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a repository" name="Docker.postgres-ha.should have a repository" time="0.0049" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a dbdb link" name="Docker.postgres-ha.should have a dbdb link" time="0.0034" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a tests folder" name="Docker.postgres-ha.should have a tests folder" time="0.0061" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a go test" name="Docker.postgres-ha.should have a go test" time="0.004" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a powershell test" name="Docker.postgres-ha.should have a powershell test" time="0.0056" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a python test" name="Docker.postgres-ha.should have a python test" time="0.0045" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a backup script" name="Docker.postgres-ha.should have a backup script" time="0.0051" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a restore script" name="Docker.postgres-ha.should have a restore script" time="0.0099" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'restore.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "restore.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:111
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:111</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should have a stress-test script" name="Docker.postgres-ha.should have a stress-test script" time="0.0105" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'stress.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "stress.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:117
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:117</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should not have a sample script" name="Docker.postgres-ha.should not have a sample script" time="0.0039" asserts="0" success="True" result="Success" executed="True" />
-                </results>
-              </test-suite>
-              <test-suite type="TestFixture" name="Docker.postgres12" executed="True" result="Failure" success="False" time="2.116" asserts="0" description="Docker.postgres12">
-                <results>
-                  <test-case description="contains docker-compose.yml" name="Docker.postgres12.contains docker-compose.yml" time="0.0061" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="doesn't contain a dockerfile" name="Docker.postgres12.doesn't contain a dockerfile" time="0.0038" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="contains info.json" name="Docker.postgres12.contains info.json" time="0.0058" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a title" name="Docker.postgres12.should have a title" time="0.0035" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a description" name="Docker.postgres12.should have a description" time="0.0035" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a type" name="Docker.postgres12.should have a type" time="0.0049" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a valid type" name="Docker.postgres12.should have a valid type" time="0.0041" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a homepage" name="Docker.postgres12.should have a homepage" time="0.0049" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a registry" name="Docker.postgres12.should have a registry" time="0.0035" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a repository" name="Docker.postgres12.should have a repository" time="0.0051" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a dbdb link" name="Docker.postgres12.should have a dbdb link" time="0.0035" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a tests folder" name="Docker.postgres12.should have a tests folder" time="0.0062" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a go test" name="Docker.postgres12.should have a go test" time="0.0041" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a powershell test" name="Docker.postgres12.should have a powershell test" time="0.006" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a python test" name="Docker.postgres12.should have a python test" time="0.0042" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a backup script" name="Docker.postgres12.should have a backup script" time="0.0051" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a restore script" name="Docker.postgres12.should have a restore script" time="0.0101" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'restore.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "restore.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:111
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:111</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should have a stress-test script" name="Docker.postgres12.should have a stress-test script" time="0.0098" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'stress.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "stress.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:117
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:117</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should not have a sample script" name="Docker.postgres12.should not have a sample script" time="0.0039" asserts="0" success="True" result="Success" executed="True" />
-                </results>
-              </test-suite>
-              <test-suite type="TestFixture" name="Docker.postgres13" executed="True" result="Failure" success="False" time="2.2243" asserts="0" description="Docker.postgres13">
-                <results>
-                  <test-case description="contains docker-compose.yml" name="Docker.postgres13.contains docker-compose.yml" time="0.0044" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="doesn't contain a dockerfile" name="Docker.postgres13.doesn't contain a dockerfile" time="0.0055" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="contains info.json" name="Docker.postgres13.contains info.json" time="0.0039" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a title" name="Docker.postgres13.should have a title" time="0.0034" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a description" name="Docker.postgres13.should have a description" time="0.0048" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a type" name="Docker.postgres13.should have a type" time="0.0036" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a valid type" name="Docker.postgres13.should have a valid type" time="0.0034" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a homepage" name="Docker.postgres13.should have a homepage" time="0.0049" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a registry" name="Docker.postgres13.should have a registry" time="0.0034" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a repository" name="Docker.postgres13.should have a repository" time="0.0052" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a dbdb link" name="Docker.postgres13.should have a dbdb link" time="0.0036" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a tests folder" name="Docker.postgres13.should have a tests folder" time="0.0061" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a go test" name="Docker.postgres13.should have a go test" time="0.0041" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a powershell test" name="Docker.postgres13.should have a powershell test" time="0.0063" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a python test" name="Docker.postgres13.should have a python test" time="0.0045" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a backup script" name="Docker.postgres13.should have a backup script" time="0.0059" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a restore script" name="Docker.postgres13.should have a restore script" time="0.0112" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'restore.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "restore.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:111
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:111</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should have a stress-test script" name="Docker.postgres13.should have a stress-test script" time="0.0111" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'stress.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "stress.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:117
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:117</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should not have a sample script" name="Docker.postgres13.should not have a sample script" time="0.0049" asserts="0" success="True" result="Success" executed="True" />
-                </results>
-              </test-suite>
-              <test-suite type="TestFixture" name="Docker.postgres14" executed="True" result="Failure" success="False" time="2.3366" asserts="0" description="Docker.postgres14">
-                <results>
-                  <test-case description="contains docker-compose.yml" name="Docker.postgres14.contains docker-compose.yml" time="0.0049" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="doesn't contain a dockerfile" name="Docker.postgres14.doesn't contain a dockerfile" time="0.0071" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="contains info.json" name="Docker.postgres14.contains info.json" time="0.0064" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a title" name="Docker.postgres14.should have a title" time="0.004" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a description" name="Docker.postgres14.should have a description" time="0.0054" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a type" name="Docker.postgres14.should have a type" time="0.0045" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a valid type" name="Docker.postgres14.should have a valid type" time="0.0052" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a homepage" name="Docker.postgres14.should have a homepage" time="0.004" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a registry" name="Docker.postgres14.should have a registry" time="0.0057" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a repository" name="Docker.postgres14.should have a repository" time="0.0035" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a dbdb link" name="Docker.postgres14.should have a dbdb link" time="0.0047" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a tests folder" name="Docker.postgres14.should have a tests folder" time="0.0042" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a go test" name="Docker.postgres14.should have a go test" time="0.0045" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a powershell test" name="Docker.postgres14.should have a powershell test" time="0.0052" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a python test" name="Docker.postgres14.should have a python test" time="0.0039" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a backup script" name="Docker.postgres14.should have a backup script" time="0.005" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a restore script" name="Docker.postgres14.should have a restore script" time="0.0101" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'restore.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "restore.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:111
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:111</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should have a stress-test script" name="Docker.postgres14.should have a stress-test script" time="0.0102" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'stress.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "stress.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:117
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:117</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should not have a sample script" name="Docker.postgres14.should not have a sample script" time="0.0038" asserts="0" success="True" result="Success" executed="True" />
-                </results>
-              </test-suite>
-              <test-suite type="TestFixture" name="Docker.postgres15" executed="True" result="Failure" success="False" time="2.446" asserts="0" description="Docker.postgres15">
-                <results>
-                  <test-case description="contains docker-compose.yml" name="Docker.postgres15.contains docker-compose.yml" time="0.0069" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="doesn't contain a dockerfile" name="Docker.postgres15.doesn't contain a dockerfile" time="0.0049" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="contains info.json" name="Docker.postgres15.contains info.json" time="0.0038" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a title" name="Docker.postgres15.should have a title" time="0.0034" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a description" name="Docker.postgres15.should have a description" time="0.0047" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a type" name="Docker.postgres15.should have a type" time="0.0049" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a valid type" name="Docker.postgres15.should have a valid type" time="0.0035" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a homepage" name="Docker.postgres15.should have a homepage" time="0.0051" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a registry" name="Docker.postgres15.should have a registry" time="0.0035" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a repository" name="Docker.postgres15.should have a repository" time="0.0049" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a dbdb link" name="Docker.postgres15.should have a dbdb link" time="0.0034" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a tests folder" name="Docker.postgres15.should have a tests folder" time="0.0063" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a go test" name="Docker.postgres15.should have a go test" time="0.0053" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a powershell test" name="Docker.postgres15.should have a powershell test" time="0.0058" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a python test" name="Docker.postgres15.should have a python test" time="0.0049" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a backup script" name="Docker.postgres15.should have a backup script" time="0.0054" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a restore script" name="Docker.postgres15.should have a restore script" time="0.0102" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'restore.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "restore.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:111
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:111</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should have a stress-test script" name="Docker.postgres15.should have a stress-test script" time="0.0106" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'stress.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "stress.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:117
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:117</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should not have a sample script" name="Docker.postgres15.should not have a sample script" time="0.0042" asserts="0" success="True" result="Success" executed="True" />
-                </results>
-              </test-suite>
-              <test-suite type="TestFixture" name="Docker.postgres16" executed="True" result="Failure" success="False" time="2.5576" asserts="0" description="Docker.postgres16">
-                <results>
-                  <test-case description="contains docker-compose.yml" name="Docker.postgres16.contains docker-compose.yml" time="0.0043" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="doesn't contain a dockerfile" name="Docker.postgres16.doesn't contain a dockerfile" time="0.0058" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="contains info.json" name="Docker.postgres16.contains info.json" time="0.0045" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a title" name="Docker.postgres16.should have a title" time="0.0035" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a description" name="Docker.postgres16.should have a description" time="0.0036" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a type" name="Docker.postgres16.should have a type" time="0.0038" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a valid type" name="Docker.postgres16.should have a valid type" time="0.0056" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a homepage" name="Docker.postgres16.should have a homepage" time="0.0037" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a registry" name="Docker.postgres16.should have a registry" time="0.0056" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a repository" name="Docker.postgres16.should have a repository" time="0.0041" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a dbdb link" name="Docker.postgres16.should have a dbdb link" time="0.0059" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a tests folder" name="Docker.postgres16.should have a tests folder" time="0.004" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a go test" name="Docker.postgres16.should have a go test" time="0.0047" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a powershell test" name="Docker.postgres16.should have a powershell test" time="0.0066" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a python test" name="Docker.postgres16.should have a python test" time="0.004" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a backup script" name="Docker.postgres16.should have a backup script" time="0.0057" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a restore script" name="Docker.postgres16.should have a restore script" time="0.0098" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'restore.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "restore.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:111
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:111</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should have a stress-test script" name="Docker.postgres16.should have a stress-test script" time="0.0113" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'stress.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "stress.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:117
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:117</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should not have a sample script" name="Docker.postgres16.should not have a sample script" time="0.0039" asserts="0" success="True" result="Success" executed="True" />
-                </results>
-              </test-suite>
-              <test-suite type="TestFixture" name="Docker.postgres17" executed="True" result="Failure" success="False" time="2.6635" asserts="0" description="Docker.postgres17">
-                <results>
-                  <test-case description="contains docker-compose.yml" name="Docker.postgres17.contains docker-compose.yml" time="0.0053" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="doesn't contain a dockerfile" name="Docker.postgres17.doesn't contain a dockerfile" time="0.0053" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="contains info.json" name="Docker.postgres17.contains info.json" time="0.0036" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a title" name="Docker.postgres17.should have a title" time="0.0067" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a description" name="Docker.postgres17.should have a description" time="0.0034" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a type" name="Docker.postgres17.should have a type" time="0.0047" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a valid type" name="Docker.postgres17.should have a valid type" time="0.0042" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a homepage" name="Docker.postgres17.should have a homepage" time="0.0066" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a registry" name="Docker.postgres17.should have a registry" time="0.0035" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a repository" name="Docker.postgres17.should have a repository" time="0.0033" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a dbdb link" name="Docker.postgres17.should have a dbdb link" time="0.0056" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a tests folder" name="Docker.postgres17.should have a tests folder" time="0.0039" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a go test" name="Docker.postgres17.should have a go test" time="0.0052" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a powershell test" name="Docker.postgres17.should have a powershell test" time="0.0042" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a python test" name="Docker.postgres17.should have a python test" time="0.0055" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a backup script" name="Docker.postgres17.should have a backup script" time="0.0037" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a restore script" name="Docker.postgres17.should have a restore script" time="0.0093" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'restore.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "restore.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:111
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:111</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should have a stress-test script" name="Docker.postgres17.should have a stress-test script" time="0.0095" asserts="0" success="False" result="Failure" executed="True">
-                    <failure>
-                      <message>Expected path 'stress.sh' to exist, but it did not exist.</message>
-                      <stack-trace>at "stress.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:117
-at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:117</stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case description="should not have a sample script" name="Docker.postgres17.should not have a sample script" time="0.0053" asserts="0" success="True" result="Success" executed="True" />
-                </results>
-              </test-suite>
-              <test-suite type="TestFixture" name="Docker.traefik" executed="True" result="Success" success="True" time="2.7437" asserts="0" description="Docker.traefik">
-                <results>
-                  <test-case description="contains docker-compose.yml" name="Docker.traefik.contains docker-compose.yml" time="0.0059" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="doesn't contain a dockerfile" name="Docker.traefik.doesn't contain a dockerfile" time="0.0037" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="contains info.json" name="Docker.traefik.contains info.json" time="0.0053" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a title" name="Docker.traefik.should have a title" time="0.0035" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a description" name="Docker.traefik.should have a description" time="0.0047" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a type" name="Docker.traefik.should have a type" time="0.0041" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a valid type" name="Docker.traefik.should have a valid type" time="0.0047" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a homepage" name="Docker.traefik.should have a homepage" time="0.0035" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a registry" name="Docker.traefik.should have a registry" time="0.0048" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a repository" name="Docker.traefik.should have a repository" time="0.0034" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a dbdb link" name="Docker.traefik.should have a dbdb link" time="0.0026" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a tests folder" name="Docker.traefik.should have a tests folder" time="0.004" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a go test" name="Docker.traefik.should have a go test" time="0.0026" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a powershell test" name="Docker.traefik.should have a powershell test" time="0.0026" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a python test" name="Docker.traefik.should have a python test" time="0.0039" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a backup script" name="Docker.traefik.should have a backup script" time="0.0026" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a restore script" name="Docker.traefik.should have a restore script" time="0.0041" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a stress-test script" name="Docker.traefik.should have a stress-test script" time="0.0026" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should not have a sample script" name="Docker.traefik.should not have a sample script" time="0.0038" asserts="0" success="True" result="Success" executed="True" />
-                </results>
-              </test-suite>
-              <test-suite type="TestFixture" name="Docker.wud" executed="True" result="Success" success="True" time="2.8266" asserts="0" description="Docker.wud">
-                <results>
-                  <test-case description="contains docker-compose.yml" name="Docker.wud.contains docker-compose.yml" time="0.0044" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="doesn't contain a dockerfile" name="Docker.wud.doesn't contain a dockerfile" time="0.0054" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="contains info.json" name="Docker.wud.contains info.json" time="0.0037" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a title" name="Docker.wud.should have a title" time="0.0049" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a description" name="Docker.wud.should have a description" time="0.0036" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a type" name="Docker.wud.should have a type" time="0.0055" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a valid type" name="Docker.wud.should have a valid type" time="0.0036" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a homepage" name="Docker.wud.should have a homepage" time="0.0051" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a registry" name="Docker.wud.should have a registry" time="0.0034" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a repository" name="Docker.wud.should have a repository" time="0.0034" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a dbdb link" name="Docker.wud.should have a dbdb link" time="0.0028" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a tests folder" name="Docker.wud.should have a tests folder" time="0.0044" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a go test" name="Docker.wud.should have a go test" time="0.0026" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a powershell test" name="Docker.wud.should have a powershell test" time="0.0026" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a python test" name="Docker.wud.should have a python test" time="0.004" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a backup script" name="Docker.wud.should have a backup script" time="0.0027" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a restore script" name="Docker.wud.should have a restore script" time="0.0042" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should have a stress-test script" name="Docker.wud.should have a stress-test script" time="0.0026" asserts="0" success="True" result="Success" executed="True" />
-                  <test-case description="should not have a sample script" name="Docker.wud.should not have a sample script" time="0.0039" asserts="0" success="True" result="Success" executed="True" />
-                </results>
-              </test-suite>
-            </results>
-          </test-suite>
-        </results>
-      </test-suite>
-    </results>
-  </test-suite>
-</test-results>
+<testsuites xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="junit_schema_4.xsd" name="Pester" tests="374" errors="0" failures="10" disabled="0" time="3.948">
+  <testsuite name="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" tests="374" errors="0" failures="10" hostname="lt16" id="0" skipped="0" disabled="0" package="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" time="3.948">
+    <properties>
+      <property name="junit-version" value="4" />
+      <property name="user" value="james" />
+      <property name="clr-version" value="8.0.10" />
+      <property name="cwd" value="/home/james/repos/db-lab/docker/compose/wud" />
+      <property name="user-domain" value="" />
+      <property name="framework-version" value="5.7.1" />
+      <property name="os-version" value="6.6.82" />
+      <property name="machine-name" value="lt16" />
+      <property name="platform" value="Linux" />
+    </properties>
+    <testcase name="Docker.dbgate.contains docker-compose.yml" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.148" />
+    <testcase name="Docker.dbgate.doesn't contain a dockerfile" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.011" />
+    <testcase name="Docker.dbgate.contains info.json" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.dbgate.should have a title" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.038" />
+    <testcase name="Docker.dbgate.should have a description" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.009" />
+    <testcase name="Docker.dbgate.should have a type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.dbgate.should have a valid type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.009" />
+    <testcase name="Docker.dbgate.should have a homepage" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.dbgate.should have a registry" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.013" />
+    <testcase name="Docker.dbgate.should have a repository" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.011" />
+    <testcase name="Docker.dbgate.should have a dbdb link" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.dbgate.should have a tests folder" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.dbgate.should have a go test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.dbgate.should have a powershell test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.018" />
+    <testcase name="Docker.dbgate.should have a python test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.010" />
+    <testcase name="Docker.dbgate.should have a backup script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.010" />
+    <testcase name="Docker.dbgate.should not have a sample script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.017" />
+    <testcase name="Docker.dockerproxy.contains docker-compose.yml" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.013" />
+    <testcase name="Docker.dockerproxy.doesn't contain a dockerfile" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.010" />
+    <testcase name="Docker.dockerproxy.contains info.json" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.011" />
+    <testcase name="Docker.dockerproxy.should have a title" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.016" />
+    <testcase name="Docker.dockerproxy.should have a description" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.009" />
+    <testcase name="Docker.dockerproxy.should have a type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.010" />
+    <testcase name="Docker.dockerproxy.should have a valid type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.011" />
+    <testcase name="Docker.dockerproxy.should have a homepage" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.dockerproxy.should have a registry" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.011" />
+    <testcase name="Docker.dockerproxy.should have a repository" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.013" />
+    <testcase name="Docker.dockerproxy.should have a dbdb link" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.dockerproxy.should have a tests folder" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.dockerproxy.should have a go test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.012" />
+    <testcase name="Docker.dockerproxy.should have a powershell test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.dockerproxy.should have a python test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.dockerproxy.should have a backup script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.014" />
+    <testcase name="Docker.dockerproxy.should not have a sample script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.013" />
+    <testcase name="Docker.dozzle.contains docker-compose.yml" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.022" />
+    <testcase name="Docker.dozzle.doesn't contain a dockerfile" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.011" />
+    <testcase name="Docker.dozzle.contains info.json" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.011" />
+    <testcase name="Docker.dozzle.should have a title" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.011" />
+    <testcase name="Docker.dozzle.should have a description" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.011" />
+    <testcase name="Docker.dozzle.should have a type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.010" />
+    <testcase name="Docker.dozzle.should have a valid type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.009" />
+    <testcase name="Docker.dozzle.should have a homepage" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.013" />
+    <testcase name="Docker.dozzle.should have a registry" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.009" />
+    <testcase name="Docker.dozzle.should have a repository" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.018" />
+    <testcase name="Docker.dozzle.should have a dbdb link" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.dozzle.should have a tests folder" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.010" />
+    <testcase name="Docker.dozzle.should have a go test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.dozzle.should have a powershell test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.dozzle.should have a python test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.012" />
+    <testcase name="Docker.dozzle.should have a backup script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.009" />
+    <testcase name="Docker.dozzle.should not have a sample script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.016" />
+    <testcase name="Docker.dynamodb.contains docker-compose.yml" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.010" />
+    <testcase name="Docker.dynamodb.doesn't contain a dockerfile" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.012" />
+    <testcase name="Docker.dynamodb.contains info.json" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.dynamodb.should have a title" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.dynamodb.should have a description" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.dynamodb.should have a type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.009" />
+    <testcase name="Docker.dynamodb.should have a valid type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.dynamodb.should have a homepage" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.011" />
+    <testcase name="Docker.dynamodb.should have a registry" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.dynamodb.should have a repository" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.011" />
+    <testcase name="Docker.dynamodb.should have a dbdb link" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.009" />
+    <testcase name="Docker.dynamodb.should have a tests folder" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.010" />
+    <testcase name="Docker.dynamodb.should have a go test" status="Failed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.094">
+      <failure message="Expected path 'tests/go' to exist, but it did not exist.">at "tests/go" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:87
+at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:87</failure>
+    </testcase>
+    <testcase name="Docker.dynamodb.should have a powershell test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.dynamodb.should have a python test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.009" />
+    <testcase name="Docker.dynamodb.should have a backup script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.012" />
+    <testcase name="Docker.dynamodb.should not have a sample script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.dynamodb-admin.contains docker-compose.yml" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.dynamodb-admin.doesn't contain a dockerfile" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.dynamodb-admin.contains info.json" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.dynamodb-admin.should have a title" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.dynamodb-admin.should have a description" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.dynamodb-admin.should have a type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.dynamodb-admin.should have a valid type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.013" />
+    <testcase name="Docker.dynamodb-admin.should have a homepage" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.dynamodb-admin.should have a registry" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.dynamodb-admin.should have a repository" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.dynamodb-admin.should have a dbdb link" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.dynamodb-admin.should have a tests folder" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.dynamodb-admin.should have a go test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.dynamodb-admin.should have a powershell test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.dynamodb-admin.should have a python test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.dynamodb-admin.should have a backup script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.dynamodb-admin.should not have a sample script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.homepage.contains docker-compose.yml" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.homepage.doesn't contain a dockerfile" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.009" />
+    <testcase name="Docker.homepage.contains info.json" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.homepage.should have a title" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.homepage.should have a description" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.009" />
+    <testcase name="Docker.homepage.should have a type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.homepage.should have a valid type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.homepage.should have a homepage" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.homepage.should have a registry" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.homepage.should have a repository" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.homepage.should have a dbdb link" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.homepage.should have a tests folder" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.homepage.should have a go test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.004" />
+    <testcase name="Docker.homepage.should have a powershell test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.homepage.should have a python test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.homepage.should have a backup script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.004" />
+    <testcase name="Docker.homepage.should not have a sample script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.009" />
+    <testcase name="Docker.minio.contains docker-compose.yml" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.011" />
+    <testcase name="Docker.minio.doesn't contain a dockerfile" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.minio.contains info.json" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.010" />
+    <testcase name="Docker.minio.should have a title" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.minio.should have a description" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.minio.should have a type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.minio.should have a valid type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.minio.should have a homepage" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.minio.should have a registry" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.minio.should have a repository" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.minio.should have a dbdb link" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.004" />
+    <testcase name="Docker.minio.should have a tests folder" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.minio.should have a go test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.004" />
+    <testcase name="Docker.minio.should have a powershell test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.003" />
+    <testcase name="Docker.minio.should have a python test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.003" />
+    <testcase name="Docker.minio.should have a backup script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.004" />
+    <testcase name="Docker.minio.should not have a sample script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.mkdocs.contains docker-compose.yml" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.mkdocs.doesn't contain a dockerfile" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.mkdocs.contains info.json" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.mkdocs.should have a title" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.mkdocs.should have a description" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.004" />
+    <testcase name="Docker.mkdocs.should have a type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.mkdocs.should have a valid type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.mkdocs.should have a homepage" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.mkdocs.should have a registry" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.mkdocs.should have a repository" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.mkdocs.should have a dbdb link" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.003" />
+    <testcase name="Docker.mkdocs.should have a tests folder" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.004" />
+    <testcase name="Docker.mkdocs.should have a go test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.mkdocs.should have a powershell test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.004" />
+    <testcase name="Docker.mkdocs.should have a python test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.mkdocs.should have a backup script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.004" />
+    <testcase name="Docker.mkdocs.should not have a sample script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.mssql2017.contains docker-compose.yml" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.mssql2017.doesn't contain a dockerfile" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.mssql2017.contains info.json" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.mssql2017.should have a title" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.mssql2017.should have a description" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.004" />
+    <testcase name="Docker.mssql2017.should have a type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.mssql2017.should have a valid type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.mssql2017.should have a homepage" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.004" />
+    <testcase name="Docker.mssql2017.should have a registry" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.mssql2017.should have a repository" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.mssql2017.should have a dbdb link" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.mssql2017.should have a tests folder" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.mssql2017.should have a go test" status="Failed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.013">
+      <failure message="Expected path 'tests/go' to exist, but it did not exist.">at "tests/go" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:87
+at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:87</failure>
+    </testcase>
+    <testcase name="Docker.mssql2017.should have a powershell test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.mssql2017.should have a python test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.mssql2017.should have a backup script" status="Failed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.014">
+      <failure message="Expected path 'backup.sh' to exist, but it did not exist.">at "backup.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:105
+at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:105</failure>
+    </testcase>
+    <testcase name="Docker.mssql2017.should not have a sample script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.mssql2019.contains docker-compose.yml" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.mssql2019.doesn't contain a dockerfile" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.mssql2019.contains info.json" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.mssql2019.should have a title" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.mssql2019.should have a description" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.mssql2019.should have a type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.mssql2019.should have a valid type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.mssql2019.should have a homepage" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.mssql2019.should have a registry" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.mssql2019.should have a repository" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.mssql2019.should have a dbdb link" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.mssql2019.should have a tests folder" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.mssql2019.should have a go test" status="Failed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.014">
+      <failure message="Expected path 'tests/go' to exist, but it did not exist.">at "tests/go" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:87
+at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:87</failure>
+    </testcase>
+    <testcase name="Docker.mssql2019.should have a powershell test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.mssql2019.should have a python test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.mssql2019.should have a backup script" status="Failed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.013">
+      <failure message="Expected path 'backup.sh' to exist, but it did not exist.">at "backup.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:105
+at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:105</failure>
+    </testcase>
+    <testcase name="Docker.mssql2019.should not have a sample script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.mssql2022.contains docker-compose.yml" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.mssql2022.doesn't contain a dockerfile" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.mssql2022.contains info.json" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.mssql2022.should have a title" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.mssql2022.should have a description" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.mssql2022.should have a type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.mssql2022.should have a valid type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.mssql2022.should have a homepage" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.mssql2022.should have a registry" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.mssql2022.should have a repository" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.mssql2022.should have a dbdb link" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.mssql2022.should have a tests folder" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.mssql2022.should have a go test" status="Failed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.013">
+      <failure message="Expected path 'tests/go' to exist, but it did not exist.">at "tests/go" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:87
+at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:87</failure>
+    </testcase>
+    <testcase name="Docker.mssql2022.should have a powershell test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.mssql2022.should have a python test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.mssql2022.should have a backup script" status="Failed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.013">
+      <failure message="Expected path 'backup.sh' to exist, but it did not exist.">at "backup.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:105
+at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:105</failure>
+    </testcase>
+    <testcase name="Docker.mssql2022.should not have a sample script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.neo4j.contains docker-compose.yml" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.neo4j.doesn't contain a dockerfile" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.neo4j.contains info.json" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.neo4j.should have a title" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.neo4j.should have a description" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.neo4j.should have a type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.neo4j.should have a valid type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.neo4j.should have a homepage" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.neo4j.should have a registry" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.neo4j.should have a repository" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.neo4j.should have a dbdb link" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.neo4j.should have a tests folder" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.neo4j.should have a go test" status="Failed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.014">
+      <failure message="Expected path 'tests/go' to exist, but it did not exist.">at "tests/go" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:87
+at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:87</failure>
+    </testcase>
+    <testcase name="Docker.neo4j.should have a powershell test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.neo4j.should have a python test" status="Failed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.016">
+      <failure message="Expected path 'tests/python' to exist, but it did not exist.">at "tests/python" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:99
+at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:99</failure>
+    </testcase>
+    <testcase name="Docker.neo4j.should have a backup script" status="Failed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.011">
+      <failure message="Expected path 'backup.sh' to exist, but it did not exist.">at "backup.sh" | Should -Exist, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:105
+at &lt;ScriptBlock&gt;, /home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1:105</failure>
+    </testcase>
+    <testcase name="Docker.neo4j.should not have a sample script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.009" />
+    <testcase name="Docker.pgadmin.contains docker-compose.yml" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.009" />
+    <testcase name="Docker.pgadmin.doesn't contain a dockerfile" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.pgadmin.contains info.json" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.pgadmin.should have a title" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.004" />
+    <testcase name="Docker.pgadmin.should have a description" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.pgadmin.should have a type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.pgadmin.should have a valid type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.004" />
+    <testcase name="Docker.pgadmin.should have a homepage" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.pgadmin.should have a registry" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.pgadmin.should have a repository" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.pgadmin.should have a dbdb link" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.004" />
+    <testcase name="Docker.pgadmin.should have a tests folder" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.pgadmin.should have a go test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.004" />
+    <testcase name="Docker.pgadmin.should have a powershell test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.003" />
+    <testcase name="Docker.pgadmin.should have a python test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.pgadmin.should have a backup script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.004" />
+    <testcase name="Docker.pgadmin.should not have a sample script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.postgres-ha.contains docker-compose.yml" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres-ha.doesn't contain a dockerfile" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres-ha.contains info.json" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres-ha.should have a title" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres-ha.should have a description" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres-ha.should have a type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres-ha.should have a valid type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres-ha.should have a homepage" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres-ha.should have a registry" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.postgres-ha.should have a repository" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres-ha.should have a dbdb link" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.004" />
+    <testcase name="Docker.postgres-ha.should have a tests folder" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres-ha.should have a go test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres-ha.should have a powershell test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres-ha.should have a python test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres-ha.should have a backup script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres-ha.should not have a sample script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres12.contains docker-compose.yml" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres12.doesn't contain a dockerfile" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres12.contains info.json" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.postgres12.should have a title" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.postgres12.should have a description" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres12.should have a type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.postgres12.should have a valid type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.postgres12.should have a homepage" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.postgres12.should have a registry" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres12.should have a repository" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.postgres12.should have a dbdb link" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres12.should have a tests folder" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres12.should have a go test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres12.should have a powershell test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres12.should have a python test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.postgres12.should have a backup script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.postgres12.should not have a sample script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres13.contains docker-compose.yml" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres13.doesn't contain a dockerfile" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.postgres13.contains info.json" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres13.should have a title" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.postgres13.should have a description" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.postgres13.should have a type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.postgres13.should have a valid type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres13.should have a homepage" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.postgres13.should have a registry" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres13.should have a repository" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres13.should have a dbdb link" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres13.should have a tests folder" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.postgres13.should have a go test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.postgres13.should have a powershell test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres13.should have a python test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.009" />
+    <testcase name="Docker.postgres13.should have a backup script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres13.should not have a sample script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.009" />
+    <testcase name="Docker.postgres14.contains docker-compose.yml" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.010" />
+    <testcase name="Docker.postgres14.doesn't contain a dockerfile" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres14.contains info.json" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres14.should have a title" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres14.should have a description" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.postgres14.should have a type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.postgres14.should have a valid type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres14.should have a homepage" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres14.should have a registry" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres14.should have a repository" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres14.should have a dbdb link" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres14.should have a tests folder" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres14.should have a go test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.postgres14.should have a powershell test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.postgres14.should have a python test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.postgres14.should have a backup script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.009" />
+    <testcase name="Docker.postgres14.should not have a sample script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres15.contains docker-compose.yml" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres15.doesn't contain a dockerfile" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.009" />
+    <testcase name="Docker.postgres15.contains info.json" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.postgres15.should have a title" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres15.should have a description" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres15.should have a type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.004" />
+    <testcase name="Docker.postgres15.should have a valid type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.postgres15.should have a homepage" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres15.should have a registry" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres15.should have a repository" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres15.should have a dbdb link" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres15.should have a tests folder" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres15.should have a go test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres15.should have a powershell test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.postgres15.should have a python test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.postgres15.should have a backup script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.postgres15.should not have a sample script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.postgres16.contains docker-compose.yml" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.009" />
+    <testcase name="Docker.postgres16.doesn't contain a dockerfile" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.postgres16.contains info.json" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.postgres16.should have a title" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.postgres16.should have a description" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres16.should have a type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.004" />
+    <testcase name="Docker.postgres16.should have a valid type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.postgres16.should have a homepage" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.004" />
+    <testcase name="Docker.postgres16.should have a registry" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres16.should have a repository" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres16.should have a dbdb link" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres16.should have a tests folder" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres16.should have a go test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.009" />
+    <testcase name="Docker.postgres16.should have a powershell test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.postgres16.should have a python test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.postgres16.should have a backup script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.004" />
+    <testcase name="Docker.postgres16.should not have a sample script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres17.contains docker-compose.yml" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.postgres17.doesn't contain a dockerfile" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres17.contains info.json" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres17.should have a title" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.postgres17.should have a description" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres17.should have a type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.004" />
+    <testcase name="Docker.postgres17.should have a valid type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.postgres17.should have a homepage" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres17.should have a registry" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.004" />
+    <testcase name="Docker.postgres17.should have a repository" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres17.should have a dbdb link" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres17.should have a tests folder" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres17.should have a go test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.postgres17.should have a powershell test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.postgres17.should have a python test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.postgres17.should have a backup script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.postgres17.should not have a sample script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.traefik.contains docker-compose.yml" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.traefik.doesn't contain a dockerfile" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.traefik.contains info.json" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.traefik.should have a title" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.traefik.should have a description" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.traefik.should have a type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.traefik.should have a valid type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.traefik.should have a homepage" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.traefik.should have a registry" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.traefik.should have a repository" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.traefik.should have a dbdb link" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.traefik.should have a tests folder" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.003" />
+    <testcase name="Docker.traefik.should have a go test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.003" />
+    <testcase name="Docker.traefik.should have a powershell test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.traefik.should have a python test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.003" />
+    <testcase name="Docker.traefik.should have a backup script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.traefik.should not have a sample script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.wud.contains docker-compose.yml" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.wud.doesn't contain a dockerfile" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.wud.contains info.json" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.wud.should have a title" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.wud.should have a description" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.008" />
+    <testcase name="Docker.wud.should have a type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.004" />
+    <testcase name="Docker.wud.should have a valid type" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.007" />
+    <testcase name="Docker.wud.should have a homepage" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.wud.should have a registry" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.wud.should have a repository" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.005" />
+    <testcase name="Docker.wud.should have a dbdb link" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.wud.should have a tests folder" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.003" />
+    <testcase name="Docker.wud.should have a go test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.003" />
+    <testcase name="Docker.wud.should have a powershell test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+    <testcase name="Docker.wud.should have a python test" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.003" />
+    <testcase name="Docker.wud.should have a backup script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.003" />
+    <testcase name="Docker.wud.should not have a sample script" status="Passed" classname="/home/james/repos/db-lab/.pwsh/pester/repo.tests.ps1" assertions="0" time="0.006" />
+  </testsuite>
+</testsuites>

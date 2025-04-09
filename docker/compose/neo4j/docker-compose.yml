@@ -2,7 +2,7 @@ services:
   neo4j:
     container_name: neo4j
     labels:
-      - homepage.group=Graph
+      - homepage.group=GUIs
       - homepage.name=Neo4j
       - homepage.icon=neo4j.png
       - homepage.description=Neo4j Browser (7474) and Bolt API (7687)
@@ -12,6 +12,7 @@ services:
       - wud.tag.include=^\d+?.\d+?.\d+?$
     environment:
       NEO4J_AUTH: neo4j/${SECRET_PASSWORD}
+      NEO4J_server_http__enabled__modules: TRANSACTIONAL_ENDPOINTS,UNMANAGED_EXTENSIONS,BROWSER,QUERY_API_ENDPOINTS
     image: neo4j:5.23.0
     ports:
     - 7474:7474

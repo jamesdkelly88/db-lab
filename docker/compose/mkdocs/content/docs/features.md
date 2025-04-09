@@ -6,6 +6,7 @@
 | Microsoft SQL Server 2017 | :white_check_mark: | :white_check_mark:<br>DbGate | :x: | :white_check_mark: | :white_check_mark: | :x: | :x: | :x: | :x: |
 | Microsoft SQL Server 2019 | :white_check_mark: | :white_check_mark:<br>DbGate | :x: | :white_check_mark: | :white_check_mark: | :x: | :x: | :x: | :x: |
 | Microsoft SQL Server 2022 | :white_check_mark: | :white_check_mark:<br>DbGate | :x: | :white_check_mark: | :white_check_mark: | :x: | :x: | :x: | :x: |
+| Neo4j | :white_check_mark: | :white_check_mark:<br>Neo4j browser | :x: | :white_check_mark: | :x: | :white_check_mark:<br>pole | :x: | :x: | :x: |
 | PostgreSQL (High-Availability) | :white_check_mark: | :white_check_mark:<br>DbGate<br>pgAdmin | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:<br>dvd-store | :white_check_mark: | :x: | :x: |
 | PostgreSQL v12 | :white_check_mark: | :white_check_mark:<br>DbGate<br>pgAdmin | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:<br>dvd-store | :white_check_mark: | :x: | :x: |
 | PostgreSQL v13 | :white_check_mark: | :white_check_mark:<br>DbGate<br>pgAdmin | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:<br>dvd-store | :white_check_mark: | :x: | :x: |
