@@ -9,7 +9,7 @@ services:
     hostname: pg-proxy
     image: haproxy:3.1.1-alpine3.20
     labels:
-      - homepage.group=Relational
+      - homepage.group=GUIs
       - homepage.name=HAProxy Stats
       - homepage.icon=haproxy.png
       - homepage.href=http://${DOMAIN}:7000
