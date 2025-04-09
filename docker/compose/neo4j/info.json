@@ -1,0 +1,14 @@
+{
+    "name": "Neo4j",
+    "type": ["graph"],
+    "description": [
+        "Neo4j is a graph database management system (GDBMS) developed by Neo4j Inc, and built using Java."
+    ],
+    "links": {
+        "homepage": "https://neo4j.com/",
+        "repository": "https://github.com/neo4j/neo4j",
+        "registry": "https://hub.docker.com/_/neo4j",
+        "dbdb": "https://dbdb.io/db/neo4j"
+    },
+    "ui": ["Neo4j browser"]
+}
