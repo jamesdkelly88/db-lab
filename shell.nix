@@ -1,6 +1,6 @@
-let
-  unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz) { };
-in
+# let
+#   unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz) { };
+# in
 { pkgs ? import <nixpkgs> {config.allowUnfree = true;} }:
 
 pkgs.mkShell rec {
@@ -16,7 +16,7 @@ pkgs.mkShell rec {
     pkgs.python311Packages.pip
     pkgs.sqlcmd
     pkgs.zlib
-    unstable.pkgs.postgresql_17
+    pkgs.postgresql_17
   ];
 
   # docker should be running on the system already, so not included here!
