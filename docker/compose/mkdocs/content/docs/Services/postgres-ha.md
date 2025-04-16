@@ -22,6 +22,7 @@ HAProxy stats are viewable via port 7000 - for some reason this doesn't work beh
 
 - [DbGate](../dbgate)
 - [pgAdmin](../pgadmin)
+- [PuppyGraph](../puppygraph)
 
 ## Images
 | Image | Tag |
