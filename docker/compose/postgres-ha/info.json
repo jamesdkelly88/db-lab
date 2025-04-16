@@ -12,5 +12,5 @@
         "registry": "https://hub.docker.com/_/postgres",
         "dbdb": "https://dbdb.io/db/postgresql"
     },
-    "ui": ["DbGate","pgAdmin"]
+    "ui": ["DbGate","pgAdmin","PuppyGraph"]
 }
