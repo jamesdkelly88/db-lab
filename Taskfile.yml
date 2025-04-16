@@ -13,7 +13,7 @@ vars:
   CORE: dockerproxy traefik homepage mkdocs minio dozzle wud
   DOCKER_FOLDERS:
     sh: ls ./docker/compose
-  DOCKER_NETWORKS: backup docker dynamodb mssql postgres web
+  DOCKER_NETWORKS: backup docker dynamodb etcd mssql postgres web
 
 tasks:
   all-backup:

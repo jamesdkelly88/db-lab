@@ -1,0 +1,15 @@
+{
+    "name": "etcd",
+    "type": ["key-value"],
+    "description": [
+        "etcd is a strongly consistent, distributed key-value store that provides a reliable way to store data that needs to be accessed by a distributed system or cluster of machines. It gracefully handles leader elections during network partitions and can tolerate machine failure, even in the leader node.",
+        "The v3 api can be used directly, or via the command line tool etcdctl - remember to set ETCDCTL_API=3"
+    ],
+    "links": {
+        "homepage": "https://etcd.io/",
+        "registry": "https://quay.io/repository/coreos/etcd?tab=tags&tag=latest",
+        "repository": "https://github.com/etcd-io/etcd",
+        "dbdb": "https://dbdb.io/db/etcd"
+    },
+    "ui": ["etcd browser"]
+}
