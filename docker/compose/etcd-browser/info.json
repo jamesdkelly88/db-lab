@@ -1,0 +1,13 @@
+{
+    "name": "etcd browser",
+    "type": ["gui"],
+    "description": [
+        "A simple etcd v3 browser written in Go and Vue.js."
+    ],
+    "links": {
+        "homepage": "n/a",
+        "repository": "https://github.com/rustyx/etcdv3-browser",
+        "registry": "https://hub.docker.com/r/rustyx/etcdv3-browser"
+    },
+    "ui": []
+}

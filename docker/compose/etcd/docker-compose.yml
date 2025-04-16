@@ -1,0 +1,26 @@
+services:
+  etcd:
+    command: /usr/local/bin/etcd --data-dir=/etcd-data --advertise-client-urls http://${DOMAIN}:2379 --listen-client-urls http://0.0.0.0:2379
+    image: quay.io/coreos/etcd:v3.5.21
+    container_name: etcd
+    labels:
+      - homepage.group=Key-Value
+      - homepage.name=etcd
+      - homepage.icon=etcd.png
+      - "homepage.description=etcd v3 (2379)"
+      - wud.tag.include=^v\d+\.\d+\.\d+$
+    networks:
+    - default
+    ports:
+    - 2379:2379
+    restart: unless-stopped
+    volumes:
+    - data:/etcd-data
+
+networks:
+  default:
+    name: etcd
+    external: true
+
+volumes:
+  data:
