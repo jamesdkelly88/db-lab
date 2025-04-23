@@ -1,0 +1,26 @@
+services:
+  postgres:
+    container_name: postgres
+    labels:
+      - homepage.group=Relational
+      - homepage.name=PostgreSQL
+      - homepage.icon=postgres.png
+      - homepage.description=PostgreSQL v17 with extensions (5432)
+      - wud.tag.include=^17.\d{1,2}$
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: scram-sha-256
+      POSTGRES_PASSWORD: ${SECRET_PASSWORD}
+    image: jamesdkelly88/postgres-full:17.4
+    ports:
+    - 5432:5432
+    restart: unless-stopped
+    volumes:
+    - data:/var/lib/postgresql/data
+
+networks:
+  default:
+    name: postgres
+    external: true
+
+volumes:
+  data:
