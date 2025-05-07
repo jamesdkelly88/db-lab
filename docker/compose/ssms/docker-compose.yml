@@ -1,0 +1,46 @@
+services:
+  ssms:
+    container_name: ssms
+    hostname: ssms
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/kvm
+      - /dev/net/tun
+    environment:
+      CPU_CORES: "2"
+      DISK_SIZE: "64G"
+      KEYBOARD: "en-GB"
+      PASSWORD: ${SECRET_PASSWORD}
+      RAM_SIZE: "4G"
+      REGION: "en-GB"
+      USERNAME: ${SECRET_USER}
+      VERSION: "11l"
+    image: dockurr/windows:4.35
+    labels:
+      - homepage.group=GUIs
+      - homepage.name=SSMS
+      - homepage.icon=microsoft-sql-server.png
+      - homepage.href=http://ssms.${DOMAIN}
+      - "homepage.description=For: SQL Server"
+      - traefik.enable=true
+      - traefik.http.services.ssms-ssms.loadbalancer.server.port=8006
+      - wud.tag.include=^4.\d+?$
+    ports:
+    - 3389:3389/tcp
+    - 3389:3389/udp
+    restart: unless-stopped
+    stop_grace_period: 2m
+    volumes:
+    - storage:/storage
+    - ./oem:/oem
+
+networks:
+  default:
+    name: web
+    external: true
+  mssql:
+    external: true
+
+volumes:
+  storage:
