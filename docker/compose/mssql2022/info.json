@@ -12,5 +12,5 @@
         "repository": "closed-source",
         "dbdb": "https://dbdb.io/db/sql-server"
     },
-    "ui": ["DbGate"]
+    "ui": ["DbGate","SQL Server Management Studio"]
 }

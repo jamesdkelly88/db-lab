@@ -1,0 +1,14 @@
+{
+    "name": "SQL Server Management Studio",
+    "type": ["gui"],
+    "description": [
+        "Microsoft SQL Server Management Studio (SSMS) is a software application developed by Microsoft that is used for configuring, managing, and administering all components within Microsoft SQL Server.",
+        "SSMS is a Windows-only application, so this instance is running in Dockurr, a containerised Windows installation with a web viewer."
+    ],
+    "links": {
+        "homepage": "https://learn.microsoft.com/en-gb/ssms/download-sql-server-management-studio-ssms",
+        "repository": "https://github.com/dockur/windows",
+        "registry": "https://hub.docker.com/r/dockurr/windows"
+    },
+    "ui": []
+}

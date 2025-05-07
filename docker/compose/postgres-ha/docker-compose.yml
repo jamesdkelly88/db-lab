@@ -12,7 +12,7 @@ services:
       - homepage.group=GUIs
       - homepage.name=HAProxy Stats
       - homepage.icon=haproxy.png
-      - homepage.href=http://${DOMAIN}:7000
+      - homepage.href=http://${DOMAIN}:7000 # TODO: fix this by setting web network as default
       - homepage.description=HAProxy stats for HA PostgreSQL (7000)
       - traefik.enable=true
       - traefik.http.services.pg-proxy-postgres-ha.loadbalancer.server.port=7000
