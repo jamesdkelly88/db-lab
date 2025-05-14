@@ -28,13 +28,12 @@ HAProxy stats are viewable via port 7000 - for some reason this doesn't work beh
 | Image | Tag |
 | --- | --- |
 | haproxy | 3.1.1-alpine3.20 |
-| jamesdkelly88/postgres-patroni | 16 |
+| jamesdkelly88/postgres-patroni | 17.5 |
 | zookeeper | 3.9.3 |
 
 ## Ports
-- 5432
-- 7000
+- 5433
 
 ## Links
-- [http://jkdb.duckdns.org:7000](http://jkdb.duckdns.org:7000)
+- [http://pg-proxy.jkdb.duckdns.org](http://pg-proxy.jkdb.duckdns.org)
 

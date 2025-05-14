@@ -2,13 +2,13 @@
 tags:
   - relational
 ---
-# PostgreSQL v13
+# PostgreSQL v18
 
 [:fontawesome-solid-globe: Project Homepage](https://www.postgresql.org/)
 
 [:simple-git: Repository](https://git.postgresql.org/gitweb/?p=postgresql.git)
 
-[:simple-docker: Container Registry](https://hub.docker.com/_/postgres)
+[:simple-docker: Container Registry](https://hub.docker.com/r/jamesdkelly88/postgres)
 
 [:material-database: DBDB.io](https://dbdb.io/db/postgresql)
 
@@ -23,9 +23,9 @@ A powerful, open source object-relational database system with over 35 years of 
 ## Images
 | Image | Tag |
 | --- | --- |
-| postgres | 13.21-alpine3.20 |
+| jamesdkelly88/postgres | 18beta1 |
 
 ## Ports
-- 54323
+- 54328
 
 
