@@ -209,6 +209,12 @@ tasks:
       - echo 'Hello World from Task!'
     silent: true
 
+  list:
+    desc: List all tasks
+    cmds:
+    - task --list
+    silent: true
+
   networks:
     desc: Create required docker networks
     cmds:
