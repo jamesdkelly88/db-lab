@@ -240,11 +240,11 @@ tasks:
   test:
     desc: run all tests
     cmds:
-    - echo "Testing with Python"
+    - echo -e "\e[1;34mTesting with Python\e[0m"
     - task: test-py
-    - echo "Testing with Powershell"
+    - echo -e "\e[1;34mTesting with Powershell\e[0m"
     - task: test-pwsh
-    - echo "Testing with Go"
+    - echo -e "\e[1;34mTesting with Go\e[0m"
     - task: test-go
     silent: true
 
