@@ -66,7 +66,7 @@ postgresql:
   listen: 0.0.0.0:5432
   connect_address: pg-primary:5432
   data_dir: /var/lib/postgresql/data/postgresql0
-  bin_dir: /usr/lib/postgresql/16/bin
+  bin_dir: /usr/lib/postgresql/17/bin
 #  config_dir:
   pgpass: /tmp/pgpass0
   authentication:
