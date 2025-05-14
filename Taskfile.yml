@@ -237,6 +237,18 @@ tasks:
     - docker push "$DOCKER_HUB_USER/$IMAGE_NAME:$IMAGE_TAG"
     silent: true
 
+  test:
+    desc: run all tests
+    cmds:
+    - echo "Testing with Python"
+    - task: test-py
+    - echo "Testing with Powershell"
+    - task: test-pwsh
+    - echo "Testing with Go"
+    - task: test-go
+    silent: true
+
+
   test-go:
     aliases:
     - go-test
