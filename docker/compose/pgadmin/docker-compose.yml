@@ -1,6 +1,6 @@
 services:
   pgadmin:
-    image: dpage/pgadmin4:8.14
+    image: dpage/pgadmin4:9.3.0
     container_name: pgadmin
     labels:
       - homepage.group=GUIs
@@ -9,7 +9,7 @@ services:
       - homepage.href=http://pgadmin.${DOMAIN}
       - "homepage.description=For: PostgreSQL"
       - traefik.enable=true
-      - wud.tag.include=^8.\d+?$
+      - wud.tag.include=^9.\d+?.\d+?$
     environment:
       PGADMIN_DEFAULT_EMAIL: ${SECRET_EMAIL}
       PGADMIN_DEFAULT_PASSWORD: ${SECRET_PASSWORD}
