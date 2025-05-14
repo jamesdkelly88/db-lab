@@ -15,4 +15,5 @@
 | PostgreSQL v15 | :white_check_mark: | :white_check_mark:<br>DbGate<br>pgAdmin<br>PuppyGraph | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:<br>dvd-store | :white_check_mark: | :x: | :x: |
 | PostgreSQL v16 | :white_check_mark: | :white_check_mark:<br>DbGate<br>pgAdmin<br>PuppyGraph | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:<br>dvd-store | :white_check_mark: | :x: | :x: |
 | PostgreSQL v17 | :white_check_mark: | :white_check_mark:<br>DbGate<br>pgAdmin<br>PuppyGraph | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:<br>dvd-store | :white_check_mark: | :x: | :x: |
+| PostgreSQL v18 | :white_check_mark: | :white_check_mark:<br>DbGate<br>pgAdmin<br>PuppyGraph | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:<br>dvd-store | :white_check_mark: | :x: | :x: |
 

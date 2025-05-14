@@ -23,7 +23,7 @@ A powerful, open source object-relational database system with over 35 years of 
 ## Images
 | Image | Tag |
 | --- | --- |
-| postgres | 16.8-alpine3.20 |
+| postgres | 16.9-alpine3.20 |
 
 ## Ports
 - 54326

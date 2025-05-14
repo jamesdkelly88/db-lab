@@ -15,7 +15,7 @@ Real-time logging and monitoring for Docker in the browser
 ## Images
 | Image | Tag |
 | --- | --- |
-| amir20/dozzle | v8.12.4 |
+| amir20/dozzle | v8.12.15 |
 
 ## Links
 - [http://dozzle.jkdb.duckdns.org](http://dozzle.jkdb.duckdns.org)

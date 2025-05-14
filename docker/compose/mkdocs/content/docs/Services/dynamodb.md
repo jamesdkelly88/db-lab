@@ -31,7 +31,7 @@ A list of the differences between the Amazon hosted DynamoDB and this locally ho
 ## Images
 | Image | Tag |
 | --- | --- |
-| amazon/dynamodb-local | 2.6.0 |
+| amazon/dynamodb-local | 2.6.1 |
 
 ## Ports
 - 8000
