@@ -150,6 +150,8 @@ tasks:
     cmds:
     - echo "building $DOCKER_HUB_USER/$IMAGE_NAME:$IMAGE_TAG"
     - docker build -t "$DOCKER_HUB_USER/$IMAGE_NAME:$IMAGE_TAG" .
+    - echo "uploading $DOCKER_HUB_USER/$IMAGE_NAME:$IMAGE_TAG to docker hub"
+    - docker push "$DOCKER_HUB_USER/$IMAGE_NAME:$IMAGE_TAG"
     silent: true
 
   cleanup:

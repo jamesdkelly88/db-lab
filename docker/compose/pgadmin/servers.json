@@ -54,6 +54,15 @@
             "Username": "postgres",
             "SSLMode": "prefer"
         },
+        "18": {
+            "Name": "v18",
+            "Group": "Servers",
+            "Host": "postgres18",
+            "Port": 5432,
+            "MaintenanceDB": "postgres",
+            "Username": "postgres",
+            "SSLMode": "prefer"
+        },
         "ha": {
             "Name": "HA",
             "Group": "Servers",

@@ -3,7 +3,7 @@ set -e
 source ../../db-lab.env
 
 case $1 in
-    12 | 13 | 14 | 15 | 16 | 17 )
+    12 | 13 | 14 | 15 | 16 | 17 | 18 )
         PG_HOSTNAME=postgres$1;;    
     ha )
         PG_HOSTNAME=pg-proxy;;

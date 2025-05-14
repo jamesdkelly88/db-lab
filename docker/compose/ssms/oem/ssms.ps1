@@ -8,3 +8,5 @@ Invoke-WebRequest $remote_path -OutFile $local_path
 # Install SSMS
 
 # Setup Kiosk mode
+
+# Windows Updates to manual
