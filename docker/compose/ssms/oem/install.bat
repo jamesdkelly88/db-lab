@@ -1,2 +1,2 @@
 powershell.exe -command "& { Set-ExecutionPolicy unrestricted }"
-powershell.exe ssms.ps1
+powershell.exe "C:\OEM\ssms.ps1"

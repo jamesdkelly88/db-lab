@@ -1,13 +1,13 @@
 ## Missing extensions (based on v17 RDS)
 - [ ] auto_explain
-- [ ] bool_plperl
+- [x] bool_plperl
 - [ ] flow_control
 - [x] hll
-- [ ] hstore_plperl
+- [x] hstore_plperl
 - [x] hypopg
 - [x] ICU module
 - [x] ip4r
-- [ ] jsonb_plperl
+- [x] jsonb_plperl
 - [ ] log_fdw
 - [x] mysql_fdw
 - [ ] old_snapshot
@@ -18,15 +18,15 @@
 - [ ] pg_proctab
 - [x] pg_repack
 - [x] pg_similarity
-- [ ] pg_tle
-- [ ] pg_transport
-- [ ] pgactive
+- [ ] pg_tle [build from source](https://github.com/aws/pg_tle/blob/main/docs/01_install.md)
+- [ ] ~~pg_transport (rds only)~~
+- [ ] ~~pgactive (rds only)~~
 - [x] pglogical
 - [ ] pgrouting
 - [ ] pgTAP
-- [ ] plperl
+- [x] plperl
 - [x] plprofiler
-- [ ] plrust
+- [ ] plrust [build deps](https://plrust.io/install-plrust-on-debian-ubuntu.html)
 - [ ] pltcl
 - [ ] plv8
 - [ ] prefix
@@ -36,6 +36,7 @@
 ## Extensions to try
 - [ ] pg-permissions
 - [ ] pgmemcache
+- [x] pgtt
 
 ```
 pgagent - job scheduling engine for PostgreSQL

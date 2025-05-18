@@ -10,7 +10,7 @@ services:
     environment:
       POSTGRES_HOST_AUTH_METHOD: scram-sha-256
       POSTGRES_PASSWORD: ${SECRET_PASSWORD}
-    image: jamesdkelly88/postgres-full:17.4
+    image: jamesdkelly88/postgres-full:17.5
     ports:
     - 5432:5432
     restart: unless-stopped

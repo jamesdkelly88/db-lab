@@ -1,0 +1,24 @@
+{
+    "name": "PostgreSQL (Full)",
+    "type": ["relational"],
+    "description": [
+        "A customised deployment of PostgreSQL v17 with added extensions:",
+        "- [age](https://age.apache.org/) (graph database)",
+        "- [h3](https://github.com/zachasme/h3-pg) (hexagonal geospatial indexing)",
+        "- [oracle_fdw](https://github.com/laurenz/oracle_fdw) (foreign data wrapper for Oracle Database)",
+        "- [pg_cron](https://github.com/citusdata/pg_cron) (job scheduling)",
+        "- [pgaudit](https://www.pgaudit.org/) (auditing)",
+        "- [pgtt](https://github.com/darold/pgtt) (global temp tables)",
+        "- [postgis-3](https://postgis.net/) (geospatial data)",
+        "- [tds_fdw](https://github.com/tds-fdw/tds_fdw) (foreign data wrapper for SQL Server)",
+        "- [timescaledb](https://github.com/timescale/timescaledb) (time-series database)",
+        "- [vector](https://github.com/pgvector/pgvector) (vector database)"
+    ],
+    "links": {
+        "homepage": "https://www.postgresql.org/",
+        "repository": "https://git.postgresql.org/gitweb/?p=postgresql.git",
+        "registry": "https://hub.docker.com/r/jamesdkelly88/postgres",
+        "dbdb": "https://dbdb.io/db/postgresql"
+    },
+    "ui": ["DbGate","pgAdmin","pgweb","PuppyGraph"]
+}

@@ -27,7 +27,7 @@ This is the only service in the lab that uses a local directory mount instead of
 ## Images
 | Image | Tag |
 | --- | --- |
-| minio/minio | RELEASE.2024-11-07T00-52-20Z |
+| minio/minio | RELEASE.2025-04-22T22-12-26Z |
 
 ## Ports
 - 9000

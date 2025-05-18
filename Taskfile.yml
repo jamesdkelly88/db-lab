@@ -13,7 +13,7 @@ vars:
   CORE: dockerproxy traefik homepage mkdocs minio dozzle wud
   DOCKER_FOLDERS:
     sh: ls ./docker/compose
-  DOCKER_NETWORKS: backup docker dynamodb etcd mssql postgres web
+  DOCKER_NETWORKS: backup cockroach docker dynamodb etcd mssql postgres web
 
 tasks:
   all-backup:
@@ -215,17 +215,29 @@ tasks:
     - task --list
     silent: true
 
+  mkdocs:
+    desc: Generate documentation
+    cmds:
+    - pwsh -f .pwsh/mkdocs/Update-Docs.ps1
+    silent: true
+
   networks:
     desc: Create required docker networks
     cmds:
       - for: { var: DOCKER_NETWORKS }
         cmd: docker network inspect {{.ITEM}} --format \{\{.Id\}\} 2>/dev/null || docker network create --driver bridge {{.ITEM}}
 
+  pester:
+    desc: Run pester tests
+    cmds:
+    - pwsh -f .pwsh/pester/Run-Tests.ps1
+    silent: true
+
   pre-commit:
     desc: Run helper scripts (use before committing changes)
     cmds:
-    - pwsh -f .pwsh/mkdocs/Update-Docs.ps1
-    - pwsh -f .pwsh/pester/Run-Tests.ps1
+    - task: mkdocs
+    - task: pester
     silent: true
 
   publish:

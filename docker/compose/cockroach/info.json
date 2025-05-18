@@ -1,0 +1,16 @@
+{
+    "name": "CockroachDB (single)",
+    "type": ["relational"],
+    "description": [
+        "CockroachDB is a cloud-native distributed SQL database designed to build, scale, and manage modern, data-intensive applications.",
+        "CockroachDB supports the PostgreSQL wire protocol, so you can use any available PostgreSQL client drivers to connect from various languages.",
+        "This instance of CockroachDB is a single node deployment for testing use"
+    ],
+    "links": {
+        "homepage": "https://www.cockroachlabs.com/",
+        "repository": "https://github.com/cockroachdb/cockroach",
+        "registry": "https://hub.docker.com/r/cockroachdb/cockroach",
+        "dbdb": "https://dbdb.io/db/cockroachdb"
+    },
+    "ui": ["pgweb"]
+}

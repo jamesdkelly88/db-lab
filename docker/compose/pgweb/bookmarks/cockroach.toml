@@ -1,0 +1,5 @@
+host = "cockroach"
+port = 26257
+user = "admin"
+database = "defaultdb"
+sslmode = "disable"
