@@ -1,0 +1,5 @@
+host = "roach1"
+port = 26257
+user = "admin"
+database = "defaultdb"
+sslmode = "disable"
