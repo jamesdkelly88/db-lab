@@ -63,6 +63,15 @@
             "Username": "postgres",
             "SSLMode": "prefer"
         },
+        "full": {
+            "Name": "Full",
+            "Group": "Servers",
+            "Host": "postgres",
+            "Port": 5432,
+            "MaintenanceDB": "postgres",
+            "Username": "postgres",
+            "SSLMode": "prefer"
+        },
         "ha": {
             "Name": "HA",
             "Group": "Servers",
