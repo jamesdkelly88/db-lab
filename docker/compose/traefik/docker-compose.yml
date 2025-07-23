@@ -1,6 +1,6 @@
 services:
   traefik:
-    image: traefik:v2.11.27
+    image: traefik:v2.11.28
     container_name: traefik
     environment:
       TRAEFIK_API_INSECURE: true
