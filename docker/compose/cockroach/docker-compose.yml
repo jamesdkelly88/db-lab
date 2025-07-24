@@ -1,0 +1,30 @@
+services:
+  cockroach:
+    container_name: cockroach
+    hostname: cockroach
+    command: start-single-node --advertise-addr=cockroach:26357 --http-addr=cockroach:8080 --listen-addr=localhost:26257 --sql-addr=cockroach:26257 --insecure
+    labels:
+      - homepage.group=Relational
+      - homepage.name=CockroachDB
+      - homepage.href=http://cockroach.${DOMAIN}
+      - homepage.icon=https://upload.wikimedia.org/wikipedia/en/3/31/Cockroach_Labs_Logo.png
+      - homepage.description=Single-node CockroachDB cluster (26257)
+      - traefik.enable=true
+      - traefik.http.services.cockroach-cockroach.loadbalancer.server.port=8080
+      - wud.tag.include=^v\d+?\.\d+?\.\d+?$
+    image: cockroachdb/cockroach:v25.1.6
+    ports:
+    - 26257:26257
+    restart: unless-stopped
+    volumes:
+    - data:/cockroach/cockroach-data
+  
+networks:
+  default:
+    name: web
+    external: true
+  cockroach:
+    external: true
+  
+volumes:
+  data:

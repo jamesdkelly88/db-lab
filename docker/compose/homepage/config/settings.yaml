@@ -1,14 +1,34 @@
 ---
 # For configuration options and examples, please see:
 # https://gethomepage.dev/latest/configs/settings
-fiveColumns: true
+fiveColumns: false
+useEqualHeights: true
 
 layout:
   Docker:
-  Relational:
+    style: row
+    columns: 6
+  GUIs:
+    style: row
+    columns: 6
   Document:
+    style: row
+    columns: 6
   Graph:
+    style: row
+    columns: 6
+  Key-Value:
+    style: row
+    columns: 6
+  Ledger:
+    style: row
+    columns: 6
+  Relational:
+    style: row
+    columns: 6
   Vector:
+    style: row
+    columns: 6
 
 providers:
   openweathermap: openweathermapapikey

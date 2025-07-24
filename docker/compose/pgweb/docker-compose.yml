@@ -1,0 +1,27 @@
+services:
+  pgweb:
+    image: sosedoff/pgweb:0.16.2
+    container_name: pgweb
+    labels:
+      - homepage.group=GUIs
+      - homepage.name=pgweb
+      - homepage.icon=postgres.png
+      - homepage.href=http://pgweb.${DOMAIN}
+      - "homepage.description=For: PostgreSQL / CockroachDB"
+      - traefik.enable=true
+      - wud.tag.include=^\d+?\.\d+?\.\d+?$
+    networks:
+    - default
+    - cockroach
+    - postgres
+    restart: unless-stopped
+    volumes:
+    - ./bookmarks:/home/pgweb/.pgweb/bookmarks
+networks:
+  default:
+    name: web
+    external: true
+  cockroach:
+    external: true
+  postgres:
+    external: true

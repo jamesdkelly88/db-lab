@@ -9,16 +9,18 @@ services:
     hostname: pg-proxy
     image: haproxy:3.1.1-alpine3.20
     labels:
-      - homepage.group=Relational
+      - homepage.group=GUIs
       - homepage.name=HAProxy Stats
       - homepage.icon=haproxy.png
-      - homepage.href=http://${DOMAIN}:7000
-      - homepage.description=HAProxy stats for HA PostgreSQL (7000)
+      - homepage.href=http://pg-proxy.${DOMAIN}
+      - homepage.description=HAProxy stats for HA PostgreSQL
       - traefik.enable=true
       - traefik.http.services.pg-proxy-postgres-ha.loadbalancer.server.port=7000
+    networks:
+      - web
+      - postgres
     ports:
-      - 5432:5432
-      - 7000:7000
+      - 5433:5432
     volumes:
       - type: bind
         source: ./haproxy.cfg
@@ -26,14 +28,14 @@ services:
     restart: unless-stopped
   pg-primary:
     container_name: pg-primary
-    image: jamesdkelly88/postgres-patroni:16
+    image: jamesdkelly88/postgres-patroni:17.5
     restart: unless-stopped
     hostname: pg-primary
     labels:
       - homepage.group=Relational
       - homepage.name=PostgreSQL (HA)
       - homepage.icon=postgres.png
-      - homepage.description=PostgreSQL 3-node cluster with HAProxy/Patroni/Zookeeper (5432)
+      - homepage.description=3-node cluster (5433)
       - wud.tag.include=^\d$
     environment:
       POSTGRES_HOST_AUTH_METHOD: scram-sha-256
@@ -42,12 +44,14 @@ services:
     expose:
       - 5432
       - 8008
+    networks:
+      - postgres
     volumes:
      - data1:/var/lib/postgresql/data
     command: patroni /postgres0.yml
   pg-secondary:
     container_name: pg-secondary
-    image: jamesdkelly88/postgres-patroni:16
+    image: jamesdkelly88/postgres-patroni:17.5
     restart: unless-stopped
     hostname: pg-secondary
     expose:
@@ -59,10 +63,12 @@ services:
       POSTGRES_HOST_AUTH_METHOD: scram-sha-256
       PATRONI_SUPERUSER_PASSWORD: ${SECRET_PASSWORD}
       PGDATA: '/var/lib/postgresql/data/pgdata'
+    networks:
+      - postgres
     command: patroni /postgres1.yml        
   pg-tertiary:
     container_name: pg-tertiary
-    image: jamesdkelly88/postgres-patroni:16
+    image: jamesdkelly88/postgres-patroni:17.5
     restart: unless-stopped
     hostname: pg-tertiary
     expose:
@@ -74,6 +80,8 @@ services:
       POSTGRES_HOST_AUTH_METHOD: scram-sha-256
       PATRONI_SUPERUSER_PASSWORD: ${SECRET_PASSWORD}
       PGDATA: '/var/lib/postgresql/data/pgdata'
+    networks:
+      - postgres
     command: patroni /postgres2.yml        
   zookeeper:
     container_name: zookeeper
@@ -82,10 +90,13 @@ services:
     environment:
       ZOO_TICK_TIME: 2000
     image: zookeeper:3.9.3
+    networks:
+      - postgres
     restart: unless-stopped
 networks:
-  default:
-    name: postgres
+  postgres:
+    external: true
+  web:
     external: true
 
 volumes:

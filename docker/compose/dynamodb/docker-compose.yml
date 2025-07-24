@@ -3,7 +3,7 @@ services:
     command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ./data"
     container_name: dynamodb
     labels:
-      - homepage.group=Document
+      - homepage.group=Key-Value
       - homepage.name=DynamoDB
       - homepage.icon=aws.png
       - homepage.description=DynamoDB Local (8000)

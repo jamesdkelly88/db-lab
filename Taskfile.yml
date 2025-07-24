@@ -13,7 +13,7 @@ vars:
   CORE: dockerproxy traefik homepage mkdocs minio dozzle wud
   DOCKER_FOLDERS:
     sh: ls ./docker/compose
-  DOCKER_NETWORKS: backup docker dynamodb mssql postgres web
+  DOCKER_NETWORKS: backup cockroach docker dynamodb etcd mssql postgres web
 
 tasks:
   all-backup:
@@ -207,14 +207,39 @@ tasks:
       - echo 'Hello World from Task!'
     silent: true
 
+  list:
+    desc: List all tasks
+    cmds:
+    - task --list
+    silent: true
+
+  mkdocs:
+    desc: Generate documentation
+    cmds:
+    - pwsh -f .pwsh/mkdocs/Update-Docs.ps1
+    silent: true
+
   networks:
     desc: Create required docker networks
     cmds:
       - for: { var: DOCKER_NETWORKS }
         cmd: docker network inspect {{.ITEM}} --format \{\{.Id\}\} 2>/dev/null || docker network create --driver bridge {{.ITEM}}
 
+  pester:
+    desc: Run pester tests
+    cmds:
+    - pwsh -f .pwsh/pester/Run-Tests.ps1
+    silent: true
+
+  pre-commit:
+    desc: Run helper scripts (use before committing changes)
+    cmds:
+    - task: mkdocs
+    - task: pester
+    silent: true
+
   publish:
-    desc: Publish image to Docker Hub
+    desc: Build and publish image to Docker Hub
     dir: '{{.USER_WORKING_DIR}}'
     deps:
     - build
@@ -227,6 +252,18 @@ tasks:
     - echo "publishing $DOCKER_HUB_USER/$IMAGE_NAME:$IMAGE_TAG"
     - docker push "$DOCKER_HUB_USER/$IMAGE_NAME:$IMAGE_TAG"
     silent: true
+
+  test:
+    desc: run all tests
+    cmds:
+    - echo -e "\e[1;34mTesting with Python\e[0m"
+    - task: test-py
+    - echo -e "\e[1;34mTesting with Powershell\e[0m"
+    - task: test-pwsh
+    - echo -e "\e[1;34mTesting with Go\e[0m"
+    - task: test-go
+    silent: true
+
 
   test-go:
     aliases:

@@ -18,11 +18,13 @@ A powerful, open source object-relational database system with over 35 years of 
 
 - [DbGate](../dbgate)
 - [pgAdmin](../pgadmin)
+- [pgweb](../pgweb)
+- [PuppyGraph](../puppygraph)
 
 ## Images
 | Image | Tag |
 | --- | --- |
-| postgres | 15.12-alpine3.20 |
+| postgres | 15.13-alpine3.20 |
 
 ## Ports
 - 54325

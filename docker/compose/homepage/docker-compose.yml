@@ -1,13 +1,8 @@
 services:
   homepage:
-    image: ghcr.io/gethomepage/homepage:v0.10.9
+    image: ghcr.io/gethomepage/homepage:v1.4.0
     container_name: homepage
     labels:
-      - homepage.group=Docker
-      - homepage.name=Homepage
-      - homepage.icon=homepage.png
-      - homepage.href=http://homepage.${DOMAIN}
-      - homepage.description=This page
       - traefik.enable=true
       - wud.tag.include=^v\d+?.\d+?.\d+?$
     volumes:
@@ -16,6 +11,7 @@ services:
     environment:
       PUID: ${PUID}
       PGID: ${PGID}
+      HOMEPAGE_ALLOWED_HOSTS: homepage.${DOMAIN}
 
 networks:
   default:

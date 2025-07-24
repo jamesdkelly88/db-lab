@@ -1,0 +1,30 @@
+services:
+  neo4j:
+    container_name: neo4j
+    labels:
+      - homepage.group=GUIs
+      - homepage.name=Neo4j
+      - homepage.icon=neo4j.png
+      - homepage.description=Neo4j Browser (7474) and Bolt API (7687)
+      - homepage.href=http://neo4j.${DOMAIN}
+      - traefik.enable=true
+      - traefik.http.services.neo4j-neo4j.loadbalancer.server.port=7474
+      - wud.tag.include=^\d+?.\d+?.\d+?$
+    environment:
+      NEO4J_AUTH: neo4j/${SECRET_PASSWORD}
+      NEO4J_server_http__enabled__modules: TRANSACTIONAL_ENDPOINTS,UNMANAGED_EXTENSIONS,BROWSER,QUERY_API_ENDPOINTS
+    image: neo4j:2025.06.2
+    ports:
+    - 7474:7474
+    - 7687:7687
+    restart: unless-stopped
+    volumes:
+    - data:/data
+
+networks:
+  default:
+    name: web
+    external: true
+      
+volumes:
+  data:

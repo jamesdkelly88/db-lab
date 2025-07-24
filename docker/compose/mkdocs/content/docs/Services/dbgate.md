@@ -15,7 +15,7 @@ Powerful cross-platform SQL client and database manager for MySQL, SQL Server, O
 ## Images
 | Image | Tag |
 | --- | --- |
-| dbgate/dbgate | 6.3.2-alpine |
+| dbgate/dbgate | 6.4.2-alpine |
 
 ## Links
 - [http://dbgate.jkdb.duckdns.org](http://dbgate.jkdb.duckdns.org)

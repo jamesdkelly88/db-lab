@@ -1,0 +1,25 @@
+services:
+  etcd-browser:
+    image: rustyx/etcdv3-browser:v0.6.1
+    container_name: etcd-browser
+    labels:
+      - homepage.group=GUIs
+      - homepage.name=etcd browser
+      - homepage.icon=etcd.png
+      - homepage.href=http://etcd-browser.${DOMAIN}
+      - "homepage.description=For: etcd"
+      - traefik.enable=true
+      - wud.tag.include=^v\d+\.\d+\.\d+$
+    environment:
+      ETCD: etcd:2379
+      EDITABLE: 1
+    networks:
+    - default
+    - web
+    restart: unless-stopped
+networks:
+  default:
+    name: etcd
+    external: true
+  web:
+    external: true

@@ -1,0 +1,26 @@
+services:
+  postgres18:
+    container_name: postgres18
+    labels:
+      - homepage.group=Relational
+      - homepage.name=PostgreSQL 18
+      - homepage.icon=postgres.png
+      - homepage.description=PostgreSQL v18 (54328)
+      - wud.tag.include=^18.+?$
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: scram-sha-256
+      POSTGRES_PASSWORD: ${SECRET_PASSWORD}
+    image: postgres:18beta2-alpine3.22
+    ports:
+    - 54328:5432
+    restart: unless-stopped
+    volumes:
+    - data:/var/lib/postgresql/data
+
+networks:
+  default:
+    name: postgres
+    external: true
+
+volumes:
+  data:

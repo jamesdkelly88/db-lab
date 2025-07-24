@@ -1,0 +1,14 @@
+{
+    "name": "pgweb",
+    "type": ["gui"],
+    "description": [
+        "Pgweb is a cross-platform web-based database browser for PostgreSQL, written in Go.",
+        "Bookmarks for servers can be created and stored in `/home/pgweb/.pgweb/bookmarks`, but there is a [limitation](https://github.com/sosedoff/pgweb/issues/652) since v0.13 (and still present in v0.16) that requires the password to be included in the bookmark file."
+    ],
+    "links": {
+        "homepage": "https://pgweb-demo.fly.dev/",
+        "repository": "https://github.com/sosedoff/pgweb",
+        "registry": "https://hub.docker.com/r/sosedoff/pgweb/tags"
+    },
+    "ui": []
+}

@@ -20,6 +20,7 @@ SQL Server has supported Linux containers since 2017. All versions since then ar
 ## GUI
 
 - [DbGate](../dbgate)
+- [SQL Server Management Studio](../sql-server-management-studio)
 
 ## Images
 | Image | Tag |
