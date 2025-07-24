@@ -16,6 +16,7 @@ services:
       - homepage.description=HAProxy stats for HA PostgreSQL
       - traefik.enable=true
       - traefik.http.services.pg-proxy-postgres-ha.loadbalancer.server.port=7000
+      - wud.tag.include=^v\d+\.\d+\.\d+-alpine.+?$
     networks:
       - web
       - postgres
