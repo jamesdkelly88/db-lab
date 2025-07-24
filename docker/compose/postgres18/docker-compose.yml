@@ -6,7 +6,7 @@ services:
       - homepage.name=PostgreSQL 18
       - homepage.icon=postgres.png
       - homepage.description=PostgreSQL v18 (54328)
-      - wud.tag.include=^18.+?$
+      - wud.tag.include=^18.+?-alpine.+?$
     environment:
       POSTGRES_HOST_AUTH_METHOD: scram-sha-256
       POSTGRES_PASSWORD: ${SECRET_PASSWORD}
