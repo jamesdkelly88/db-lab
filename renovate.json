@@ -15,6 +15,10 @@
       "matchBaseBranches": ["main"],
       "automerge": true,
       "ignoreTests": true
+    },
+    {
+      "packagePatterns": ["^minio"],
+      "versioning": "regex:^RELEASE\\.(?<major>\\d{4})-(?<minor>\\d{2})-(?<patch>\\d{2})"
     }
   ]
 }

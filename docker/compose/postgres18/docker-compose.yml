@@ -10,7 +10,7 @@ services:
     environment:
       POSTGRES_HOST_AUTH_METHOD: scram-sha-256
       POSTGRES_PASSWORD: ${SECRET_PASSWORD}
-    image: jamesdkelly88/postgres:18beta1
+    image: postgres:18beta2-alpine3.22
     ports:
     - 54328:5432
     restart: unless-stopped
