@@ -2,10 +2,11 @@ services:
   postgres15:
     container_name: postgres15
     labels:
-      - homepage.group=Relational
+      - homepage.group=Databases
       - homepage.name=PostgreSQL 15
+      - homepage.href=#
       - homepage.icon=postgres.png
-      - homepage.description=PostgreSQL v15 (54325)
+      - homepage.description=Key-Value | Relational (54325)
       - wud.tag.include=^15.\d{1,2}-alpine.+?$
     environment:
       POSTGRES_HOST_AUTH_METHOD: scram-sha-256

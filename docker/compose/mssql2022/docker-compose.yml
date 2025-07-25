@@ -3,10 +3,11 @@ services:
     container_name: sqlserver2022
     hostname: sqlserver2022
     labels:
-      - homepage.group=Relational
+      - homepage.group=Databases
       - homepage.name=SQL Server 2022
+      - homepage.href=#
       - homepage.icon=microsoft-sql-server.png
-      - homepage.description=Microsoft SQL Server 2022 (1433)
+      - homepage.description=Graph | Ledger | Relational (1433)
       - wud.tag.include=^2022-CU.+?-rhel-.+?$
     environment:
       ACCEPT_EULA: Y

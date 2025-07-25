@@ -1,6 +1,6 @@
 {
     "name": "DynamoDB",
-    "type": ["document"],
+    "type": ["document","key-value","nosql"],
     "description": [
         "Amazon DynamoDB is a serverless, NoSQL database service that enables you to develop modern applications at any scale. With the downloadable version of Amazon DynamoDB, you can develop and test applications without accessing the DynamoDB web service. Instead, the database is self-contained on your computer.",
         "To interact with the local database, you need to set the following environment variables:",

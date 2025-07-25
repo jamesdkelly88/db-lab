@@ -116,7 +116,7 @@ foreach($f in Get-ChildItem -Path $compose_root -Directory)
 
                 foreach($l in $s.labels)
                 {
-                    if($l -like "homepage.href=*")
+                    if($l -like "homepage.href=*" -and $l -ne "homepage.href=#")
                     {
                         $urls += $l.substring(14).replace("`${DOMAIN}",$domain)
                     }

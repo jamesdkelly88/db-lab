@@ -1,6 +1,6 @@
 {
     "name": "PuppyGraph",
-    "type": ["gui"],
+    "type": ["gui","graph"],
     "description": [
         "A graph query engine for all your data.",
         "PuppyGraph enables you to query your data as a graph by directly connecting to your data warehouses and lakes. This eliminates the need to build and maintain time-consuming ETL pipelines needed with a traditional graph database setup. No more waiting for data and failed ETL processes."

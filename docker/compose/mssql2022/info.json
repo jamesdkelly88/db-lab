@@ -1,6 +1,6 @@
 {
     "name": "Microsoft SQL Server 2022",
-    "type": ["ledger","relational"],
+    "type": ["ledger","relational","graph"],
     "description": [
         "Microsoft SQL Server (Structured Query Language) is a proprietary relational database management system developed by Microsoft",
         "There is no official web interface for SQL Server.",

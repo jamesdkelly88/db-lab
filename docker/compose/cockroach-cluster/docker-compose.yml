@@ -4,11 +4,11 @@ services:
     hostname: roach1
     command: start --advertise-addr=roach1:26357 --http-addr=roach1:8080 --listen-addr=roach1:26357 --sql-addr=roach1:26257 --insecure --join=roach1:26357,roach2:26357,roach3:26357
     labels:
-      - homepage.group=Relational
-      - homepage.name=CockroachDB
+      - homepage.group=Web Interfaces
+      - homepage.name=CockroachDB Cluster
       - homepage.href=http://roach1.${DOMAIN}
       - homepage.icon=https://upload.wikimedia.org/wikipedia/en/3/31/Cockroach_Labs_Logo.png
-      - homepage.description=3-node CockroachDB cluster (26258)
+      - homepage.description=Relational (26258)
       - traefik.enable=true
       - traefik.http.services.roach1-cockroach.loadbalancer.server.port=8080
       - wud.tag.include=^v\d+?\.\d+?\.\d+?$

@@ -1,6 +1,6 @@
 {
-    "name": "Microsoft SQL Server 2019",
-    "type": ["relational","graph"],
+    "name": "Microsoft SQL Server 2025 (Preview)",
+    "type": ["ledger","relational","graph","vector"],
     "description": [
         "Microsoft SQL Server (Structured Query Language) is a proprietary relational database management system developed by Microsoft",
         "There is no official web interface for SQL Server.",

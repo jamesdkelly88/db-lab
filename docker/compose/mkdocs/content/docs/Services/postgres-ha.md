@@ -1,6 +1,7 @@
 ---
 tags:
   - relational
+  - key-value
 ---
 # PostgreSQL (High-Availability)
 

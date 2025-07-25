@@ -17,7 +17,7 @@ Web containers need to have the label `traefik.enable=true` in their `docker-com
 ## Images
 | Image | Tag |
 | --- | --- |
-| traefik | v2.11.24 |
+| traefik | v2.11.28 |
 
 ## Ports
 - 80

@@ -3,11 +3,11 @@ services:
     image: dbgate/dbgate:6.6.0-alpine
     container_name: dbgate
     labels:
-      - homepage.group=GUIs
+      - homepage.group=Web Interfaces
       - homepage.name=DbGate
       - homepage.icon=https://avatars.githubusercontent.com/u/78292618
       - homepage.href=http://dbgate.${DOMAIN}
-      - "homepage.description=For: PostgreSQL, SQL Server"
+      - "homepage.description=For: PostgreSQL | SQL Server"
       - traefik.enable=true
       - wud.tag.include=^\d.\d.\d-alpine$
     environment:

@@ -1,6 +1,6 @@
 {
-    "name": "PostgreSQL v18",
-    "type": ["relational"],
+    "name": "PostgreSQL v18 (Preview)",
+    "type": ["relational","key-value"],
     "description": [
         "A powerful, open source object-relational database system with over 35 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance."
     ],

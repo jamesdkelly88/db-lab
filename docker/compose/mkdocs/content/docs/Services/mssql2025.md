@@ -3,8 +3,9 @@ tags:
   - ledger
   - relational
   - graph
+  - vector
 ---
-# Microsoft SQL Server 2022
+# Microsoft SQL Server 2025 (Preview)
 
 [:fontawesome-solid-globe: Project Homepage](https://www.microsoft.com/en-gb/sql-server)
 
@@ -26,9 +27,9 @@ SQL Server has supported Linux containers since 2017. All versions since then ar
 ## Images
 | Image | Tag |
 | --- | --- |
-| mcr.microsoft.com/mssql/rhel/server | 2022-CU15-GDR1-rhel-9.1 |
+| mcr.microsoft.com/mssql/rhel/server | 2025-CTP2.1-rhel-9.1 |
 
 ## Ports
-- 1433
+- 1432
 
 

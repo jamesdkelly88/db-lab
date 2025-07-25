@@ -3,10 +3,11 @@ services:
     command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ./data"
     container_name: dynamodb
     labels:
-      - homepage.group=Key-Value
+      - homepage.group=Databases 
       - homepage.name=DynamoDB
+      - homepage.href=#
       - homepage.icon=aws.png
-      - homepage.description=DynamoDB Local (8000)
+      - homepage.description= Document | Key-Value | NoSQL (8000)
       - wud.tag.include=^v\d+?.\d+?.\d+?$
     environment:
       - AWS_ACCESS_KEY_ID=""

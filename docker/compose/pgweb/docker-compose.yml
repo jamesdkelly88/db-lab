@@ -3,11 +3,11 @@ services:
     image: sosedoff/pgweb:0.16.2
     container_name: pgweb
     labels:
-      - homepage.group=GUIs
+      - homepage.group=Web Interfaces
       - homepage.name=pgweb
       - homepage.icon=postgres.png
       - homepage.href=http://pgweb.${DOMAIN}
-      - "homepage.description=For: PostgreSQL / CockroachDB"
+      - "homepage.description=For: PostgreSQL | CockroachDB"
       - traefik.enable=true
       - wud.tag.include=^\d+?\.\d+?\.\d+?$
     networks:

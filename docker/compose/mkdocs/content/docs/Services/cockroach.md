@@ -25,7 +25,7 @@ This instance of CockroachDB is a single node deployment for testing use
 ## Images
 | Image | Tag |
 | --- | --- |
-| cockroachdb/cockroach | v25.1.6 |
+| cockroachdb/cockroach | v25.2.2 |
 
 ## Ports
 - 26257

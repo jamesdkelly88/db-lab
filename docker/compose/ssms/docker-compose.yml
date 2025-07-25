@@ -18,7 +18,7 @@ services:
       VERSION: "11l"
     image: dockurr/windows:4.35
     labels:
-      - homepage.group=GUIs
+      - homepage.group=Web Interfaces
       - homepage.name=SSMS
       - homepage.icon=microsoft-sql-server.png
       - homepage.href=http://ssms.${DOMAIN}
