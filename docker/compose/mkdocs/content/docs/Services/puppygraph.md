@@ -1,6 +1,7 @@
 ---
 tags:
   - gui
+  - graph
 ---
 # PuppyGraph
 
@@ -17,7 +18,7 @@ PuppyGraph enables you to query your data as a graph by directly connecting to y
 ## Images
 | Image | Tag |
 | --- | --- |
-| puppygraph/puppygraph | 0.67 |
+| puppygraph/puppygraph | 0.86 |
 
 ## Ports
 - 7688

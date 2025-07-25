@@ -2,7 +2,7 @@ services:
   dynamodb-admin:
     container_name: dynamodb-admin
     labels:
-      - homepage.group=GUIs
+      - homepage.group=Web Interfaces
       - homepage.name=DynamoDB Admin
       - homepage.icon=aws.png
       - homepage.href=http://dynamodb-admin.${DOMAIN}

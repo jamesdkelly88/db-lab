@@ -21,7 +21,7 @@ Neo4j is a graph database management system (GDBMS) developed by Neo4j Inc, and 
 ## Images
 | Image | Tag |
 | --- | --- |
-| neo4j | 5.23.0 |
+| neo4j | 2025.06.2 |
 
 ## Ports
 - 7474

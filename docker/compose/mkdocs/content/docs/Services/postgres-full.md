@@ -1,6 +1,11 @@
 ---
 tags:
   - relational
+  - graph
+  - key-value
+  - spatial
+  - time-series
+  - vector
 ---
 # PostgreSQL (Full)
 
@@ -24,6 +29,8 @@ A customised deployment of PostgreSQL v17 with added extensions:
 
 - [pgaudit](https://www.pgaudit.org/) (auditing)
 
+- [pgtt](https://github.com/darold/pgtt) (global temp tables)
+
 - [postgis-3](https://postgis.net/) (geospatial data)
 
 - [tds_fdw](https://github.com/tds-fdw/tds_fdw) (foreign data wrapper for SQL Server)
@@ -42,7 +49,7 @@ A customised deployment of PostgreSQL v17 with added extensions:
 ## Images
 | Image | Tag |
 | --- | --- |
-| jamesdkelly88/postgres-full | 17.4 |
+| jamesdkelly88/postgres-full | 17.5 |
 
 ## Ports
 - 5432

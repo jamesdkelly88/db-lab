@@ -1,6 +1,8 @@
 ---
 tags:
   - document
+  - key-value
+  - nosql
 ---
 # DynamoDB
 

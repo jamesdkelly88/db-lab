@@ -23,7 +23,7 @@ The v3 api can be used directly, or via the command line tool etcdctl - remember
 ## Images
 | Image | Tag |
 | --- | --- |
-| quay.io/coreos/etcd | v3.5.21 |
+| quay.io/coreos/etcd | v3.6.3 |
 
 ## Ports
 - 2379

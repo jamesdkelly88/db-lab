@@ -1,32 +1,17 @@
 ---
 # For configuration options and examples, please see:
 # https://gethomepage.dev/latest/configs/settings
+
 fiveColumns: false
-useEqualHeights: true
 
 layout:
   Docker:
     style: row
     columns: 6
-  GUIs:
+  Web Interfaces:
     style: row
     columns: 6
-  Document:
-    style: row
-    columns: 6
-  Graph:
-    style: row
-    columns: 6
-  Key-Value:
-    style: row
-    columns: 6
-  Ledger:
-    style: row
-    columns: 6
-  Relational:
-    style: row
-    columns: 6
-  Vector:
+  Databases:
     style: row
     columns: 6
 
@@ -34,5 +19,12 @@ providers:
   openweathermap: openweathermapapikey
   weatherapi: weatherapiapikey
 
+quicklaunch:
+  searchDescriptions: true
+  hideInternetSearch: true
+
 statusStyle: "dot"
 
+title: Database Lab
+
+useEqualHeights: true

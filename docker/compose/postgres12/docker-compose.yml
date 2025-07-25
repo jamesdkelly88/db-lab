@@ -2,10 +2,11 @@ services:
   postgres12:
     container_name: postgres12
     labels:
-      - homepage.group=Relational
+      - homepage.group=Databases
       - homepage.name=PostgreSQL 12
+      - homepage.href=#
       - homepage.icon=postgres.png
-      - homepage.description=PostgreSQL v12 (54322)
+      - homepage.description=Key-Value | Relational (54322)
       - wud.tag.include=^12.\d{1,2}-alpine.+?$
     environment:
       POSTGRES_PASSWORD: ${SECRET_PASSWORD}

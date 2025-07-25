@@ -4,10 +4,11 @@ services:
     image: quay.io/coreos/etcd:v3.6.3
     container_name: etcd
     labels:
-      - homepage.group=Key-Value
+      - homepage.group=Databases
       - homepage.name=etcd
+      - homepage.href=#
       - homepage.icon=etcd.png
-      - "homepage.description=etcd v3 (2379)"
+      - "homepage.description=Key-Value (2379)"
       - wud.tag.include=^v\d+\.\d+\.\d+$
     networks:
     - default

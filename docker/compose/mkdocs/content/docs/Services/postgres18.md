@@ -1,8 +1,9 @@
 ---
 tags:
   - relational
+  - key-value
 ---
-# PostgreSQL v18
+# PostgreSQL v18 (Preview)
 
 [:fontawesome-solid-globe: Project Homepage](https://www.postgresql.org/)
 
@@ -24,7 +25,7 @@ A powerful, open source object-relational database system with over 35 years of 
 ## Images
 | Image | Tag |
 | --- | --- |
-| jamesdkelly88/postgres | 18beta1 |
+| postgres | 18beta2-alpine3.22 |
 
 ## Ports
 - 54328

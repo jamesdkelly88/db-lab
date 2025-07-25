@@ -1,6 +1,6 @@
 {
     "name": "PostgreSQL (Full)",
-    "type": ["relational"],
+    "type": ["relational","graph","key-value","spatial","time-series","vector"],
     "description": [
         "A customised deployment of PostgreSQL v17 with added extensions:",
         "- [age](https://age.apache.org/) (graph database)",

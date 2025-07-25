@@ -2,10 +2,11 @@ services:
   postgres:
     container_name: postgres
     labels:
-      - homepage.group=Relational
-      - homepage.name=PostgreSQL
+      - homepage.group=Databases
+      - homepage.name=PostgreSQL 17 (Extensions)
+      - homepage.href=#
       - homepage.icon=postgres.png
-      - homepage.description=PostgreSQL v17 with extensions (5432)
+      - homepage.description=Graph | Key-Value | Relational | Spatial | Time-Series | Vector (5432)
       - wud.tag.include=^17.\d{1,2}$
     environment:
       POSTGRES_HOST_AUTH_METHOD: scram-sha-256

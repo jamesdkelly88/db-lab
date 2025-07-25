@@ -1,6 +1,6 @@
 {
     "name": "PostgreSQL (High-Availability)",
-    "type": ["relational"],
+    "type": ["relational","key-value"],
     "description": [
         "A powerful, open source object-relational database system with over 35 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.",
         "This high-availability 3-node cluster is exposed on port 5432 and uses HA-Proxy to manage traffic and zookeeper to determine the leader.",

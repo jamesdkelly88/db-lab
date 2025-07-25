@@ -1,6 +1,7 @@
 ---
 tags:
   - relational
+  - graph
 ---
 # Microsoft SQL Server 2017
 

@@ -3,7 +3,7 @@ services:
     image: rustyx/etcdv3-browser:v0.6.1
     container_name: etcd-browser
     labels:
-      - homepage.group=GUIs
+      - homepage.group=Web Interfaces
       - homepage.name=etcd browser
       - homepage.icon=etcd.png
       - homepage.href=http://etcd-browser.${DOMAIN}

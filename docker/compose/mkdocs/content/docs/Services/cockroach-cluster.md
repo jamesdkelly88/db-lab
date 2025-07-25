@@ -25,7 +25,7 @@ This instance of CockroachDB is a three node cluster which requires a license (o
 ## Images
 | Image | Tag |
 | --- | --- |
-| cockroachdb/cockroach | v25.1.6 |
+| cockroachdb/cockroach | v25.2.2 |
 
 ## Ports
 - 26258

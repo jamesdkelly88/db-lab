@@ -3,10 +3,11 @@ services:
     container_name: sqlserver2017
     hostname: sqlserver2017
     labels:
-      - homepage.group=Relational
+      - homepage.group=Databases
       - homepage.name=SQL Server 2017
+      - homepage.href=#
       - homepage.icon=microsoft-sql-server.png
-      - homepage.description=Microsoft SQL Server 2017 (1435)
+      - homepage.description=Graph | Relational (1435)
       - wud.tag.include=^2017-CU.+?-ubuntu-.+?$
     environment:
       ACCEPT_EULA: Y

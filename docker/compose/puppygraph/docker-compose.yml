@@ -5,11 +5,11 @@ services:
     environment:
      PUPPYGRAPH_PASSWORD: ${SECRET_PASSWORD}
     labels:
-      - homepage.group=GUIs
+      - homepage.group=Web Interfaces
       - homepage.name=PuppyGraph
       - homepage.icon=https://avatars.githubusercontent.com/u/131501899?s=200&v=4
       - homepage.href=http://puppygraph.${DOMAIN}
-      - "homepage.description=Gremlin (8182) and Bolt API (7688) For: PostgreSQL"
+      - "homepage.description=Graph | For: PostgreSQL (8182, 7688)"
       - traefik.enable=true
       - traefik.http.services.puppygraph-puppygraph.loadbalancer.server.port=8081
       - wud.tag.include=^\d+\.\d+$

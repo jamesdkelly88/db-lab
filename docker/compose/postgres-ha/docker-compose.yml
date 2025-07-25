@@ -9,11 +9,11 @@ services:
     hostname: pg-proxy
     image: haproxy:3.1.1-alpine3.20
     labels:
-      - homepage.group=GUIs
+      - homepage.group=Web Interfaces
       - homepage.name=HAProxy Stats
       - homepage.icon=haproxy.png
       - homepage.href=http://pg-proxy.${DOMAIN}
-      - homepage.description=HAProxy stats for HA PostgreSQL
+      - "homepage.description=For: PostgreSQL (HA)"
       - traefik.enable=true
       - traefik.http.services.pg-proxy-postgres-ha.loadbalancer.server.port=7000
       - wud.tag.include=^v\d+\.\d+\.\d+-alpine.+?$
@@ -33,10 +33,11 @@ services:
     restart: unless-stopped
     hostname: pg-primary
     labels:
-      - homepage.group=Relational
+      - homepage.group=Databases
       - homepage.name=PostgreSQL (HA)
+      - homepage.href=#
       - homepage.icon=postgres.png
-      - homepage.description=3-node cluster (5433)
+      - homepage.description=Key-Value | Relational (5433)
       - wud.tag.include=^\d$
     environment:
       POSTGRES_HOST_AUTH_METHOD: scram-sha-256

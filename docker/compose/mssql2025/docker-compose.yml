@@ -1,14 +1,14 @@
 services:
-  sqlserver2019:
-    container_name: sqlserver2019
-    hostname: sqlserver2019
+  sqlserver2025:
+    container_name: sqlserver2025
+    hostname: sqlserver2025
     labels:
       - homepage.group=Databases
-      - homepage.name=SQL Server 2019
+      - homepage.name=SQL Server 2025 (Preview)
       - homepage.href=#
       - homepage.icon=microsoft-sql-server.png
-      - homepage.description=Graph | Relational (1434)
-      - wud.tag.include=^2019-CU.+?-rhel-.+?$
+      - homepage.description=Graph | Ledger | Relational | Vector (1432)
+      - wud.tag.include=^2025-C.+?-rhel-.+?$
     environment:
       ACCEPT_EULA: Y
       MSSQL_AGENT_ENABLED: true
@@ -19,9 +19,9 @@ services:
       MSSQL_PID: Evaluation
       MSSQL_SA_PASSWORD: ${SECRET_PASSWORD}
       TZ: Europe/London
-    image: mcr.microsoft.com/mssql/rhel/server:2019-CU28-GDR1-rhel-8.7  
+    image: mcr.microsoft.com/mssql/rhel/server:2025-CTP2.1-rhel-9.1   
     ports:
-    - 1434:1433
+    - 1432:1433
     restart: unless-stopped
     user: root
     volumes:
