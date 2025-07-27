@@ -1,0 +1,27 @@
+services:
+  mysql84:
+    container_name: mysql57
+    hostname: mysql57
+    labels:
+      - homepage.group=Databases
+      - homepage.name=MySQL 5.7
+      - homepage.href=#
+      - homepage.icon=mysql.png
+      - homepage.description=Relational (3305)
+      - wud.tag.include=^5.7.\d+-oraclelinux\d+$
+    environment:
+      MYSQL_ROOT_PASSWORD: ${SECRET_PASSWORD}
+    image: mysql:5.7.44-oraclelinux7  
+    ports:
+    - 3305:3306
+    restart: unless-stopped
+    volumes:
+    - data:/var/lib/mysql
+
+networks:
+  default:
+    name: mysql
+    external: true
+      
+volumes:
+  data:

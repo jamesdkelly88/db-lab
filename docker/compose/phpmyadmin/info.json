@@ -1,0 +1,13 @@
+{
+    "name": "phpMyAdmin",
+    "type": ["gui"],
+    "description": [
+        "phpMyAdmin is a free software tool written in PHP, intended to handle the administration of MySQL over the Web"
+    ],
+    "links": {
+        "homepage": "https://www.phpmyadmin.net/",
+        "repository": "https://github.com/phpmyadmin/docker",
+        "registry": "https://hub.docker.com/_/phpmyadmin"
+    },
+    "ui": []
+}

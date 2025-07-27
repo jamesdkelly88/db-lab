@@ -1,0 +1,27 @@
+services:
+  mysql84:
+    container_name: mysql9
+    hostname: mysql9
+    labels:
+      - homepage.group=Databases
+      - homepage.name=MySQL 9
+      - homepage.href=#
+      - homepage.icon=mysql.png
+      - homepage.description=Relational (3309)
+      - wud.tag.include=^9.\d+.\d+-oraclelinux\d+$
+    environment:
+      MYSQL_ROOT_PASSWORD: ${SECRET_PASSWORD}
+    image: mysql:9.4.0-oraclelinux9   
+    ports:
+    - 3309:3306
+    restart: unless-stopped
+    volumes:
+    - data:/var/lib/mysql
+
+networks:
+  default:
+    name: mysql
+    external: true
+      
+volumes:
+  data:

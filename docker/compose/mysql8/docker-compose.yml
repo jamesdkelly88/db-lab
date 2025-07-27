@@ -1,0 +1,27 @@
+services:
+  mysql8:
+    container_name: mysql8
+    hostname: mysql8
+    labels:
+      - homepage.group=Databases
+      - homepage.name=MySQL 8.0
+      - homepage.href=#
+      - homepage.icon=mysql.png
+      - homepage.description=Relational (3308)
+      - wud.tag.include=^8.0.\d+-oraclelinux\d+$
+    environment:
+      MYSQL_ROOT_PASSWORD: ${SECRET_PASSWORD}
+    image: mysql:8.0.43-oraclelinux9   
+    ports:
+    - 3308:3306
+    restart: unless-stopped
+    volumes:
+    - data:/var/lib/mysql
+
+networks:
+  default:
+    name: mysql
+    external: true
+      
+volumes:
+  data:

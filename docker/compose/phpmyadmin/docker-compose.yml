@@ -1,0 +1,25 @@
+services:
+  phpmyadmin:
+    image: phpmyadmin:5.2.2-apache
+    container_name: phpmyadmin
+    labels:
+      - homepage.group=Web Interfaces
+      - homepage.name=phpMyAdmin
+      - homepage.icon=phpmyadmin.png
+      - homepage.href=http://phpmyadmin.${DOMAIN}
+      - "homepage.description=For: MySQL"
+      - traefik.enable=true
+      - wud.tag.include=^5.\d+?.\d+?-apache$
+    environment:
+      - PMA_ABSOLUTE_URI=http://phpmyadmin.${DOMAIN}
+      - PMA_ARBITRARY=1
+    networks:
+    - default
+    - web
+    restart: unless-stopped
+networks:
+  default:
+    name: mysql
+    external: true
+  web:
+    external: true

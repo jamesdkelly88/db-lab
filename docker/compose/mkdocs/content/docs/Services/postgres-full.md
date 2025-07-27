@@ -45,6 +45,7 @@ A customised deployment of PostgreSQL v17 with added extensions:
 - [pgAdmin](../pgadmin)
 - [pgweb](../pgweb)
 - [PuppyGraph](../puppygraph)
+- [WhoDB](../whodb)
 
 ## Images
 | Image | Tag |

@@ -1,0 +1,14 @@
+{
+    "name": "MySQL v9",
+    "type": ["relational"],
+    "description": [
+        "MySQL is an open source RDBMS that is owned by Oracle."
+    ],
+    "links": {
+        "homepage": "https://www.mysql.com/",
+        "repository": "https://github.com/mysql",
+        "registry": "https://hub.docker.com/_/mysql",
+        "dbdb": "https://dbdb.io/db/mysql"
+    },
+    "ui": ["DbGate","phpMyAdmin","whoDB"]
+}
