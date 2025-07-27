@@ -21,6 +21,7 @@ A powerful, open source object-relational database system with over 35 years of 
 - [pgAdmin](../pgadmin)
 - [pgweb](../pgweb)
 - [PuppyGraph](../puppygraph)
+- [WhoDB](../whodb)
 
 ## Images
 | Image | Tag |

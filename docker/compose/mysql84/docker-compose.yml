@@ -1,0 +1,27 @@
+services:
+  mysql84:
+    container_name: mysql84
+    hostname: mysql84
+    labels:
+      - homepage.group=Databases
+      - homepage.name=MySQL 8.4
+      - homepage.href=#
+      - homepage.icon=mysql.png
+      - homepage.description=Relational (3306)
+      - wud.tag.include=^8.4.\d+-oraclelinux\d+$
+    environment:
+      MYSQL_ROOT_PASSWORD: ${SECRET_PASSWORD}
+    image: mysql:8.4.6-oraclelinux9   
+    ports:
+    - 3306:3306
+    restart: unless-stopped
+    volumes:
+    - data:/var/lib/mysql
+
+networks:
+  default:
+    name: mysql
+    external: true
+      
+volumes:
+  data:

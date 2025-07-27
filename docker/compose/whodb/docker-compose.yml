@@ -1,0 +1,28 @@
+services:
+  whodb:
+    image: clidey/whodb:0.58.0
+    container_name: whodb
+    labels:
+      - homepage.group=Web Interfaces
+      - homepage.name=WhoDB
+      - homepage.icon=https://github.com/clidey/whodb/raw/main/docs/images/logo.png
+      - homepage.href=http://whodb.${DOMAIN}
+      - "homepage.description=For: MySQL | PostgreSQL"
+      - traefik.enable=true
+      - traefik.http.services.whodb-whodb.loadbalancer.server.port=8080
+      - wud.tag.include=^0.\d+?.\d+?$
+    networks:
+    - default
+    - mysql
+    - postgres
+    restart: unless-stopped
+networks:
+  default:
+    name: web
+    external: true
+  mysql:
+    external: true
+  postgres:
+    external: true
+volumes:
+  llama:

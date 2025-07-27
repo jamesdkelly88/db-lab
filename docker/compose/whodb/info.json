@@ -1,0 +1,14 @@
+{
+    "name": "WhoDB",
+    "type": ["gui"],
+    "description": [
+        "WhoDB is a lightweight (~20MB), powerful, and user-friendly database management tool designed to streamline your database administration tasks. Combining the simplicity of Adminer with enhanced UX and performance, WhoDB is built with GoLang to deliver optimal speed and efficiency. With features like interactive schema visualization and inline editing, WhoDB caters to both small projects and complex enterprise systems.",
+        "WhoDB has an AI integration feature called Houdini - this is not enabled in this lab as it requires a local LLM (Large Language Model)."
+    ],
+    "links": {
+        "homepage": "https://whodb.com/",
+        "repository": "https://github.com/clidey/whodb",
+        "registry": "https://hub.docker.com/r/clidey/whodb"
+    },
+    "ui": []
+}

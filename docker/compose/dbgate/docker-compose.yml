@@ -7,11 +7,11 @@ services:
       - homepage.name=DbGate
       - homepage.icon=https://avatars.githubusercontent.com/u/78292618
       - homepage.href=http://dbgate.${DOMAIN}
-      - "homepage.description=For: PostgreSQL | SQL Server"
+      - "homepage.description=For: MySQL | PostgreSQL | SQL Server"
       - traefik.enable=true
       - wud.tag.include=^\d.\d.\d-alpine$
     environment:
-      CONNECTIONS: mssql2017,mssql2019,mssql2022,postgresha,postgres12,postgres13,,postgres14,postgres15,postgres16,postgres17
+      CONNECTIONS: mssql2017,mssql2019,mssql2022,mysql57,mysql8,mysql84,mysql9,postgres,postgresha,postgres12,postgres13,postgres14,postgres15,postgres16,postgres17
 
       LABEL_mssql2017: SQL Server 2017
       SERVER_mssql2017: sqlserver2017
@@ -33,6 +33,41 @@ services:
       PASSWORD_mssql2022: ${SECRET_PASSWORD}
       PORT_mssql2022: 1433
       ENGINE_mssql2022: mssql@dbgate-plugin-mssql
+
+      LABEL_mysql57: MySQL 5.7
+      SERVER_mysql57: mysql57
+      USER_mysql57: root
+      PASSWORD_mysql57: ${SECRET_PASSWORD}
+      PORT_mysql57: 3306
+      ENGINE_mysql57: mysql@dbgate-plugin-mysql
+
+      LABEL_mysql8: MySQL 8.0
+      SERVER_mysql8: mysql8
+      USER_mysql8: root
+      PASSWORD_mysql8: ${SECRET_PASSWORD}
+      PORT_mysql8: 3306
+      ENGINE_mysql8: mysql@dbgate-plugin-mysql
+
+      LABEL_mysql84: MySQL 8.4
+      SERVER_mysql84: mysql84
+      USER_mysql84: root
+      PASSWORD_mysql84: ${SECRET_PASSWORD}
+      PORT_mysql84: 3306
+      ENGINE_mysql84: mysql@dbgate-plugin-mysql
+
+      LABEL_mysql9: MySQL 9
+      SERVER_mysql9: mysql9
+      USER_mysql9: root
+      PASSWORD_mysql9: ${SECRET_PASSWORD}
+      PORT_mysql9: 3306
+      ENGINE_mysql9: mysql@dbgate-plugin-mysql
+
+      LABEL_postgres: PostgreSQL (With Extensions)
+      SERVER_postgres: postgres
+      USER_postgres: postgres
+      PASSWORD_postgres: ${SECRET_PASSWORD}
+      PORT_postgres: 5432
+      ENGINE_postgres: postgres@dbgate-plugin-postgres
 
       LABEL_postgresha: PostgreSQL (HA)
       SERVER_postgresha: pg-proxy
@@ -86,6 +121,7 @@ services:
     networks:
     - default
     - mssql
+    - mysql
     - postgres
     restart: unless-stopped
     volumes:
@@ -96,6 +132,8 @@ networks:
     name: web
     external: true
   mssql:
+    external: true
+  mysql:
     external: true
   postgres:
     external: true

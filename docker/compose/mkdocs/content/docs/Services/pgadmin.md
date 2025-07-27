@@ -15,7 +15,7 @@ pgAdmin 4 is a web based administration tool for the PostgreSQL database.
 ## Images
 | Image | Tag |
 | --- | --- |
-| dpage/pgadmin4 | 9.5.0 |
+| dpage/pgadmin4 | 9.6.0 |
 
 ## Links
 - [http://pgadmin.jkdb.duckdns.org](http://pgadmin.jkdb.duckdns.org)
