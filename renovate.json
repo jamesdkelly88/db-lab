@@ -22,7 +22,7 @@
     },
     {
       "matchFileNames": ["docker/compose/mysql8/docker-compose.yml"],
-      "versioning": "regex:^8\\.0\\.\\d+?-oraclelinux\\d+?$"
+      "versioning": "regex:^8\\.0\\.(?<patch>\\d{1,2})-oraclelinux\\d+?$"
     }
   ]
 }
