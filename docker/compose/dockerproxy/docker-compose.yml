@@ -1,6 +1,6 @@
 services:
   dockerproxy:
-    image: ghcr.io/tecnativa/docker-socket-proxy:v0.4.0
+    image: ghcr.io/tecnativa/docker-socket-proxy:v0.4.1
     container_name: dockerproxy
     labels:
       - homepage.group=Docker
