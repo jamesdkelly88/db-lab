@@ -1,6 +1,6 @@
 services:
   phpmyadmin:
-    image: phpmyadmin:5.2.2-apache
+    image: phpmyadmin:5.2.3-apache
     container_name: phpmyadmin
     labels:
       - homepage.group=Web Interfaces
