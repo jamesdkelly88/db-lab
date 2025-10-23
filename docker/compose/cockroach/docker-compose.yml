@@ -12,7 +12,7 @@ services:
       - traefik.enable=true
       - traefik.http.services.cockroach-cockroach.loadbalancer.server.port=8080
       - wud.tag.include=^v\d+?\.\d+?\.\d+?$
-    image: cockroachdb/cockroach:v25.3.2
+    image: cockroachdb/cockroach:v25.3.3
     ports:
     - 26257:26257
     restart: unless-stopped
