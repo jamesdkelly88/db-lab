@@ -1,4 +1,4 @@
-FROM postgres:17.6
+FROM postgres:17.7
 
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y \
