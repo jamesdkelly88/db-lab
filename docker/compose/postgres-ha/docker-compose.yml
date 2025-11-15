@@ -29,7 +29,7 @@ services:
     restart: unless-stopped
   pg-primary:
     container_name: pg-primary
-    image: jamesdkelly88/postgres-patroni:17.5
+    image: jamesdkelly88/postgres-patroni:17.7
     restart: unless-stopped
     hostname: pg-primary
     labels:
@@ -53,7 +53,7 @@ services:
     command: patroni /postgres0.yml
   pg-secondary:
     container_name: pg-secondary
-    image: jamesdkelly88/postgres-patroni:17.5
+    image: jamesdkelly88/postgres-patroni:17.7
     restart: unless-stopped
     hostname: pg-secondary
     expose:
@@ -70,7 +70,7 @@ services:
     command: patroni /postgres1.yml        
   pg-tertiary:
     container_name: pg-tertiary
-    image: jamesdkelly88/postgres-patroni:17.5
+    image: jamesdkelly88/postgres-patroni:17.7
     restart: unless-stopped
     hostname: pg-tertiary
     expose:
