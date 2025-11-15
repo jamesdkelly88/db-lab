@@ -3,25 +3,40 @@
   "extends": [
     "config:recommended"
   ],
-  "baseBranches": ["main"],
+  "baseBranchPatterns": [
+    "main"
+  ],
   "packageRules": [
     {
-      "matchUpdateTypes": ["major"],
-      "matchBaseBranches": ["main"],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "matchBaseBranches": [
+        "main"
+      ],
       "enabled": false
     },
     {
-      "matchUpdateTypes": ["minor","patch"],
-      "matchBaseBranches": ["main"],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "matchBaseBranches": [
+        "main"
+      ],
       "automerge": true,
       "ignoreTests": true
     },
     {
-      "packagePatterns": ["^minio"],
-      "versioning": "regex:^RELEASE\\.(?<major>\\d{4})-(?<minor>\\d{2})-(?<patch>\\d{2}).+Z$"
+      "versioning": "regex:^RELEASE\\.(?<major>\\d{4})-(?<minor>\\d{2})-(?<patch>\\d{2}).+Z$",
+      "matchPackageNames": [
+        "/^minio/"
+      ]
     },
     {
-      "matchFileNames": ["docker/compose/mysql8/docker-compose.yml"],
+      "matchFileNames": [
+        "docker/compose/mysql8/docker-compose.yml"
+      ],
       "versioning": "regex:^8\\.0\\.(?<patch>\\d{1,2})-oraclelinux\\d+?$"
     }
   ]
