@@ -1,6 +1,6 @@
 services:
   pgweb:
-    image: sosedoff/pgweb:0.16.2
+    image: sosedoff/pgweb:0.17.0
     container_name: pgweb
     labels:
       - homepage.group=Web Interfaces
