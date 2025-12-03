@@ -1,6 +1,6 @@
 services:
   dbgate:
-    image: dbgate/dbgate:6.7.2-alpine
+    image: dbgate/dbgate:6.7.3-alpine
     container_name: dbgate
     labels:
       - homepage.group=Web Interfaces
