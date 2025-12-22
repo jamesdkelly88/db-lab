@@ -1,6 +1,6 @@
 services:
   etcd-browser:
-    image: rustyx/etcdv3-browser:v0.7.1
+    image: rustyx/etcdv3-browser:v0.7.2
     container_name: etcd-browser
     labels:
       - homepage.group=Web Interfaces
