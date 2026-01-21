@@ -1,6 +1,6 @@
 services:
   puppygraph:
-    image: puppygraph/puppygraph:0.111
+    image: puppygraph/puppygraph:0.112
     container_name: puppygraph
     environment:
      PUPPYGRAPH_PASSWORD: ${SECRET_PASSWORD}
