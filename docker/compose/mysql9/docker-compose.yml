@@ -11,7 +11,7 @@ services:
       - wud.tag.include=^9.\d+.\d+-oraclelinux\d+$
     environment:
       MYSQL_ROOT_PASSWORD: ${SECRET_PASSWORD}
-    image: mysql:9.5.0-oraclelinux9   
+    image: mysql:9.6.0-oraclelinux9   
     ports:
     - 3309:3306
     restart: unless-stopped
