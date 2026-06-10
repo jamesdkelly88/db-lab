@@ -1,0 +1,14 @@
+{
+    "name": "floci",
+    "type": ["relational","key-value","nosql","in-memory"],
+    "description": [
+        "Floci is a fast, free, and open-source local AWS service emulator built for developers who need reliable AWS services in development and CI without cost, complexity, or vendor lock-in.",
+        "To use, set environment variable AWS_ENDPOINT_URL to http://localhost:4566 and match AWS_DEFAULT_REGION, AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY to the values in the compose file."
+    ],
+    "links": {
+        "homepage": "https://floci.io/floci/",
+        "repository": "https://github.com/floci-io/floci",
+        "registry": "https://hub.docker.com/r/floci/floci"
+    },
+    "ui": []
+}

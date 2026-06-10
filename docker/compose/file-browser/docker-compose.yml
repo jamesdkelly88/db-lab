@@ -1,0 +1,29 @@
+services:
+  filebrowser:
+    image: filebrowser/filebrowser:v2.63.14
+    container_name: filebrowser
+    labels:
+      - homepage.group=Docker
+      - homepage.name=FileBrowser
+      - homepage.icon=filebrowser.png
+      - homepage.href=http://filebrowser.${DOMAIN}
+      - "homepage.description=For: Floci"
+      - traefik.enable=true
+      - wud.tag.include=^v\d+?.\d+?.\d+$
+    networks:
+    - default
+    restart: unless-stopped
+    volumes:
+    - data:/srv
+    - db:/database
+    - config:/config
+networks:
+  default:
+    name: web
+    external: true
+volumes:
+  db:
+  config:
+  data:
+    external: true
+    name: floci_data # change this to the name of the volume you want to browse

@@ -12,8 +12,8 @@ pkgs.mkShell rec {
     pkgs.go
     pkgs.go-task
     pkgs.powershell
-    pkgs.python311
-    pkgs.python311Packages.pip
+    pkgs.python3
+    pkgs.python3Packages.pip
     pkgs.sqlcmd
     pkgs.zlib
     pkgs.postgresql_17
