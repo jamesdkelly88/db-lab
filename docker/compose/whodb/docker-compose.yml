@@ -1,6 +1,6 @@
 services:
   whodb:
-    image: clidey/whodb:0.114.0
+    image: clidey/whodb:0.115.0
     container_name: whodb
     labels:
       - homepage.group=Web Interfaces
