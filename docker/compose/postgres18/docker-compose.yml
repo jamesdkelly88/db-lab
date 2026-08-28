@@ -7,11 +7,11 @@ services:
       - homepage.href=#
       - homepage.icon=postgres.png
       - homepage.description=Key-Value | Relational (54328)
-      - wud.tag.include=^18.+?-alpine.+?$
+      - wud.tag.include=^18.+?-alpine$
     environment:
       POSTGRES_HOST_AUTH_METHOD: scram-sha-256
       POSTGRES_PASSWORD: ${SECRET_PASSWORD}
-    image: postgres:18.4-alpine3.22
+    image: postgres:18.4-alpine
     ports:
     - 54328:5432
     restart: unless-stopped
