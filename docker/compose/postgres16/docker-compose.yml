@@ -11,7 +11,7 @@ services:
     environment:
       POSTGRES_HOST_AUTH_METHOD: scram-sha-256
       POSTGRES_PASSWORD: ${SECRET_PASSWORD}
-    image: postgres:16.14-alpine
+    image: postgres:16.15-alpine
     ports:
     - 54326:5432
     restart: unless-stopped
