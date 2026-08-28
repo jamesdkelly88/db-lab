@@ -7,10 +7,10 @@ services:
       - homepage.href=#
       - homepage.icon=postgres.png
       - homepage.description=Key-Value | Relational (54323)
-      - wud.tag.include=^13.\d{1,2}-alpine.+?$
+      - wud.tag.include=^13.\d{1,2}-alpine$
     environment:
       POSTGRES_PASSWORD: ${SECRET_PASSWORD}
-    image: postgres:13.23-alpine3.22
+    image: postgres:13.23-alpine
     ports:
     - 54323:5432
     restart: unless-stopped
